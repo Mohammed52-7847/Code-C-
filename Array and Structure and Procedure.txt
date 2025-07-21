@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+using namespace std;
+struct stInfo
+{
+	string Name;
+	string Address;
+	int Age;
+	string Phone;
+	bool Marraige;
+	char Statue;
+};
+void ReadInformation(stInfo Info[3])
+{
+	cout << "Name:\n";
+	getline(cin, Info[0].Name);
+}
+void PrintInformation(stInfo Info[3])
+{
+	cout << "The Name is: " << Info[0].Name << endl;
+}
+int main()
+{
+	stInfo Info[3];
+	ReadInformation(Info);
+	PrintInformation(Info);
+	return 0;
+}

@@ -1,0 +1,31 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int ReadPositiveNumber(string Message)
+{
+	int Number = 0;
+	do
+	{
+		cout << Message << endl;
+		cin >> Number;
+	} while (Number <= 0);
+	return Number;
+}
+void PrintIntervertNumber(int Number)
+{
+	cout << endl;
+	for (int i = Number;i >= 1;i--)
+	{
+		for (int c = 1; c <= i; c++)
+		{
+			cout << i;
+		}
+		cout << endl;
+	}
+}
+int main()
+{
+	PrintIntervertNumber(ReadPositiveNumber("Please Enter Your Positive Number: "));
+	cout << "\n";
+	return 0;
+}

@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+#include <cstdio>
+using namespace std;
+string ReadName(string Message)
+{
+	string Name;
+	cout << Message << endl;
+	getline(cin, Name);
+	cin.ignore();
+	return Name;
+}
+void PrintName(string Name)
+{
+	cout << endl;
+	cout << "First letters of this string:\n";
+	cout << Name[0] << endl;
+	cout << Name[9] << endl;
+	cout << Name[15] << endl;
+	cout << Name[27] << endl;
+	cout << Name[40] << endl;
+}
+int main()
+{
+	PrintName(ReadName("Please Enter Your String?"));
+
+	system("pause>0");
+	return 0;
+}

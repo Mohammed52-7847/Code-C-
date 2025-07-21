@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main ()
+{
+    short int a;
+	cout << "please enter your number= ";
+	cin >> a;
+	short int num_1 = round(pow(a, 2));
+	short int num_2 = round(pow(a, 3));
+	short int num_3 = round(pow(a, 4));
+	cout << "**************************""\n";
+	cout << "number 1= " << num_1 << "." << endl;
+	cout << "number 2= " << num_2 << "." << endl;
+	cout << "number 3= " << num_3 << "." << endl;
+	cout << "**************************""\n";
+
+
+    return 0;
+}

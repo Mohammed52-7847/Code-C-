@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    //const int f = 0.5;
+	int a;
+	int h;
+	cout << "please enter your number-a = ";
+	cin >> a;
+	cout << "please enter your number-h = ";
+	cin >> h;
+	const int f = 1/2;
+	//int multi = a * h;
+	int triangle_area = a / 2 * h;
+	cout << "***************************""\n";
+	cout << "the Triangle Area is = " << triangle_area << "." << endl;
+
+return 0;
+}

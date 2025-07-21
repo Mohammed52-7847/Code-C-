@@ -1,0 +1,17 @@
+#include <vector>
+#include <string>
+#include <iostream>
+using namespace std;
+int main()
+{
+	vector<int>vnum{1, 2, 3, 4, 5};
+	
+	vector<int>::iterator iteo = vnum.end();
+	while (iteo != vnum.begin())
+	{
+		--iteo;
+		cout << *iteo << "{}";
+	}
+
+	system("pause>0");
+}

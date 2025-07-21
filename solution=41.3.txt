@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int ReadNumber()
+{
+	float Number = 0;
+	cout << "Plaese Enter Your Number:\n";
+	cin >> Number;
+	return Number;
+}
+float CheckNumber1(float Number)
+{
+	return (Number / 7) / 24;
+}
+float CheckNumber2(float Number)
+{
+	return (Number / 24);
+}
+void PrintNumber(float Number)
+{
+	cout << "Weeks: " << CheckNumber1(Number) << endl;
+	cout << "Days: " << CheckNumber2(Number) << endl;
+}
+int main()
+{
+	PrintNumber(ReadNumber());
+	return 0;
+}

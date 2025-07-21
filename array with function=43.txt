@@ -1,0 +1,43 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void ReadProcedure(double x[1])
+{
+	cout << "please enter your seconds: ""\n";
+	cin >> x[0];
+}
+double calculatefunction1(double x[1])
+{
+	return  floor(x[0]/(24 * 60 * 60));
+}
+double calculatefunction2(double x[1])
+{
+	return  20735 / ( 60 * 60);
+}
+double calculatefunction3(double x[1])
+{
+	return  2735 / 60;
+}
+double calculatefunction4(double x[1])
+{
+	return  2735 % 60;
+}
+void printprocedure(double x[1])
+{
+	cout << "\n*********************************\n";
+	cout << calculatefunction1(x) << " : " << calculatefunction2(x) << " : " << calculatefunction3(x) << " : " << calculatefunction4(x) << "." << endl;
+	cout << "\n*********************************\n";
+}
+int main()
+{
+	double x[1];
+	ReadProcedure(x);
+	calculatefunction1(x);
+	calculatefunction2(x);
+	calculatefunction3(x);
+	calculatefunction4(x);
+	printprocedure(x);
+
+	return 0;
+}

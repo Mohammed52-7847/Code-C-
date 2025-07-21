@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+void ReadOneNumber(int& r)
+{
+	cout << "Please Enter Your Number r: " << endl;
+	cin >> r;
+}
+float CalculateCircle(float r)
+{
+	const float pi = 3.14;
+	return pi * (pow(r, 2));
+}
+void PrintCircleArea(float Circle)
+{
+	cout << "The Circle Area is: " << Circle << "." << endl;
+}
+int main()
+{
+	int r;
+	ReadOneNumber(r);
+	PrintCircleArea(CalculateCircle(r));
+	return 0;
+}

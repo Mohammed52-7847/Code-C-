@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    int d;
+	cout << "please enter your number-D = ";
+	cin >> d;
+	const float pi = 3.14;
+	float circle_area = pi * d * d / 4;
+	cout << "************************************""\n";
+	cout << "The Circle Area is = " << circle_area << "." << endl;
+
+return 0;
+}

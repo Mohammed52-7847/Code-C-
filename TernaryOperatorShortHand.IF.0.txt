@@ -1,0 +1,37 @@
+#include <iostream>
+#include <string>
+#include "HeaderOutput.h";
+#include "HeaderMath.h";
+#include "MyInput.h";
+#include "MyOutput.h";
+using namespace std;
+using namespace HeOut;
+using namespace MathFun;
+using namespace MyLib;
+using namespace MyOut;
+enum enPassAndFail{Pass = 1,Fail = 2};
+int main()
+{
+	/*PrintCeil(ReadNumber());
+	PrintFloor(ReadNumber());
+	PrintAbs(ReadNumber());*/
+	/*cout << "\n______________________\n";
+	int Number = ReadNumber();
+	(Number > 0) ? cout << "\nPass." : cout << "\nFail.";
+	(Number == 0) ? cout << "\nPass." : (Number > 0) ? cout << "\nPass." : cout << "\nFail.";*/
+	/*int Number = ReadPositiveNumber("Please enter Your Positive Number ?\n");
+	(Number >= 50) ? cout << "\nPass.\n" : cout << "\nFail.\n";*/
+	//float A, D;
+	//Read2Numbers(A,D);
+	//PrintResults(RectangleAreaBySideAndDiagonal(A, D));
+	//PrintResults(TriangleArea(A, D));
+	int Mark = ReadNumber();
+	string Result;
+	string Test;
+	Result = (Mark > 0) ? "Positive" : "Negative";
+	Test = (Mark == 0) ? "Zero" : ((Mark > 0) ? "Positive" : "Negative");
+	cout << "Number is: " << Result << endl;
+	cout << endl;
+	cout << "Number is: " << Test << endl;
+	return 0;
+}

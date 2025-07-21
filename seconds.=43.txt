@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main ()
+{
+    int n;
+	cout << "please enter the seconds= ";
+	cin >> n;
+	int day = round(n / (24*60*60));
+	int day_1 = round(n % (24*60*60));
+	int hours = round(day_1 / (60*60));
+	int hours_1 = round(day_1 % (60*60));
+	int minutes = round(hours_1 / 60);
+	int minutes_1 = round(hours_1 % 60);
+	int seconds = round(minutes_1 / 60);
+	int seconds_1 = round(minutes_1 % 60);
+	cout << "**********************""\n";
+	cout << day << ":" << hours << ":" << minutes << ":" << seconds_1 << "." << endl;
+
+
+    return 0;
+}

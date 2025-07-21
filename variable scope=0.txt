@@ -1,0 +1,49 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int x = 9000;
+int v = 20;
+
+
+int z;
+string a;
+
+void procedure()
+{
+	int x = 200;
+	x = x * 300;
+	cout << "this number: " << x << endl;
+}
+int Myfunction(int x = 300)
+{
+	return x ;
+}
+int main()
+{
+	int x = 600;
+	int D = x++;
+	D = ++x;
+	D = ++x;
+	
+	cout << "number: " << D << endl;
+	procedure();
+	cout << "number-1: " << Myfunction() << endl;
+
+	::x--;
+	cout << "number-2: " << ::x << endl;
+	::v--;
+	cout << "number-3: " << ::v << endl;
+	cout << "age: ";
+	cin >> ::z;
+	cout << "Name: ";
+	cin.ignore(1);
+	getline(cin,::a);
+	cout << ::z << endl;
+	cout << ::a << endl;
+
+
+
+	return 0;
+}

@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+struct stInfo
+{
+	float Age;
+};
+stInfo ReadAge()
+{
+	stInfo Info;
+	cout << "Please Enter Your Age: " << endl;
+	cin >> Info.Age;
+	return Info;
+}
+float ValidateAgeBetween_18And_45(stInfo Info)
+{
+	return (Info.Age >= 18 && Info.Age <= 45);
+}
+void PrintRuselt(stInfo Info)
+{
+	if (ValidateAgeBetween_18And_45(Info))
+		cout << "\n Valid." << endl;
+	else
+		cout << "\n Invalid." << endl;
+}
+int main()
+{
+	PrintRuselt(ReadAge());
+	return 0;
+}

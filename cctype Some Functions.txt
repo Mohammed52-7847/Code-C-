@@ -1,0 +1,18 @@
+#include <iostream>
+#include <string>
+#include <cctype>
+using namespace std;
+int main()
+{
+	char x;
+	char w;
+	x = toupper('a');
+	w = tolower('A');
+	cout << "a to A: " << x << endl;
+	cout << "A to a: " << w << endl;
+	cout << "A to Z: " << isupper('A') << endl;
+	cout << "a to z: " << islower('a') << endl;
+	cout << "a to A: " << isdigit('6') << endl;
+	cout << "a to A: " << ispunct('&') << endl;
+	return 0;
+}

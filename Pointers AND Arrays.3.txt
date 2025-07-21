@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	string arr[5] = {"Mohamed","Helmi","Ahmed","Baghdadi","Ali"};
+	string* ptr;
+	ptr = arr;
+	cout << "Address.\n";
+	cout << ptr << endl;
+	cout << ptr + 1 << endl;
+	cout << ptr + 2 << endl;
+	cout << ptr + 3 << endl;
+	cout << ptr + 4 << endl;
+	cout << "Value.\n";
+	cout << *(ptr) << endl;
+	cout << *(ptr + 1) << endl;
+	cout << *(ptr + 2) << endl;
+	cout << *(ptr + 3) << endl;
+	cout << *(ptr + 4) << endl;
+	return 0;
+}

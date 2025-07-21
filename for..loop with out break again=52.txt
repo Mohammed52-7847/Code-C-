@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int Readfunction()
+{
+	int n;
+	cout << "please enter your number: ";
+	cin >> n;
+	int arr[13] = {10,20,55,66,44,33,99,88,44,77,25,68,45};
+	for (int i = 0;i <= n;i++)
+	{
+		
+		
+
+		if (i == 1)
+		{
+			cout << i << " : " << arr[i] << endl;
+			//break;
+			
+		}
+		cout << "we are at interation: " << i << " : " << arr[i] << endl;
+		
+		
+	}
+
+	return n;
+}
+int main()
+{
+	cout << "The number is: " << Readfunction() << endl;
+
+	return 0;
+}

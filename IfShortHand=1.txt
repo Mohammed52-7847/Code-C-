@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+using namespace std;
+struct stInfo
+{
+	int Age;
+	bool License;
+};
+stInfo Read2Number()
+{
+	stInfo Info;
+	cout << "Enter Age Please?\n";
+	cin >> Info.Age;
+	cout << "Enter License Please?\n";
+	cin >> Info.License;
+	return Info;
+}
+void PrintResult(stInfo Info)
+{
+	string Result;
+	 Result = (Info.Age > 21 && Info.License) ? "Hired." :"Rejected.";
+	 cout << Result << endl;
+}
+int main()
+{
+	 PrintResult(Read2Number());
+	return 0;
+}

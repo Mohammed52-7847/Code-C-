@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main ()
+{
+    short int d;
+	cout << "please enter your number-D= ";
+	cin >> d;
+	const float pi = 3.14;
+	float area = ceil((pi * pow(d, 2)) / 4);
+	cout << "*****************************""\n";
+	cout << "circle diameter= " << area << "." << endl;
+	cout << "*****************************""\n";
+
+
+    return 0;
+}

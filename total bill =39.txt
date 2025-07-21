@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    float total_bill = 20;
+    int cash_paid;
+    cout << "read total bill= " << total_bill << "." << endl;
+    cout << "read cash paid= ";
+    cin >> cash_paid;
+    float remainder = cash_paid - total_bill;
+    cout << "*********************************" << endl;
+    cout << "REMAINDER= " << remainder << "." << endl;
+
+
+
+    float total_bill = 20;
+    int cash_paid = 50;
+    cout << "read total bill= " << total_bill << "." << endl;
+    cout << "read cash paid= " << cash_paid << "." << endl;
+    float remainder = cash_paid - total_bill;
+    cout << "*********************************" << endl;
+    cout << "REMAINDER= " << remainder << "." << endl;
+
+
+
+    float total_bill;
+    int cash_paid;
+    cout << "read total bill= ";
+    cin >> total_bill;
+    cout << "read cash paid= ";
+    cin >> cash_paid;
+    float remainder = cash_paid - total_bill;
+    cout << "*********************************" << endl;
+    cout << "REMAINDER= " << remainder << "." << endl;
+
+    return 0;
+}

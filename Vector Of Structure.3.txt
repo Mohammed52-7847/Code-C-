@@ -1,0 +1,68 @@
+#include <vector>
+#include <iostream>
+#include <string>
+using namespace std;
+struct stEmployee
+{
+	int Age;
+	float size;
+	string Data;
+};
+struct stInfo
+{
+	string FirstName;
+	string LastName;
+	float Salary;
+	string Address;
+	stEmployee Notes;
+};
+void ReadEmployees(vector <stInfo>& vEmployees)
+{
+	stInfo Info;
+	char Playagain = 'Y';
+	while (Playagain == 'Y' || Playagain == 'y')
+	{
+		cout << "Enter Your First Name: ";
+		cin >> Info.FirstName;
+		cout << "Enter Your Last Name: ";
+		cin >> Info.LastName;
+		cout << "Enter Your Salary: ";
+		cin >> Info.Salary;
+		cout << "Enter Your Address: ";
+		cin.ignore(1, 3);
+		getline(cin, Info.Address);
+		cout << "Enter Your Age: ";
+		cin >> Info.Notes.Age;
+		cout << "Enter Your Size: ";
+		cin >> Info.Notes.size;
+		cout << "Enter Your Data: ";
+		cin.ignore(1, 6);
+		getline(cin, Info.Notes.Data);
+		vEmployees.push_back(Info);
+		cout << "Do You Want to Add More Employees again ?Y/N ? ";
+		cin >> Playagain;
+	}
+}
+void PrintResult(vector <stInfo>& vEmployees)
+{
+	cout << "\nThe Vector Employees:\n\n";
+	for (stInfo& Info : vEmployees)
+	{
+		cout << "First Name: " << Info.FirstName << endl;
+		cout << "Last Name : " << Info.LastName << endl;
+		cout << "Salary    : " << Info.Salary << endl;
+		cout << "Address   : " << Info.Address << endl;
+		cout << "Age       : " << Info.Notes.Age << endl;
+		cout << "Size      : " << Info.Notes.size << endl;
+		cout << "Date      : " << Info.Notes.Data << endl;
+		cout << endl;
+	}
+	cout << endl;
+}
+int main()
+{
+	vector <stInfo> vEmployees;
+	ReadEmployees(vEmployees);
+	PrintResult(vEmployees);
+	return 0;
+}

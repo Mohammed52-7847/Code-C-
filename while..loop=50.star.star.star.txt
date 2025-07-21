@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int n;
+	cout << "Please Enter Your Number: ";
+	cin >> n;
+	while (n != 1234)
+	{
+		cout << "Wrong PIN." << endl;
+		cin >> n;
+	}
+	cout << "Your Balance is: " << 7500 << "." << endl;
+
+	return 0;
+}

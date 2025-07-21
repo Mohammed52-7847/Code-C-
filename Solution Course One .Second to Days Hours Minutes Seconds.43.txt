@@ -1,0 +1,70 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int ReadTotalSeconds()
+{
+	int TotalSeconds = 0;
+	cout << "\nPlease Enter a Total Seconds? ";
+	cin >> TotalSeconds;
+	return TotalSeconds;
+}
+int NumberOfDays(int TotalSeconds)
+{
+	int NumberOfDays = 0;
+	int SecondsPerDay = (24 * 60 * 60);
+    NumberOfDays = ((TotalSeconds) / (SecondsPerDay));
+	return floor(NumberOfDays);
+}
+int Remainder(int TotalSeconds)
+{
+	int Remainder = 0;
+	int SecondsPerDay = (24 * 60 * 60);
+    Remainder = ((TotalSeconds) % (SecondsPerDay));
+	return Remainder;
+}
+int NumberOfHours(int Remainder)
+{
+	int NumberOfHours = 0;
+	int SecondsPerHours = 60 * 60;
+	NumberOfHours = ((Remainder) / (SecondsPerHours));
+	return floor(NumberOfHours);
+}
+int Remainder2(int Remainder)
+{
+	int Remainder2 = 0;
+	int SecondsPerHours = 60 * 60;
+	Remainder2 = ((Remainder) % (SecondsPerHours));
+	return Remainder2;
+}
+int NumberOfMinutes(int Remainder2)
+{
+	int NumberOfMinutes = 0;
+	int SecondsPerMinute = 60;
+	NumberOfMinutes = ((Remainder2) / (SecondsPerMinute));
+	return floor(NumberOfMinutes);
+}
+int Remainder3(int Remainder2)
+{
+	int Remainder3 = 0;
+	int SecondsPerMinute = 60;
+	Remainder3 = ((Remainder2) % (SecondsPerMinute));
+	return Remainder3;
+}
+int NumberOfSeconds(int Remainder3)
+{
+	int NumberOfSeconds = Remainder3;
+	return NumberOfSeconds;
+}
+int main()
+{
+	int TotalSeconds = ReadTotalSeconds();
+	cout << "Day     : " << NumberOfDays(TotalSeconds) << endl;
+	//cout << Remainder(TotalSeconds) << endl;
+	cout << "Hours   : " << NumberOfHours(Remainder(TotalSeconds)) << endl;
+	//cout <<  Remainder2(Remainder(TotalSeconds)) << endl;
+	cout << "Minutes : " << NumberOfMinutes(Remainder2(Remainder(TotalSeconds))) << endl;
+	cout << "Seconds : " << Remainder3(Remainder2(Remainder(TotalSeconds))) << endl;
+	//cout << NumberOfSeconds(Remainder3(Remainder2(Remainder(TotalSeconds)))) << endl;
+	system("pause>0");
+	return 0;
+}

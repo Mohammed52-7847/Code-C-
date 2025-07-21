@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    int loan_amount;
+    int months;
+    cout << "Please read your loan amount: ";
+    cin >> loan_amount;
+    cout << "How many months you need: ";
+    cin >> months;
+    int payment = loan_amount / months;
+    cout << "*************************""\n";
+    cout << "PayMent: " << payment << "." << endl;
+
+    return 0;
+}

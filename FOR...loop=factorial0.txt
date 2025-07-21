@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int F = 1;
+	for (int C = 1; C <= 10; C++)
+	{
+		cout << C << endl;
+		F *= C;
+	}
+	cout << "FACTORIAL: " << F << endl;
+
+	return 0;
+}

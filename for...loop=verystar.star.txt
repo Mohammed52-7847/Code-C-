@@ -1,0 +1,90 @@
+#include <iostream>
+#include <string>
+using namespace std;
+enum encolor
+{
+	red,white,blue,green
+};
+enum enmarried
+{
+	single,married
+};
+struct strinfo
+{
+	string name;
+	int age;
+	string city;
+	string country;
+	float monthlysalary;
+	float yearlysalary;
+	char gender;
+	bool male;
+};
+struct strcar
+{
+	float number;
+	string namecar;
+	string model;
+	strinfo info;
+	encolor color = encolor::blue;
+	enmarried married = enmarried::single;
+};
+void Readcard(strcar& car)
+{
+	cout << "please enter your name: ";
+	cin.ignore(1, 2);
+	getline(cin, car.info.name);
+	cout << "please enter your age: ";
+	cin >> car.info.age;
+	cout << "please enter your city: ";
+	cin >> car.info.city;
+	cout << "please enter your country: ";
+	cin >> car.info.country;
+	cout << "please enter your monthly salary: ";
+	cin >> car.info.monthlysalary;
+	cout << "please enter your gender: ";
+	cin >> car.info.gender;
+	cout << "please enter your type: ";
+	cin >> car.info.male;
+}
+void printcard(strcar car)
+{
+	cout << "\n***************************************\n";
+	cout << "Name: " << car.info.name << "." << endl;
+	cout << "Age: " << car.info.age << "." << endl;
+	cout << "City: " << car.info.city << "." << endl;
+	cout << "Country: " << car.info.country << "." << endl;
+	cout << "Monthly Salary: " << car.info.monthlysalary << "." << endl;
+	cout << "Yearly Salary: " << car.info.monthlysalary * 12 << "." << endl;
+	cout << "Gender: " << car.info.gender << "." << endl;
+	cout << "Type: " << car.info.male << "." << endl;
+	cout << "Color: " << car.color << "." << endl;
+	cout << "Married: " << car.married << "." << endl;
+}
+void Readprocedure(strcar info[100], int& N)
+{
+	cout << "How Many Student: ";
+	cin >> N;
+	for (int C = 0; C <= N - 1; C++)
+	{
+		cout << "please enter your info: " << C + 1 << endl;
+		Readcard(info[C]);
+	}
+}
+void printprocedure(strcar info[100], int N)
+{
+	for (int C = 0; C <= N - 1; C++)
+	{
+		cout << "info: " << C + 1 << endl;
+		printcard(info[C]);
+	}
+}
+
+int main()
+{
+	strcar info[100];
+	int N = 1;
+	Readprocedure(info, N);
+	printprocedure(info, N);
+	return 0;
+}

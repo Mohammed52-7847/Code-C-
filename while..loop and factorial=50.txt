@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+
+
+int main()
+{
+	
+	int f = 1;
+	int i = 1;
+	int n;
+	cout << "number: ";
+	cin >> n;
+	while (i<n)
+	{
+		cout << i << " ";
+		i++;
+		f = f * i;
+		
+	}
+	
+	cout << "fac: " << f;
+	return 0;
+}

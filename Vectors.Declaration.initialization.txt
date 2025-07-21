@@ -1,0 +1,14 @@
+#include <vector>
+#include <iostream>
+using namespace std;
+int main()
+{
+	vector <int> vNumber = {10,20,30,40,50};
+	cout << "The Vector Number is: ";
+	for (int &Number : vNumber)
+	{
+		cout << Number << " ";
+	}
+	cout << endl;
+	return 0;
+}

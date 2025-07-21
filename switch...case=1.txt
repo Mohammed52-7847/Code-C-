@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+
+enum enscreencolor
+{
+	red=1,blue=2,green=3,yellow=4
+};
+
+int main()
+{
+	
+
+	cout << "*************************\n";
+	cout << "(1)red= \n";
+	cout << "(2)blue= \n";
+	cout << "(3)green= \n";
+	cout << "(4)yellow= \n";
+	cout << "*************************\n\n" << endl;
+	cout << "your choise: ";
+
+	int c;
+	enscreencolor color;
+	cin >> c;
+	color = (enscreencolor)c;
+
+
+	switch (color)
+	{
+	case enscreencolor::red:
+		system("color 2F");
+		break;
+	case enscreencolor::blue:
+		system("color 4F");
+		break;
+	case enscreencolor::green:
+		system("color 2F");
+		break;
+	case enscreencolor::yellow:
+		system("color 5F");
+		break;
+	default:
+		system("color 7F");
+	}
+
+
+	return 0;
+}

@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+using namespace std;
+struct stInfo
+{
+	int TotalBill = 0;
+	int CashPaid = 0;
+};
+stInfo ReadTotal()
+{
+	stInfo Info;
+	cout << "Please Enter Your TotalBill?\n";
+	cin >> Info.TotalBill;
+	cout << "Please Enter Your CashPaid?\n";
+	cin >> Info.CashPaid;
+	return Info;
+}
+float CheckCalculate(stInfo Info)
+{
+	float Remainder;
+	Remainder = Info.TotalBill - Info.CashPaid;
+	return Remainder;
+}
+void PrintResult()
+{
+	 cout << CheckCalculate(ReadTotal()) << endl;
+}
+int main()
+{
+	PrintResult();
+	return 0;
+}

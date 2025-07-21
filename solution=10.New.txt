@@ -1,0 +1,31 @@
+#include <iostream>
+#include <string>
+using namespace std;
+void ReadMark(int& Mark1, int& Mark2, int& Mark3)
+{
+	cout << "PLease Enter Your Mark 1: " << endl;
+	cin >> Mark1;
+	cout << "Please Enter Your Mark 2: " << endl;
+	cin >> Mark2;
+	cout << "Please Enter Your Mark 3: " << endl;
+	cin >> Mark3;
+}
+int SumOf3Num(int Mark1, int Mark2, int Mark3)
+{
+	return Mark1 + Mark2 + Mark3;
+}
+float Average(int Mark1, int Mark2, int Mark3)
+{
+	return (float)SumOf3Num(Mark1, Mark2, Mark3) / 3;
+}
+void PrintAverage(float Average)
+{
+	cout << "\n The Average is: " << Average << "." << endl;
+}
+int main()
+{
+	int Mark1, Mark2, Mark3;
+	ReadMark(Mark1, Mark2, Mark3);
+	PrintAverage(Average(Mark1, Mark2, Mark3));
+	return 0;
+}

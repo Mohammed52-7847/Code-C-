@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int Max(int a, int b)
+{
+	return (a + b);
+}
+int Max(float a, float b, float c)
+{
+	return (a + b + c);
+}
+int Max(double C, double D,double A,double B)
+{
+	return (C + D + A + B);
+}
+int main()
+{
+	cout << "Sum: " << Max(10, 5) << endl;
+	cout << "Sum: " << Max(5.9, 12.2,4.22) << endl;
+	cout << "Sum: " << Max(23.666, 99.87456,55.911,43.29874);
+	system("pause>0");
+	return 0;
+}

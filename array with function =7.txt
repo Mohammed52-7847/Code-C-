@@ -1,0 +1,32 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void ReadGradeProcedure(float grade[3])
+{
+	cout << "please enter grade1: ";
+	cin >> grade[0];
+	cout << "please enter grade2: ";
+	cin >> grade[1];
+	cout << "please enter grade3: ";
+	cin >> grade[2];
+}
+float operatefunction(float grade[3])
+{
+	return (grade[0] + grade[1] + grade[2]) / 3;
+}
+void PrintGradeProcedure(float grade[3])
+{
+	cout << "*******************************\n";
+	cout << "The Average of Grade is: " << operatefunction(grade) << "." << endl;
+}
+int main()
+{
+	float grade[3];
+	ReadGradeProcedure(grade);
+	operatefunction(grade);
+	PrintGradeProcedure(grade);
+	//cout << "The Average of Grade is: " << operatefunction(grade) << "." << endl;
+
+	return 0;
+}

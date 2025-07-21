@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+using namespace std;
+void ReadNum(int Num[3])
+{
+	cout << "Please Enter Your Num 1: " << endl;
+	cin >> Num[0];
+	cout << "Please Enter Your Num 2: " << endl;
+	cin >> Num[1];
+	cout << "Please Enter Your Num 3: " << endl;
+	cin >> Num[2];
+}
+int SumOf3Num(int Num[3])
+{
+	return Num[0] + Num[1] + Num[2];
+}
+void PrintSumOf3Num(int Total)
+{
+	cout << "\n The Total is: " << Total << endl;
+}
+int main()
+{
+	int Num[3];
+	ReadNum(Num);
+	PrintSumOf3Num(SumOf3Num(Num));
+	return 0;
+}

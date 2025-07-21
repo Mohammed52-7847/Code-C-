@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    short int mark_1;
+	short int mark_2;
+	short int mark_3;
+	cout << "please enter your Mark-1= ";
+	cin >> mark_1;
+	cout << "please enter your Mark-2= ";
+	cin >> mark_2;
+	cout << "please enter your Mark-3= ";
+	cin >> mark_3;
+	int sum = mark_1 + mark_2 + mark_3;
+	int avg = sum / 3;
+	cout << "the average is = " << avg << endl;
+
+	return 0;
+}

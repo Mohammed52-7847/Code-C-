@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	
+	int n;
+	int m;
+	int p = 1;
+	int i = 0;
+	cout << "please enter your number: ";
+	cin >> n;
+	cout << "please enter your power: ";
+	cin >> m;
+	while (i <= n+1)
+	{
+		cout << i << " ";
+		i++;
+		p = p * n;
+	}
+	cout << "power: " << p << " ";
+
+	return 0;
+}

@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+using namespace std;
+void ReadNumber(int& N, int& M)
+{
+	cout << "Please Enter Number: " << endl;
+	cin >> N;
+	cout << "Please Enter M: " << endl;
+	cin >> M;
+}
+int CheckNumber(int N, int M)
+{
+	int p = 1;
+	int c = 0;
+	for (int c = 1; c <= M; c++)
+	{
+		
+		p *= N;
+	}
+	return p;
+}
+void PrintResult(int Area)
+{
+	cout << "The Number is: " << Area << endl;
+}
+int main()
+{
+	int N, M;
+	ReadNumber(N,M);
+	PrintResult(CheckNumber(N,M));
+	return 0;
+}

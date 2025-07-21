@@ -1,0 +1,30 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+int main()
+{
+	fstream MyFile;
+	MyFile.open("MyFile.txt", ios::out|ios::app);
+	if (MyFile.is_open())
+	{
+		MyFile << "Firs.\n";
+		MyFile << "Second.\n";
+		MyFile << "Zaki.\n";
+		MyFile << "************************\n";
+		MyFile << "Hello Mohammed.\n";
+		MyFile << "What Do You Want?\n";
+		MyFile << "Can I Help You?\n";
+
+		MyFile.close();
+	}
+	fstream MyCode;
+	MyCode.open("MyCode.txt", ios::out | ios::app);
+	if (MyCode.is_open())
+	{
+		MyCode << "It Is Resturant,Can I Help You.\n";
+		MyCode << "Can I Reserved Three Table Please.\n";
+		MyCode.close();
+	}
+
+	return 0;
+}

@@ -1,0 +1,104 @@
+#include <iostream>
+#include <string>
+using namespace std;
+struct strInfo
+{
+	string FirstName;
+	string LastName;
+	int Age;
+	string Phone;
+};
+void ReadN(strInfo PerSon[2])
+{
+	cout << "Enter Your FirstName: ";
+	cin >> PerSon[0].FirstName;
+	cout << "Enter Your LastName: ";
+	cin >> PerSon[0].LastName;
+	cout << "Enter Your Age: ";
+	cin >> PerSon[0].Age;
+	cout << "Enter Your Phone: ";
+	cin >> PerSon[0].Phone;
+	cout << "\n";
+
+	
+}
+void PrintSS(strInfo PerSon[2])
+{
+	cout << PerSon[0].FirstName << endl;
+	cout << PerSon[0].LastName << endl;
+}
+void ReadArray(int x[3])
+{
+	cout << "Enter Your Number 1? ";
+	cin >> x[0];
+	cout << "Enter Your Number 2? ";
+	cin >> x[1];
+	cout << "Enter Your Number 3? ";
+	cin >> x[2];
+}
+void PrintArray(int x[3])
+{
+	cout << x[0] << endl;
+	cout << x[1] << endl;
+	cout << x[2] << endl;
+}
+int main()
+{
+	string x = "Mohammed Helmi Ahmed Baghdadi.";
+	cout << char(tolower(x[0])) << " ";
+	cout << char(toupper(x[1])) << " ";
+	cout << char(toupper(x[2])) << " ";
+	cout << char(toupper(x[3])) << " ";
+	cout << char(toupper(x[4])) << " ";
+	cout << char(toupper(x[5])) << " ";
+	cout << "\n****************************************\n";
+	int y[6];
+	cout << "Enter Your Number 0? ";
+	cin >> y[0];
+	cout << "Enter Your Number 1? ";
+	cin >> y[1];
+	cout << "Enter Your Number 2? ";
+	cin >> y[2];
+	cout << "Enter Your Number 3? ";
+	cin >> y[3];
+	cout << "Enter Your Number 4? ";
+	cin >> y[4];
+	cout << "Enter Your Number 5? ";
+	cin >> y[5];
+
+	cout << "\n________________________\n";
+	cout << y[0] << " " << y[1] << " " << y[2] << " " << y[3] << " " << y[4] << " " << y[5] << endl;
+	int Sum = y[0] + y[1] + y[2] + y[3] + y[4] + y[5];
+	cout << "Sum: " << Sum << endl;
+	cout << "\n________________________\n";
+	short g[3];
+	
+	
+	cout << "Enter Your Grade ? ";
+	cin >> g[0];
+	cout << "Enter Your Grade ? ";
+	cin >> g[1];
+	cout << "Enter Your Grade ? ";
+	cin >> g[2];
+	cout << "\n**************************\n";
+	short S = g[0] + g[1] + g[2];
+	float v = S / 3;
+	cout << "Sum: " << S << endl;
+	cout << "The Average of grades is: " << v << endl;
+	cout << "\n**************************\n";
+	cout << "\n**************************\n";
+	int f[3];
+	ReadArray(f);
+	PrintArray(f);
+	cout << "\n**************************\n";
+	cout << "\n**************************\n";
+	cout << "\n**************************\n";
+
+	strInfo PerSon[2];
+	ReadN(PerSon);
+	PrintSS(PerSon);
+	
+
+	system("pause>0");
+	return 0;
+}

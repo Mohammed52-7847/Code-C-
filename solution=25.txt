@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+using namespace std;
+struct stInfo
+{
+	int Age;
+};
+stInfo ReadNumber()
+{
+	stInfo Info;
+	cout << "Please Enter Your Age: " << endl;
+	cin >> Info.Age;
+	return Info;
+}
+int IsAccepted(stInfo Info)
+{
+	while (Info.Age < 18 || Info.Age > 45)
+	{
+		cout << "\n Invalid." << endl;
+		cin >> Info.Age;
+	}
+	cout << "\n Valid." << endl;
+	return Info.Age;
+}
+
+int main()
+{
+	IsAccepted(ReadNumber());
+	return 0;
+}

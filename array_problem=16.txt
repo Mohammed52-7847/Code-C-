@@ -1,0 +1,16 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+	int area[2];
+	cout << "please enter your Number-1: ";
+	cin >> area[0];
+	cout << "please enter your Number-2: ";
+	cin >> area[1];
+	double solution = area[0] * sqrt(pow(area[1], 2) - pow(area[0], 2));
+	cout << "Print Area: " << solution << "." << endl;
+
+	return 0;
+}

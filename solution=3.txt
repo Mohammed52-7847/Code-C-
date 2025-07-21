@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int N;
+	cout << "please enter your number: " << endl;
+	cin >> N;
+	if (N % 2 != 0)
+	{
+		cout << "The Odd Number is: " << N << "." << endl;
+	}
+	else if (N % 2 == 0)
+	{
+		cout << "The Even Number is: " << N << "." << endl;
+	}
+	else
+	{
+		cout << "Wrong Number." << endl;
+	}
+
+	return 0;
+}

@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+int ReadArrayBreak()
+{
+	int Number = 0;
+	cout << "Please Enter Your Number:\n";
+	cin >> Number;
+	return Number;
+}
+void PrintArrayBreak(int Number)
+{
+	int arr1[10] = { 10,99,55,6,4,89,87,20,51,72 };
+
+	for (int i = 0; i <= 10 - 1; i++)
+	{
+		if (arr1[i] == Number)
+		{
+			break;
+		}
+		cout << "\nThe Number is " << ": " << arr1[i] << endl;
+	}
+}
+int main()
+{
+	
+	PrintArrayBreak(ReadArrayBreak());
+	
+	return 0;
+}

@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+using namespace std;
+struct strInfo
+{
+	int Days;
+	int Hours;
+	int Minutes;
+	int Seconds;
+};
+strInfo ReadTaskDurationInSeconds()
+{
+	strInfo Info;
+	cout << "Please Enter a Days: " << endl;
+	cin >> Info.Days;
+	cout << "Please Enter a Hours: " << endl;
+	cin >> Info.Hours;
+	cout << "Please Enter a Minutes: " << endl;
+	cin >> Info.Minutes;
+	cout << "Please Enter a Seconds: " << endl;
+	cin >> Info.Seconds;
+	return Info;
+}
+void CheckTask(strInfo Info)
+{
+	float TotalSeconds;
+	TotalSeconds = (Info.Days * 24 * 60 * 60) + (Info.Hours * 60 * 60) + (Info.Minutes * 60) + (Info.Seconds);
+	cout << "*************************\n";
+	cout << "TotalSeconds= " << TotalSeconds << "." << endl;
+}
+int main()
+{
+	CheckTask(ReadTaskDurationInSeconds());
+	return 0;
+}

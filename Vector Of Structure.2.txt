@@ -1,0 +1,46 @@
+#include <vector>
+#include <iostream>
+using namespace std;
+struct stInfo
+{
+	string FirstName;
+	string LastName;
+	float Salary;
+};
+void ReadResult(vector <stInfo> &vInformation)
+{
+	char EnterEmployee = 'Y';
+	stInfo Info;
+	while (EnterEmployee == 'Y' || EnterEmployee == 'y')
+	{
+		cout << "Enter First Name:\n";
+		cin >> Info.FirstName;
+		cout << "Enter Last Name:\n";
+		cin >> Info.LastName;
+		cout << "Enter Your Salary:\n";
+		cin >> Info.Salary;
+		vInformation.push_back(Info);
+		cout << "Do You Want to Play Again:Y/N? ";
+		cin >> EnterEmployee;
+
+	}
+}
+void PrintResult(vector <stInfo> &vInformation)
+{
+	cout << "\nEmployees Vector: \n\n";
+	for (stInfo& Info : vInformation)
+	{
+		cout << "First Name: " << Info.FirstName << endl;
+		cout << "Last Name: " << Info.LastName << endl;
+		cout << "Salary: " << Info.Salary << endl;
+		cout << endl;
+	}
+	cout << endl;
+}
+int main()
+{
+	vector <stInfo> vInformation;
+	ReadResult(vInformation);
+	PrintResult(vInformation);
+	return 0;
+}

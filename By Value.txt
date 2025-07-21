@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+//Call By Value:
+void Set(int a)
+{
+	a = 0;
+	cout << "Int Set " << a << endl;//0
+}
+int main()
+{
+	int a = 10;
+	cout << "Before set " << a << endl;//10
+	Set(a);//0
+	cout << "After Set " << a << endl;//10
+	return 0;
+}

@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main ()
+{
+   string s1;
+   string s2;
+   string s3;
+   cout << "please enter string1: ";
+   getline(cin,s1);
+   cout << "please enter string2: ";
+   cin >> s2;
+   cout << "please enter string3: ";
+   cin >> s3;
+
+   string s4 = s2+s3;
+   int sum = stoi(s2)*stoi(s3);
+
+   cout << "****************************************""\n";
+   cout << "The length of string1 is: " << s1.length() << endl;
+   cout << s1[0] << "." << s1[2] << "." << s1[4] << "." << s1[7] << endl;
+   cout << s4 << endl;
+   cout << sum << endl;
+   cout << "****************************************""\n";
+
+
+
+   return 0;
+}

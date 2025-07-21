@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int ReadNumber()
+{
+	int N;
+	cout << "Please Enter Your Number: " << endl;
+	cin >> N;
+	return N;
+}
+int NumberFrom1To10(int N)
+{
+	int sum = 0;
+	for (int i = 1; i <= N; i++)
+	{
+		if (i % 2 == 0)
+		{
+			cout << i << endl;
+			sum += i;
+		}
+	}
+	cout << "\n Your Sum is: " << sum << endl;
+	return N;
+}
+void PrintResult(int Num)
+{
+	cout << "\n Your Number is: " << Num << endl;
+}
+int main()
+{
+	PrintResult(NumberFrom1To10(ReadNumber()));
+	return 0;
+}

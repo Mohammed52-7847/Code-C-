@@ -1,0 +1,15 @@
+#include <vector>
+#include <string>
+#include <iostream>
+using namespace std;
+int main()
+{
+	vector<int>vnum{1, 2, 3, 4, 5};
+	vector<int>::iterator iter;
+	for (iter = vnum.end()-1; iter >= vnum.begin(); iter--)
+	{
+		cout << *iter << "   ";
+	}
+
+	system("pause>0");
+}

@@ -1,0 +1,57 @@
+#include <iostream>
+#include <string>
+#include <iomanip>
+#include <cstdio>
+using namespace std;
+int RandomNumber(int From, int To)
+{
+	int randNum = rand() % (To - From + 1) + From;
+	return randNum;
+}
+void FillArray(int arr[100], int& Length)
+{
+	cout << "Enter Your Element Number:\n";
+	cin >> Length;
+	for (int i = 0; i < Length; i++)
+	{
+		arr[i] = RandomNumber(1, 100);
+	}
+}
+void FillArray2(int arr2[100], int Length)
+{
+	for (int j = 0; j < Length; j++)
+	{
+		arr2[j] = RandomNumber(1, 100);
+	}
+}
+void SumArray(int arr[100], int arr2[100],int arr3[100], int Length)
+{
+	for (int f = 0; f < Length; f++)
+	{
+		arr3[f] = arr[f] + arr2[f];
+	}
+}
+void PrintArray(int arr[100], int Length)
+{
+	for (int y = 0; y < Length; y++)
+	{
+		cout << setw(3) << arr[y] << "    ";
+	}
+	cout << endl;
+}
+int main()
+{
+	srand((unsigned)time(NULL));
+	int arr[100], arr2[100], arr3[100], Length;
+	FillArray(arr, Length);
+	cout << "\nArray 1:\n";
+	PrintArray(arr, Length);
+	FillArray2(arr2, Length);
+	cout << "\nArray 2:\n";
+	PrintArray(arr2, Length);
+	SumArray(arr, arr2, arr3, Length);
+	cout << "\nArray 3:\n";
+	PrintArray(arr3, Length);
+
+	system("pause>0");
+}

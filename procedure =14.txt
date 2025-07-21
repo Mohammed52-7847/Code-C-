@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+void MyPrintProcedure()
+{
+	int x;
+	int y;
+	int z;
+	
+
+	cout << "please enter your number1: ";
+	cin >> x;
+	cout << "please enter your number2: ";
+	cin >> y;
+	cout << x << " " << y << endl;
+	z = x;
+	x = y;
+	y = z;
+	cout << x << " " << y << endl;
+	
+
+}
+int main()
+{
+
+	
+
+	MyPrintProcedure();
+
+
+
+	return 0;
+}

@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+enum enPrimeAndNotPrime{Prime = 1,NotPrime = 2};
+int ReadNumber()
+{
+	int Number = 0;
+	cout << "Please Enter Your Number:\n";
+	cin >> Number;
+	return Number;
+}
+enPrimeAndNotPrime CheckPrime(int Number)
+{
+	int M = round(Number / 2);
+	for (int Counter = 2; Counter <= M; Counter++)
+	{
+		if (Number % Counter == 0)
+		{
+			return enPrimeAndNotPrime::NotPrime;
+		}
+	}
+	return enPrimeAndNotPrime::Prime;
+}
+void PrintPrimeAndNotPrime(int Number)
+{
+	if (CheckPrime(Number) == enPrimeAndNotPrime::Prime)
+	{
+		cout << "Prime\n";
+	}
+	else
+	{
+		cout << "NotPrime\n";
+	}
+}
+int main()
+{
+	PrintPrimeAndNotPrime(ReadNumber());
+	return 0;
+}

@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+int ReadPIN()
+{
+	int PIN = 0;
+	cout << "Please Enter Your PIN ? ";
+	cin >> PIN;
+	return PIN;
+}
+bool CheckResult()
+{
+	int PIN = 0;
+	int i = 3;
+	do
+	{
+		int PIN = ReadPIN();
+		i--;
+		if (PIN == 1234)
+		{
+			
+			return 1;
+		}
+		else
+		{
+			system("Color 4F");
+			cout << "\nWrong PIN (" << i << ")\n";
+		}
+	} while (i >= 1 && PIN != 1234);
+	return 0;
+}
+int main()
+{
+	
+	
+	if (CheckResult())
+	{
+		system("Color 2F");
+		cout << "\nYour account Balance is " << 7500 << endl;
+	}
+	else
+	{
+		cout << "\nYour Card Locked.\n";
+	}
+	system("pause>0");
+	return 0;
+}

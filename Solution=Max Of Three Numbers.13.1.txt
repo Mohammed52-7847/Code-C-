@@ -1,0 +1,51 @@
+#include <iostream>
+#include <string>
+using namespace std;
+struct strInfo
+{
+	int A, B, C;
+};
+strInfo ReadNumber()
+{
+	strInfo Info;
+	cout << "Enter A? ";
+	cin >> Info.A;
+	cout << "\nEnter B? ";
+	cin >> Info.B;
+	cout << "\nEnter C? ";
+	cin >> Info.C;
+	return Info;
+}
+int CheckNumber(strInfo Info)
+{
+	if (Info.A > Info.B)
+	{
+		if (Info.A > Info.C)
+		{
+			return Info.A;
+		}
+		else
+		{
+			return Info.C;
+		}
+	}
+	else if (Info.B > Info.C)
+	{
+		return Info.B;
+	}
+	else
+	{
+		return Info.C;
+	}
+	
+}
+void PrintNumber(strInfo Info)
+{
+	cout << "\nThe Number is: " << CheckNumber(Info) << endl;
+}
+int main()
+{
+	PrintNumber(ReadNumber());
+	system("pause>0");
+	return 0;
+}

@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main ()
+{
+    short int num;
+	short int M;
+	cout << "please enter your number= ";
+	cin >> num;
+	cout << "please enter your M= ";
+	cin >> M;
+	short int power = round(pow(num, M));
+	cout << "***************************""\n";
+	cout << "the number is= " << power << "." << endl;
+
+
+    return 0;
+}

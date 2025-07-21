@@ -1,0 +1,13 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+	
+	int Num1;
+	string Name = "123.45999";
+	Num1 = stoi(Name);
+	cout << Num1 << endl;
+	return 0;
+}

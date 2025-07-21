@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+enum enweak
+{
+	sunday=1,monday=2,tuesday=3,wednesday=4,thursday=5,friday=6,saturday=7
+};
+
+int main()
+{
+	int day;
+	cout << "please enter your day: ";
+	cin >> day;
+
+	switch (day)
+	{
+	case enweak::sunday:
+		cout << "sunday." << endl;
+		break;
+	case enweak::monday:
+		cout << "monday." << endl;
+		break;
+	case enweak::tuesday:
+		cout << "tuesday." << endl;
+		break;
+	case enweak::wednesday:
+		cout << "wednesday." << endl;
+		break;
+	case enweak::thursday:
+		cout << "thursday." << endl;
+		break;
+	case enweak::friday:
+		cout << "friday." << endl;
+		break;
+	case enweak::saturday:
+		cout << "saturday." << endl;
+		break;
+	default:
+		cout << "wrong day." << endl;
+	}
+
+	return 0;
+}

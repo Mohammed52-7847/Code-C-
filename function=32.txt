@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int Myfunction(int a, int M)
+{
+	return pow(a, M);
+}
+int main()
+{
+	int a;
+	int M;
+	cout << "please enter your number-a: ";
+	cin >> a;
+	cout << "please enter your number-M: ";
+	cin >> M;
+
+	cout << Myfunction(a, M) << endl;
+
+	return 0;
+}

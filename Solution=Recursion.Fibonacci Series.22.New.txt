@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+void PrintFinonacciUsingRecurssion(short Number,short Prev1, short Prev2)
+{
+	short FebNumber = 0;
+	
+	if (Number > 0)
+	{
+		FebNumber = Prev1 + Prev2;
+		Prev2 = Prev1;
+		Prev1 = FebNumber;
+		cout << FebNumber << "   ";
+		PrintFinonacciUsingRecurssion(Number - 1,Prev1, Prev2);
+	}
+}
+int main()
+{
+    PrintFinonacciUsingRecurssion(10,0,1);
+	cout << endl;
+	system("pause>0");
+	return 0;
+}

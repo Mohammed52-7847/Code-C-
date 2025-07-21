@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+const float PI = 3.14;
+float ReadNum()
+{
+	float Num;
+	cout << "Enter Your Number? ";
+	cin >> Num;
+	return Num;
+}
+float CheckNum(float Num)
+{
+	return PI * (pow(Num, 2));
+}
+void PrintArea(float Num)
+{
+	cout << "\nArea = " << CheckNum(Num) << endl;
+}
+int main()
+{
+	PrintArea(ReadNum());
+	system("pause>0");
+	return 0;
+}

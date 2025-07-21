@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	string* p;
+	char* x;
+	p = new string;
+	x = new char;
+
+	*p = "Mohammed Helmi Ahmed Baghdadi.";
+	*x = 'M';
+	cout << *p << endl;
+	cout << *x << endl;
+
+	cout << p << endl;
+	cout << &x << endl;
+	delete p;
+	delete x;
+	cout << "New And Delete\n";
+	int* ptrx;
+	float* ptry;
+
+	ptrx = new int;
+	ptry = new float;
+
+	*ptrx = 95;
+	*ptry = 12.56;
+
+	cout << *ptrx << endl;
+	cout << *ptry << endl;
+
+	cout << ptrx << endl;
+	cout << ptry << endl;
+
+	delete ptrx;
+	delete ptry;
+
+	return 0;
+}

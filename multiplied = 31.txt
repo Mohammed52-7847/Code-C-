@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    int a;
+    cout << "Please Enter Your Number-A= ";
+    cin >> a;
+    int multi_1 = a * a;
+    int multi_2 = a * a * a;
+    int multi_3 = a * a * a * a;
+    cout << "*******************************""\n";
+    cout << "The Number-1= " << multi_1 << "." << endl;
+    cout << "The Number-1= " << multi_2 << "." << endl;
+    cout << "The Number-1= " << multi_3 << "." << endl;
+
+    return 0;
+}

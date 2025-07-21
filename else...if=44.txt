@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int Day;
+	cout << "please enter your day: ";
+	cin >> Day;
+	
+	if (Day == 1)
+	{
+		cout << "It is SunDay." << endl;
+	}
+	else if (Day == 2)
+	{
+		cout << "It is MonDay." << endl;
+	}
+	else if (Day == 3)
+	{
+		cout << "It is TuseDay." << endl;
+	}
+	else if (Day == 4)
+	{
+		cout << "It is WednesDay." << endl;
+	}
+	else if (Day == 5)
+	{
+		cout << "It is ThursDay." << endl;
+	}
+	else if (Day == 6)
+	{
+		cout << "It is FridDay." << endl;
+	}
+	else if (Day == 7)
+	{
+		cout << "It is SaturDay." << endl;
+	}
+	else
+	{
+		cout << "Wrong Day." << endl;
+	}
+
+	return 0;
+}

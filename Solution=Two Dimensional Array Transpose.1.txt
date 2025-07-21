@@ -1,0 +1,50 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+void FillTwoDimensionalArray(int arr[3][3], short Rows, short Cols)
+{
+	int Count = 0;
+	for (short i = 0; i < Rows; i++)
+	{
+		for (short j = 0; j < Cols; j++)
+		{
+			Count++;
+			arr[i][j] = Count;
+		}
+	}
+}
+void Print(int arr[3][3], short Rows, short Cols)
+{
+	for (short i = 0; i < Rows; i++)
+	{
+		for (short j = 0; j < Cols; j++)
+		{
+			cout << setw(3) << arr[i][j] << "   ";
+		}
+		cout << endl;
+	}
+}
+void CopyPrintMatrix(int SourceArray[3][3], int Destination[3][3], short Rows, short Cols)
+{
+	for (short i = 0; i < Rows; i++)
+	{
+		for (short j = 0; j < Cols; j++)
+		{
+			Destination[i][j] = SourceArray[j][i];
+		}
+	}
+}
+
+
+int main()
+{
+	int arr[3][3];
+	FillTwoDimensionalArray(arr, 3, 3);
+	int arr2[3][3];
+	CopyPrintMatrix(arr, arr2, 3, 3);
+	cout << "\nArray 1:\n";
+	Print(arr, 3, 3);
+	cout << "\nArray 2:\n";
+	Print(arr2, 3, 3);
+	system("pause>0");
+}

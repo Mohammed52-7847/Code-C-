@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+void ReadNumber()
+{
+	int Number = 0;
+	cout << "Please Enter Your Number:\n";
+	cin >> Number;
+	while (Number != 1234)
+	{
+		cout << "Wrong PIN,5151\n";
+		system("Color 4F");
+		cout << "\a";
+		cin >> Number;
+	}
+	cout << "Balance is,7500" << endl;
+	system("Color 2F");
+	
+}
+int main()
+{
+    ReadNumber();
+	return 0;
+}

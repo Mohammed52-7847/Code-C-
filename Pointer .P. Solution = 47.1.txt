@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+void ReadNumber(int* LoanAmount, int* MonthlyInstallment)
+{
+	cout << "Please Enter Your LoanAmount:\n";
+	cin >> *LoanAmount;
+	cout << "Please Enter Your MonthlyInstallment:\n";
+	cin >> *MonthlyInstallment;
+}
+int CheckNumber(int* LoanAmount, int* MonthlyInstallment)
+{
+	int TotalMonths = 0;
+	TotalMonths = *LoanAmount / *MonthlyInstallment;
+	return TotalMonths;
+}
+void PrintNumber(int&A,int&B)
+{
+	
+	ReadNumber(&A, &B);
+	cout << "Total Months: " << CheckNumber(&A, &B) << " Months." << endl;
+}
+int main()
+{
+	int A, B;
+	PrintNumber(A,B);
+	return 0;
+}

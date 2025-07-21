@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    int bill_value;
+    cout << "please enter your Bill value= ";
+    cin >> bill_value;
+    float total_bill = bill_value * 1.1 * 1.16;
+    cout << "**********************************""\n";
+    cout << "TOTAL BILL:" << total_bill << "." << endl;
+
+return 0;
+}

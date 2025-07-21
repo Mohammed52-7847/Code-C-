@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+using namespace std;
+float ReadNumbers()
+{
+	float L;
+	cout << "Please Enter Along A: " << endl;
+	cin >> L;
+	return L;
+}
+float CircleAreaAlongTheCircumference(float L)
+{
+	const float PI = 3.141592653589793238;
+	float Area = (pow(L, 2)) / (4 * PI);
+	return Area;
+}
+void PrintResultCircumference(float Area)
+{
+	cout << "\n Circle Area A Long: " << Area << "." << endl;
+}
+int main()
+{
+	PrintResultCircumference(CircleAreaAlongTheCircumference(ReadNumbers()));
+	return 0;
+}

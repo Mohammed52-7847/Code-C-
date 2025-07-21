@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+float ReadNumber()
+{
+	float Number;
+	cout << "Please Enter Your Number:\n";
+	cin >> Number;
+	return Number;
+}
+float GetFractionNumber(float Number)
+{
+	return Number - int(Number);
+}
+int PrintFloorNumber(float Number)
+{
+	int InPart;
+	InPart = int(Number);
+	float Fraction = GetFractionNumber(Number);
+	if (abs(Fraction) >= 0.5)
+	{
+		if (Number > 0)
+		{
+			return InPart;
+		}
+		else
+		{
+			return --InPart;
+		}
+	}
+	else
+	{
+		return InPart;
+	}
+}
+int main()
+{
+	float Number = ReadNumber();
+	cout << "\nMy Floor Result: " << PrintFloorNumber(Number) << endl;
+	cout << "\nC++ Floor Result: " << floor(Number) << endl;
+	return 0;
+}

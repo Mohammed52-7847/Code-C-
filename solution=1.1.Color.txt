@@ -1,0 +1,42 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+#include <cstdlib>
+using namespace std;
+string Tabs(short NumberOfTabs)
+{
+	string t = "";
+	for (int i = 1; i <= NumberOfTabs; i++)
+	{
+		t = t + "\t";
+		cout << t;
+	}
+	return t;
+}
+string ReadName()
+{
+	string Name;
+	cout << Tabs(2) << "Please Enter Your Name: " << endl;
+	cout << Tabs(2);
+	getline(cin, Name);
+	return Name;
+}
+void PrintName(string Name)
+{
+	cout << Tabs(2) << "Your Name is: [" << Name << "]" << endl;
+	if (Name == "Mohammed")
+	{
+		system("Color 1F");
+	}
+	else
+	{
+		system("Color 4F");
+		cout << "\a";
+	}
+	
+}
+int main()
+{
+	PrintName(ReadName());
+	return 0;
+}

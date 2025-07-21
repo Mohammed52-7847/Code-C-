@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    int penny;
+    int nickel;
+    int dime;
+    int quarter;
+    int dollar;
+    cout << "Please Enter Your Penny= ";
+    cin >> penny;
+    cout << "Please Enter Your Nickel= ";
+    cin >> nickel;
+    cout << "Please Enter Your Dime= ";
+    cin >> dime;
+    cout << "Please Enter Your Quarter= ";
+    cin >> quarter;
+    cout << "Please Enter Your Dollar= ";
+    cin >> dollar;
+    const int koko = 5;
+    int total_pennies = penny * koko + nickel * koko + dime * koko + quarter * koko + dollar * koko;
+    float total_dollars = total_pennies / 100;
+    cout << "******************************************""\n";
+    cout << "TOTAL PENNIES= " << total_pennies << "." << endl;
+    cout << "TOTAL DOLLARS= " << total_dollars << "." << endl;
+    cout << "******************************************""\n";
+
+    return 0;
+}

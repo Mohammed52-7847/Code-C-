@@ -1,0 +1,113 @@
+#include <iostream>
+#include <string>
+using namespace std;
+enum encolor
+{
+	red,blue,green,yellow,white
+};
+enum enstate
+{
+	single,married
+};
+enum entype
+{
+	male,female
+};
+struct strdate
+{
+	string birth;
+	string phone;
+	string email;
+};
+struct strcar
+{
+	float numbercar;
+	float model;
+	string namecar;
+	strdate date;
+};
+struct strinformation
+{
+	strcar car;
+	string name;
+	int age;
+	string city;
+	string country;
+	float monthlysalary;
+	float yearlysalary;
+	char gender;
+	bool married;
+	encolor color = encolor::red;
+	enstate state = enstate::single;
+	entype type = entype::male;
+};
+void ReadProcedure1(strinformation& card)
+{
+	cout << "please enter your name: ";
+	cin.ignore(1);
+	getline(cin, card.name);
+	cout << "please enter your age: ";
+	cin >> card.age;
+	cout << "please enter your city: ";
+	cin >> card.city;
+	cout << "please enter your country: ";
+	cin >> card.country;
+	cout << "please enter your monthlysalary: ";
+	cin >> card.monthlysalary;
+	cout << "please enter your gender: ";
+	cin >> card.gender;
+	cout << "please enter your married: ";
+	cin >> card.married;
+	cout << "please enter your numbercar: ";
+	cin >> card.car.numbercar;
+	cout << "please enter your model: ";
+	cin >> card.car.model;
+	cout << "please enter your namecar: ";
+	cin >> card.car.namecar;
+	cout << "please enter your birth: ";
+	cin >> card.car.date.birth;
+	cout << "please enter your phone: ";
+	cin >> card.car.date.phone;
+	cout << "please enter your email:";
+	cin >> card.car.date.email;
+}
+void PrintProcedure1(strinformation card)
+{
+	cout << "\n***********************************\n";
+	cout << "Name: " << card.name << "." << endl;
+	cout << "Age: " << card.age << "." << endl;
+	cout << "City: " << card.city << "." << endl;
+	cout << "Country: " << card.country << "." << endl;
+	cout << "MonthlySalary: " << card.monthlysalary << "." << endl;
+	cout << "YearlySalary: " << card.monthlysalary * 12 << "." << endl;
+	cout << "Gender: " << card.gender << "." << endl;
+	cout << "Married: " << card.married << "." << endl;
+	cout << "Namecar: " << card.car.namecar << "." << endl;
+	cout << "Model: " << card.car.model << "." << endl;
+	cout << "NumberCar: " << card.car.numbercar << "." << endl;
+	cout << "Birth: " << card.car.date.birth << "." << endl;
+	cout << "Phone: " << card.car.date.phone << "." << endl;
+	cout << "E-Mail: " << card.car.date.email << "." << endl;
+	cout << "Color: " << card.color << "." << endl;
+	cout << "State: " << card.state << "." << endl;
+	cout << "Type: " << card.type << "." << endl;
+	cout << "\n***********************************\n";
+}
+void Readprocedure(strinformation person[2])
+{
+	ReadProcedure1(person[0]);
+	ReadProcedure1(person[1]);
+}
+void printprocedure(strinformation person[2])
+{
+	PrintProcedure1(person[0]);
+	PrintProcedure1(person[1]);
+}
+int main()
+{
+	strinformation person[2];
+	Readprocedure(person);
+	printprocedure(person);
+
+	return 0;
+}

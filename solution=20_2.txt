@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+char RandomNumber1(int From, int To)
+{
+	int randNum = rand() % (To - From + 1) + From;
+	return randNum;
+}
+char RandomNumber2(int From, int To)
+{
+	int randNum = rand() % (To - From + 1) + From;
+	return randNum;
+}
+char RandomNumber3(int From, int To)
+{
+	int randNum = rand() % (To - From + 1) + From;
+	return randNum;
+}
+int RandomNumber4(int From, int To)
+{
+	int randNum = rand() % (To - From + 1) + From;
+	return randNum;
+}
+int main()
+{
+	srand((unsigned)time(NULL));
+	cout << RandomNumber1(97, 122) << endl;
+	cout << RandomNumber2(65, 90) << endl;
+	cout << RandomNumber3(33, 47) << endl;
+	cout << RandomNumber4(1, 10) << endl;
+	
+	return 0;
+}

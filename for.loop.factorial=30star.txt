@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int N;
+	int C = 1;
+	int F = 1;
+	cout << "Please Enter Your Number: ";
+	cin >> N;
+	for (int C = 1; C <= N; C++)
+	{
+		F = F * C;
+	}
+	cout << "FACTORIAL is= " << F << "." << endl;
+
+	return 0;
+}

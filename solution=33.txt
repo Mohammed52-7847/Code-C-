@@ -1,0 +1,46 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+int ReadPositiveNumber(string Message)
+{
+	int Grade;
+	do
+	{
+		cout << "Please Enter Your Grade: " << endl;
+		cin >> Grade;
+	} while (Grade < 0);
+	return Grade;
+}
+void PrintGrade(int Grade)
+{
+	if (Grade >= 90)
+	{
+		cout << "A" << endl;
+	}
+	else if (Grade >= 80)
+	{
+		cout << "B" << endl;
+	}
+	else if (Grade >= 70)
+	{
+		cout << "C" << endl;
+	}
+	else if (Grade >= 60)
+	{
+		cout << "D" << endl;
+	}
+	else if (Grade >= 50)
+	{
+		cout << "E" << endl;
+	}
+	else
+	{
+		cout << "F" << endl;
+	}
+}
+int main()
+{
+	PrintGrade(ReadPositiveNumber("Message."));
+	return 0;
+}

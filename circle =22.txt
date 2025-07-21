@@ -1,0 +1,20 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main ()
+{
+    short int a;
+	short int b;
+	const float pi = 3.14;
+	cout << "please enter your number-A= ";
+	cin >> a;
+	cout << "please enter your number-B ";
+	cin >> b;
+    float area = floor(pi * pow(b, 2) / 4 * ((2 * a )- b) / ((2 * a) + b));
+	cout << "circle area= " << area << "." << endl;
+
+
+
+    return 0;
+}

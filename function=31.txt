@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int Myfunction(int a)
+{
+	return pow(a,2);
+}
+int MyFunction(int a)
+{
+	return pow(a, 3);
+}
+int MYfunction(int a)
+{
+	return pow(a, 4);
+}
+
+int main()
+{
+	int a;
+	cout << "Please Enter Your Number: ";
+	cin >> a;
+
+	cout << Myfunction(a) << endl;
+	cout << MyFunction(a) << endl;
+	cout << MYfunction(a) << endl;
+
+	/*cout << pow(Myfunction(a),2) << endl;
+	cout << pow(Myfunction(a),3) << endl;
+	cout << pow(Myfunction(a),4) << endl;*/
+
+	return 0;
+}

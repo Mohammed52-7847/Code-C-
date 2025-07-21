@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+using namespace std;
+struct strNum
+{
+	int x[4];
+};
+strNum ReadNumber()
+{
+	strNum Num;
+	cout << "Number_1: " << endl;
+	cin >> Num.x[0];
+	cout << "Number_2: " << endl;
+	cin >> Num.x[1];
+	cout << "Number_3: " << endl;
+	cin >> Num.x[2];
+	cout << "Number_4: " << endl;
+	cin >> Num.x[3];
+	return Num;
+}
+void PrintArray(strNum Num)
+{
+	cout << "\n";
+	cout << Num.x[3] << endl;
+	cout << Num.x[2] << endl;
+	cout << Num.x[1] << endl;
+	cout << Num.x[0] << "\n";
+}
+int main()
+{
+	PrintArray(ReadNumber());
+	return 0;
+}

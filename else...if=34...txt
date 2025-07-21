@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	float TotalSales;
+	cout << "please enter your TotalSales: ";
+	cin >> TotalSales;
+
+	if (TotalSales >= 1000000)
+	{
+		cout << TotalSales * 0.01 << "." << endl;
+	}
+	else if (TotalSales >= 500000)
+	{
+		cout << TotalSales * 0.02 << "." << endl;
+	}
+	else if (TotalSales >= 100000)
+	{
+		cout << TotalSales * 0.03 << "." << endl;
+	}
+	else if (TotalSales >= 50000)
+	{
+		cout << TotalSales * 0.05 << "." << endl;
+	}
+	else
+	{
+		cout << TotalSales * 0 << "." << endl;
+	}
+	return 0;
+}

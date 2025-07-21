@@ -1,0 +1,46 @@
+﻿#include <vector>
+#include <iostream>
+using namespace std;
+struct stInfo
+{
+	string FirstName;
+	string LastName;
+	float Salary;
+};
+int main()
+{
+	vector <stInfo> vInformation;
+	stInfo Info;
+	Info.FirstName = "Mohammed";
+	Info.LastName = "Helmi";
+	Info.Salary = 5000;
+	vInformation.push_back(Info);
+	vInformation.push_back(Info);
+	vInformation.push_back(Info);
+	vInformation.push_back(Info);
+	vInformation.push_back(Info);
+	vInformation.push_back(Info); //هنا قومت انا بعمل تكرار 6 مرات
+
+	Info.FirstName = "Reham";
+	Info.LastName = "Ali";
+	Info.Salary = 1000;
+	vInformation.push_back(Info);
+
+	Info.FirstName = "Ibrahem";
+	Info.LastName = "Zaki";
+	Info.Salary = 300 * 50;
+	//vInformation.push_back(Info);  /كدة انا مسحتة ممكن ارجعوا تاني عادي
+
+	cout << "The Vector Number is:\n\n";
+
+	for (stInfo &Memo : vInformation)
+	{
+		cout << "First Name: " << Memo.FirstName << endl;
+		cout << "Last Name: " << Memo.LastName << endl;
+		cout << "Salary: " << Memo.Salary << endl;
+		cout << endl;
+	}
+	cout << endl;
+
+	return 0;
+}

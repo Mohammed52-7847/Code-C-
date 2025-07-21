@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+int ReasPositiveNumber(string Message)
+{
+	int Number = 0;
+	do
+	{
+		cout << Message << endl;
+		cin >> Number;
+	} while (Number <= 0);
+	return Number;
+}
+void Swap(int& A, int& B)
+{
+	int Temp;
+	Temp = A;
+	A = B;
+	B = Temp;
+}
+void FillArrayWith1toN(int arr[100], int arrlength)
+{
+	for (int i = 0; i < arrlength; i++)
+	{
+		arr[i] = i + 1;
+	}
+}
+int RandomNumber(int From, int To)
+{
+	int randNum = rand() % (To - From + 1) + From;
+	return randNum;
+}
+void SuffleArray(int arr[100], int arrlength)
+{
+	for (int i = 0; i < arrlength; i++)
+	{
+		Swap(arr[RandomNumber(1, arrlength) - 1], arr[RandomNumber(1, arrlength)-1]);
+	}
+}
+void PrintArray(int arr[100], int arrlength)
+{
+	for (int i = 0; i < arrlength; i++)
+		cout << arr[i] << " ";
+	cout << "\n";
+}
+int main()
+{
+	srand((unsigned)time(NULL));
+	int arr[100];
+	int arrlength = ReasPositiveNumber("\nEnter Number Of Elements:\n");
+	FillArrayWith1toN(arr, arrlength);
+	cout << "\nArray Elements Before Shuffle:\n";
+	PrintArray(arr, arrlength);
+	SuffleArray(arr, arrlength);
+	cout << "\nArray Elements After Shuffle:\n";
+	PrintArray(arr, arrlength);
+
+	return 0;
+}

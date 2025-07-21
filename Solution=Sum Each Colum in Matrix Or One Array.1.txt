@@ -1,0 +1,72 @@
+#include <iostream>
+#include <string>
+#include <iomanip>
+using namespace std;
+int RandomNumber(int From, int To)
+{
+	int randNum = rand() % (To - From + 1) + From;
+	return randNum;
+}
+void FillTwoDimensionalArray(int arr[3][3], short Rows, short Cols)
+{
+	for (short i = 0; i < Rows; i++)
+	{
+		for (short j = 0; j < Cols; j++)
+		{
+			arr[i][j] = RandomNumber(1, 100);
+		}
+	}
+}
+void PrintMatrix(int arr[3][3], short Rows, short Cols)
+{
+	for (short i = 0; i < Rows; i++)
+	{
+		for (short j = 0; j < Cols; j++)
+		{
+			cout << setw(3) << arr[i][j] << "    ";
+		}
+		cout << endl;
+	}
+}
+int SumColum(int arr[3][3], short Rows, short ColumNumber)
+{
+	int Sum = 0;
+	for (short i = 0; i < Rows; i++)
+	{
+		Sum += arr[i][ColumNumber];
+	}
+	return Sum;
+}
+void OneArray(int arr[3][3], int SumArray[3], short Rows, short Cols)
+{
+	for (int j = 0; j < Cols; j++)
+	{
+		SumArray[j] = SumColum(arr, Rows, j);
+	}
+}
+void PrintOneArray(int SumArray[3], short Cols)
+{
+	for (int j = 0; j < Cols; j++)
+	{
+		cout << "The Colum " << j + 1 << " Sum = " << SumArray[j] << endl;
+	}
+}
+//void PrintSumColum(int arr[3][3], short Rows, short Cols)
+//{
+//	for (short j = 0; j < Cols; j++)
+//	{
+//		cout << "The Colum " << j + 1 << " Sum = " << SumColum(arr, Rows, j) << endl;
+//	}
+//}
+int main()
+{
+	srand((unsigned)time(NULL));
+	int arr[3][3],SumArray[3];
+	FillTwoDimensionalArray(arr, 3, 3);
+	cout << "The Tow Dimensional Array:\n";
+	PrintMatrix(arr, 3, 3);
+	//PrintSumColum(arr, 3, 3);
+	OneArray(arr, SumArray, 3, 3);
+	PrintOneArray(SumArray, 3);
+	system("pause>0");
+}

@@ -1,0 +1,12 @@
+#include <iostream>
+#include "HeaderOutput.h";
+#include "MyOutput.h";
+using namespace std;
+using namespace HeOut;
+using namespace MyOut;
+
+int main()
+{
+	PrintResult(SumNumbers());
+	return 0;
+}

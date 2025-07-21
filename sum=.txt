@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+	short int a;
+	short int b;
+	short int c;
+	cout << "please enter your number-A= ";
+	cin >> a;
+	cout << "please enter your number-B= ";
+	cin >> b;
+	cout << "please enter your number-C= ";
+	cin >> c;
+	int sum = a + b + c;
+	cout << "the sum is = " << sum << endl;
+
+	return 0;
+}

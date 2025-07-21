@@ -1,0 +1,117 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+
+	enum encolor
+	{
+		red,blue,pink,white,yellow
+	};
+	enum enfavorite
+	{
+		food,fruits,vegetables
+	};
+	enum enmartulestatue
+	{
+		single,married
+	};
+	enum engender
+	{
+		female,male
+	};
+
+	struct sttime
+	{
+		string birth;
+		string phone;
+		string email;
+	};
+	struct stinfo
+	{
+		sttime time;
+		string streetnum;
+		int buildingno;
+		string address;
+
+	};
+	struct stcontact
+	{
+		stinfo information;
+		string name;
+		int age;
+		string city;
+		string country;
+		float monthlysalary;
+		float yearlysalary;
+		encolor color = encolor::pink;
+		enfavorite favorite = enfavorite::vegetables;
+		enmartulestatue martuleststue = enmartulestatue::married;
+		engender gender = engender::male;
+	};
+	int main()
+	{
+		stcontact contact;
+		contact.color;
+		contact.favorite;
+		contact.martuleststue;
+		contact.gender;
+		contact.name;
+		contact.age;
+		contact.city;
+		contact.country;
+		contact.monthlysalary;
+		contact.yearlysalary;
+		contact.information.streetnum;
+		contact.information.buildingno;
+		contact.information.address;
+		contact.information.time.birth;
+		contact.information.time.phone;
+		contact.information.time.email;
+
+		cout << "name: ";
+		cin >> contact.name;
+		cout << "age: ";
+		cin >> contact.age;
+		cout << "city: ";
+		cin >> contact.city;
+		cout << "country: ";
+		cin >> contact.country;
+		cout << "monthlysalary: ";
+		cin >> contact.monthlysalary;
+		cout << "streetnum: ";
+		cin >> contact.information.streetnum;
+		cout << "buildingno: ";
+		cin >> contact.information.buildingno;
+		cout << "address: ";
+		cin >> contact.information.address;
+		cout << "birth: ";
+		cin >> contact.information.time.birth;
+		cout << "phone: ";
+		cin >> contact.information.time.phone;
+		cout << "email: ";
+		cin >> contact.information.time.email;
+
+
+		cout << "********************************************""\n";
+		cout << "Color: " << contact.color << "." << endl;
+		cout << "Favorite: " << contact.favorite << "." << endl;
+		cout << "MartuleStatue: " << contact.martuleststue << "." << endl;
+		cout << "Gender: " << contact.gender << "." << endl;
+		cout << "Name: " << contact.name << "." << endl;
+		cout << "Age: " << contact.age << "." << endl;
+		cout << "City: " << contact.city << "." << endl;
+		cout << "Country: " << contact.country << "." << endl;
+		cout << "MonthlySalary: " << contact.monthlysalary << "." << endl;
+		cout << "YearlySalary: " << contact.monthlysalary * 12 << "." << endl;
+		cout << "StreetNum: " << contact.information.streetnum << "." << endl;
+		cout << "BuildNo: " << contact.information.buildingno << "." << endl;
+		cout << "Address: " << contact.information.address << "." << endl;
+		cout << "Birth: " << contact.information.time.birth << "." << endl;
+		cout << "Phone: " << contact.information.time.phone << "." << endl;
+		cout << "E-Mail: " << contact.information.time.email << "." << endl;
+		cout << "********************************************""\n";
+
+
+		return 0;
+	}

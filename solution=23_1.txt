@@ -1,0 +1,70 @@
+#include <iostream>
+using namespace std;
+int RandomNumber(int From, int To)
+{
+	int randNum = rand() % (To - From + 1) + From;
+	return randNum;
+}
+int ReadPositiveNumber(string Message)
+{
+	int Number = 0;
+	do
+	{
+		cout << Message << endl;
+		cin >> Number;
+	} while (Number < 0);
+	return Number;
+}
+void FillArrayRandomNumbers(int arr[100], int& arrlength)
+{
+	cout << "\nEnter Array Elements:\n";
+	cin >> arrlength;
+	for (int i = 0; i < arrlength; i++)
+	{
+		arr[i] = RandomNumber(1, 100);
+	}
+	cout << endl;
+}
+void PrintArrayNumber(int arr[100], int arrlength)
+{
+	for (int i = 0; i < arrlength; i++)
+	{
+		cout << "Element [" << i+1 << "]: " << arr[i] << "\n";
+	}
+	cout << "\n";
+}
+void PrintArrayNumber2(int arr[100], int arrlength)
+{
+	for (int i = 0; i < arrlength; i++)
+	{
+		cout << arr[i] << " ";
+	}
+	cout << "\n";
+}
+int TimesRepeated(int Number, int arr[100], int arrlength)
+{
+	int Count = 0;
+	for (int i = 0; i < arrlength; i++)
+	{
+		if (Number == arr[i])
+		{
+			Count++;
+		}
+	}
+	return Count;
+}
+int main()
+{
+	srand((unsigned)time(NULL));
+	int arr[100], arrlength,NumberToCheck;
+	FillArrayRandomNumbers(arr, arrlength);
+	cout << "\nArray Elements:\n";
+	PrintArrayNumber(arr, arrlength);
+	NumberToCheck = ReadPositiveNumber("Enter The Number You Want To Check: ");
+	cout << "\nOriginal Array: ";
+	PrintArrayNumber2(arr, arrlength);
+	cout << "\nNumber: " << NumberToCheck;
+	cout << " is repeated " << TimesRepeated(NumberToCheck, arr, arrlength) << " Time(s)." << endl;
+
+	return 0;
+}

@@ -1,0 +1,20 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+float MyFunction(float a, float d)
+{
+	return a * sqrt(pow(d , 2) - pow(a , 2));
+}
+int main()
+{
+	float a, d;
+	cout << "please enter your number-1: ";
+	cin >> a;
+	cout << "please enter your number-2: ";
+	cin >> d;
+
+	cout << MyFunction(a,d) << endl;
+
+	return 0;
+}

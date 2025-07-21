@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+struct strinfo
+{
+	string firstname;
+	string lastname;
+	int age;
+	string phone;
+};
+int main()
+{
+	strinfo person[2];
+	person[0].firstname = "ahmed";
+	person[0].lastname = "baghdadi";
+	person[0].age = 22;
+	person[0].phone = "01283677253";
+
+	person[1].firstname = "mohammed";
+	person[1].lastname = "helmi";
+	person[1].age = 34;
+	person[1].phone = "01019124523";
+
+	cout << person[1].phone << endl;
+	return 0;
+}

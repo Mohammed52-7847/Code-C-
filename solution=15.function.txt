@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int ReadNum(int& a, int& b)
+{
+	cout << "Please Enter Your Number A: " << endl;
+	cin >> a;
+	cout << "Please Enter Your Number B: " << endl;
+	cin >> b;
+	return a, b;
+}
+int CheckNumber(int a,int b)
+{
+	return a * b;
+}
+void PrintRectangle(int Result)
+{
+	cout << "The Result is: " << Result << endl;
+}
+int main()
+{
+	int a, b;
+	ReadNum(a, b);
+	PrintRectangle(CheckNumber(a,b));
+	return 0;
+}

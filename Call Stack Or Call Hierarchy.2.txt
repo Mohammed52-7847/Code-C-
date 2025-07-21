@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+void Function4()
+{
+	cout << "Hi I am Mohammed Helmi Ahmed Baghdadi.\n";
+}
+void Function3()
+{
+	Function4();
+	cout << "\nMy Age is: " << 34 << ".\n";
+}
+void Function2()
+{
+	Function3();
+	cout << "\nAdress: Sidi_Badher.\n";
+}
+void Function1()
+{
+	Function2();
+	cout << "\nGrender: M.\n";
+}
+int main()
+{
+	Function1();
+	cout << "\nGood Bay.\n";
+	return 0;
+}

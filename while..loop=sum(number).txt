@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int n, sum = 0,number;
+	cout << "please enter your number: ";
+	cin >> n;
+	cout << " enter number: \n";
+	while (n > 0)
+	{
+		cin >> number;
+		sum += number;
+		n--;
+	}
+	cout << "SUM: " << sum << endl;
+
+	return 0;
+}

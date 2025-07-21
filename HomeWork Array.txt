@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+using namespace std;
+void ReadNumber(double x[3])
+{
+	cout << "Please Enter Grade 1:\n";
+	cin >> x[0];
+	cout << "Please Enter Grade 2:\n";
+	cin >> x[1];
+	cout << "Please Enter Grade 3:\n";
+	cin >> x[2];
+}
+double CheckAverage(double x[3])
+{
+	return (x[0] + x[1] + x[2]) / 3;
+}
+void PrintResult(double x[3])
+{
+	ReadNumber(x);
+	cout << "************************************\n";
+	cout << "The Average Of Grade is: " << to_string(CheckAverage(x)) << endl;
+}
+int main()
+{
+	double x[3];
+	PrintResult(x);
+	return 0;
+}

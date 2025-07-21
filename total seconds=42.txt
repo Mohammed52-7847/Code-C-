@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    int number_of_days;
+    int number_of_hours;
+    int number_of_minutes;
+    int number_of_seconds;
+    cout << "DAYS: ";
+    cin >> number_of_days;
+    cout << "HOURS: ";
+    cin >> number_of_hours;
+    cout << "MINUTES: ";
+    cin >> number_of_minutes;
+    cout << "SECONDS: ";
+    cin >> number_of_seconds;
+    int d = number_of_days * 24 * 60 * 60;
+    int h = number_of_hours * 60 * 60;
+    int m = number_of_minutes * 60;
+    int s = number_of_seconds;
+    double total_seconds = d + h + m + s;
+    cout << "******************************""\n";
+    cout << "DAYS: " << number_of_days << " , " << "HOURS: " << number_of_hours << " , " << "MINUTES: " << number_of_minutes << " , " << "SECONDS: " << number_of_seconds << "." << endl;
+    cout << "Days: " << d << endl;
+    cout << "Hours: " << h << endl;
+    cout << "Minutes: " << m << endl;
+    cout << "Seconds: " << s << endl;
+    cout << "Total seconds: " << total_seconds << "." << endl;
+
+
+return 0;
+}

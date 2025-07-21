@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+enum encountry
+{
+	Egypt=1,jourdan=2,tunsia=3,moroco=4
+};
+void countryprocedure()
+{
+	cout << "****************************\n";
+	cout << "(1)Egypt= \n";
+	cout << "(2)Jourdan= \n";
+	cout << "(3)Tunsia= \n";
+	cout << "(4)Moroco= \n";
+	cout << "*****************************\n\n";
+	cout << "Your Choise= ";
+}
+int main()
+{
+	countryprocedure();
+
+	int c;
+	encountry country;
+	cin >> c;
+	country = (encountry)c;
+
+	switch (country)
+	{
+	case encountry::Egypt:
+		cout << "This is Egypt." << endl;
+		break;
+	case encountry::jourdan:
+		cout << "This is Jourdan." << endl;
+		break;
+	case encountry::tunsia:
+		cout << "This is Tunsia." << endl;
+		break;
+	case encountry::moroco:
+		cout << "This is Moroco." << endl;
+		break;
+	default:
+		cout << "Other Country." << endl;
+	}
+
+	return 0;
+}

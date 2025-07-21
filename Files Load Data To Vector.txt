@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <vector>
+using namespace std;
+void LoadDataFromFileToVector(string FileName,vector <string>&vNameLetter)
+{
+	fstream MyFile;
+	MyFile.open(FileName, ios::in);
+	if (MyFile.is_open())
+	{
+		string Line;
+		while (getline(MyFile, Line))
+		{
+			vNameLetter.push_back(Line);
+		}
+		MyFile.close();
+	}
+}
+int main()
+{
+	vector <string> vNameLetter;
+	LoadDataFromFileToVector("MyFile.txt", vNameLetter);
+	for (string& Line : vNameLetter)
+	{
+		cout << Line << endl;
+	}
+
+	return 0;
+}

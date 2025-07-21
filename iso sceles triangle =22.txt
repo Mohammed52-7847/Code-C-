@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    int a;
+    int b;
+    cout << "please enter your number-A = ";
+    cin >> a;
+    cout << "please enter your number-B = ";
+    cin >> b;
+    const float pi = 3.14;
+    double multi = (pi * b * b / 4);
+    double divide = (2 * a - b) / (2 * a + b);
+    double iso_sceles_triangle = (pi * b * b / 4) * (2 * a - b) / (2 * a + b);
+    cout << "***************************************""\n";
+    cout << "The Iso_Sceles_Triangle Is = " << iso_sceles_triangle << "." << endl;
+
+    return 0;
+}

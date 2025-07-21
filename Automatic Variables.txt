@@ -1,0 +1,19 @@
+﻿#include <iostream>
+using namespace std;
+
+int main()
+{
+	auto x = 10;
+	auto y = 12.5;
+	auto z = "Mohammed Helmi Ahmed Baghdadi";
+	auto v = 'M';
+	auto p = true;
+	auto j = L'محمد';
+	cout << x << endl;
+	cout << y << endl;
+	cout << z << endl;
+	cout << v << endl;
+	cout << p << endl;
+	cout << j << endl;
+	return 0;
+}

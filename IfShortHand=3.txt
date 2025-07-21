@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+void Read2Number(int& Age, bool& License,bool& Recommandation)
+{
+	cout << "Enter Age Please?\n";
+	cin >> Age;
+	cout << "Enter License Please?\n";
+	cin >> License;
+	cout << "Enter Recommandation Please?\n";
+	cin >> Recommandation;
+}
+void PrintResult(int Age, bool License,bool Recommandation)
+{
+	string Result;
+	Result = (Recommandation) ? "Hired." : (Age > 21 && License) ? "Hired." : "Rejected";;
+	cout << Result << endl;
+}
+int main()
+{
+	int Age;
+	bool License;
+	bool Recommandation;
+	Read2Number(Age, License, Recommandation);
+	PrintResult(Age,License, Recommandation);
+	return 0;
+}

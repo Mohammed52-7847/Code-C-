@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+using namespace std;
+enum enValidAndInvalid{Valid_Age = 1,Invalid_Age = 2};
+int ReadNumber()
+{
+	int Age;
+	cout << "Enter Your Age:\n";
+	cin >> Age;
+	return Age;
+}
+bool CheckAge(int Age)
+{
+	int Result = Age >= 18 && Age <= 45;
+	if (Result)
+	{
+		return true;
+	}
+	return false;
+}
+void PrintResult(int valid)
+{
+	if (valid)
+	{
+		cout << "\nValid.\n";
+	}
+	else
+	{
+		cout << "\nInvalid.\n";
+	}
+}
+int main()
+{
+	PrintResult(CheckAge(ReadNumber()));
+	return 0;
+}

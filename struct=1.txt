@@ -1,0 +1,74 @@
+#include <iostream>
+using namespace std;
+struct contact
+{
+	string birth_day;
+	string phone;
+	string street;
+	string email;
+};
+struct card
+{
+	string name;
+	int age;
+	string city;
+	string country;
+	float monthly_salary;
+	float yearly_salary;
+	char gender;
+	bool married;
+	contact address;
+};
+int main()
+{
+	card information;
+	information.name;
+	information.age;
+	information.city;
+	information.country;
+	information.monthly_salary;
+	information.yearly_salary;
+	information.gender;
+	information.married;
+
+	cout << "Name: ";
+	cin >> information.name;
+	cout << "Age: ";
+	cin >> information.age;
+	cout << "City: ";
+	cin >> information.city;
+	cout << "Country: ";
+	cin >> information.country;
+	cout << "Monthly Salary: ";
+	cin >> information.monthly_salary;
+	cout << "Gender: ";
+	cin >> information.gender;
+	cout << "Married: ";
+	cin >> information.married;
+	cout << "Birth Day: ";
+	cin >> information.address.birth_day;
+	cout << "Phone: ";
+	cin >> information.address.phone;
+	cout << "Street: ";
+	cin >> information.address.street;
+	cout << "E-Mail: ";
+	cin >> information.address.email;
+
+	cout << "*************************************""\n";
+	cout << "Name: " << information.name << "." << endl;
+	cout << "Age: " << information.age << "." << endl;
+	cout << "City: " << information.city << "." << endl;
+	cout << "Country: " << information.country << "." << endl;
+	cout << "Monthly Salary: " << information.monthly_salary << "." << endl;
+	cout << "Yearly Salary: " << information.monthly_salary * 12 << "." << endl;
+	cout << "Gender: " << information.gender << "." << endl;
+	cout << "Married: " << information.married << "." << endl;
+	cout << "Birth-Day: " << information.address.birth_day << "." << endl;
+	cout << "Phone: " << information.address.phone << "." << endl;
+	cout << "Street: " << information.address.street << "." << endl;
+	cout << "E-Mail: " << information.address.email << "." << endl;
+	cout << "*************************************""\n";
+
+
+	return 0;
+}

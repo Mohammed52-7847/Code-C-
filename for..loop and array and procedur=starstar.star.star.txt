@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+struct strperson
+{
+	string firstname;
+	string lastname;
+	int age;
+	string phone;
+};
+void Readprocedure(strperson& person)
+{
+	cout << "please enter your firstname: ";
+	cin >> person.firstname;
+	cout << "please enter your lastname: ";
+	cin >> person.lastname;
+	cout << "please enter your age: ";
+	cin >> person.age;
+	cout << "please enter your phone: ";
+	cin >> person.phone;
+}
+void printprocedure(strperson person)
+{
+	cout << "First Name: " << person.firstname << "." << endl;
+	cout << "Last Name: " << person.lastname << "." << endl;
+	cout << "Age: " << person.age << "." << endl;
+	cout << "Phone: " << person.phone << "." << endl;
+	cout << "\n*************************************************\n";
+}
+void Readprocedure1(strperson info[100],int& Number)
+{
+	cout << "How Many Info: ";
+	cin >> Number;
+	for (int C = 0; C <= Number - 1; C++)
+	{
+		cout << "Please Enter Your Info: " << C + 1 << endl;
+		Readprocedure(info[C]);
+	}
+	
+}
+void printprocedure1(strperson info[100],int Number)
+{
+	for (int C = 0; C <= Number - 1; C++)
+	{
+		cout << "Please Enter Your Info: " << C + 1 << endl;
+		printprocedure(info[C]);
+	}
+}
+int main()
+{
+	strperson info[100];
+	int Number = 1;
+	Readprocedure1(info,Number);
+	printprocedure1(info,Number);
+
+	return 0;
+}

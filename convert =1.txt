@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main ()
+{
+    string st1 = "43.22";
+    int num1 = stoi(st1);
+    cout << num1 << endl;
+
+
+    string st1 = "43.22";
+    float num1 = stof(num1);
+    cout << num1 << endl;
+
+    string st1 = "43.22";
+    double num1 = stod(num1);
+    cout << num1 << endl;
+
+    retirn 0;
+
+
+}

@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+using namespace std;
+struct stMax
+{
+	float Num1;
+	float Num2;
+};
+stMax ReadMax()
+{
+	stMax Max;
+	cout << "Please Enter Your Num1: " << endl;
+	cin >> Max.Num1;
+	cout << "Please Enter Your Num2: " << endl;
+	cin >> Max.Num2;
+	return Max;
+}
+float CheckMax(stMax Max)
+{
+	if (Max.Num1 > Max.Num2)
+		return (float)Max.Num1;
+	else
+		return (float)Max.Num2;
+}
+void PrintMax(stMax Max)
+{
+	cout << "The Max Number is: " << CheckMax(Max) << endl;
+}
+int main()
+{
+	PrintMax(ReadMax());
+	return 0;
+}

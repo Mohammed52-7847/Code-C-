@@ -1,0 +1,64 @@
+#include <iostream>
+using namespace std;
+struct card
+{
+	string name;
+	short int age;
+	string city;
+	string country;
+	float monthly_salary;
+	float yearly_salary;
+	char gender;
+	bool married;
+};
+struct info
+{
+	card personal;
+	string birth;
+	string phone;
+	string street;
+	string email;
+};
+struct user
+{
+	info data;
+	string car;
+	string type_car;
+	string color_car;
+
+};
+int main()
+{
+	user x,y,z;
+	x.data.personal.name = "mohamed helmi ahmed";
+	x.data.personal.age = 34;
+	x.data.personal.city = "alexandria";
+	x.data.personal.country = "egypt";
+	x.data.personal.monthly_salary = 5000;
+	x.data.personal.yearly_salary;
+	x.data.personal.gender = 'M';
+	x.data.personal.married = 1;
+
+	x.data.birth = "5/9/1989";
+	x.data.phone = "01283677253";
+	x.data.street = "18-street almohdin sidi basher";
+	x.data.email = "mohamedahmed22700000000000@gmail.com";
+	
+	y.car = "lada";
+	x.type_car = "2023";
+	y.color_car = "blue";
+
+	cout << "***********************************************""\n";
+	cout << "Name: " << x.data.personal.name << "." << endl;
+	cout << "Age: " << x.data.personal.age << "." << endl;
+	cout << "City: " << x.data.personal.city << "." << endl;
+	cout << "Yearly Salary: " << x.data.personal.monthly_salary * 12 << "." << endl;
+	cout << "Birth: " << x.data.birth << "." << endl;
+	cout << "Phone: " << x.data.phone << "." << endl;
+	cout << "E-Mail: " << x.data.email << "." << endl;
+	cout << "Car: " << y.car << "." << endl;
+	cout << "Color Car: " << y.color_car << "." << endl;
+	cout << "***********************************************""\n";
+
+	return 0;
+}

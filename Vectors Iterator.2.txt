@@ -1,0 +1,16 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int main()
+{
+	vector <string> name{"Mohammed", "Helmi", "Ahmed", "Baghdadi"};
+	vector <string> ::iterator Sem;
+	for (Sem = name.begin(); Sem != name.end(); Sem++)
+	{
+		cout << *Sem << " ";
+		system("Color 1F");
+		cout << "\a";
+	}
+	cout << endl;
+	return 0;
+}

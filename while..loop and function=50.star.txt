@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int Readnumber()
+{
+	int i = 1;
+	int N;
+	cout << "please enter your number: ";
+	cin >> N;
+	while (i <= N)
+	{
+		cout << i << " ";
+		i++;
+	}
+	cout << "\n";
+	return i;
+}
+int main()
+{
+   Readnumber();
+
+	return 0;
+}

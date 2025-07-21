@@ -1,0 +1,40 @@
+#include <iostream>
+#include <string>
+using namespace std;
+enum enOdd{Odd = 1,Even = 2};
+int ReadNumber()
+{
+	int Number = 0;
+	cout << "\nEnter Number? ";
+	cin >> Number;
+	return Number;
+}
+enOdd CheckNumber(int Number)
+{
+	int Result = Number % 2;
+	if (Result == 0)
+	{
+		return enOdd::Even;
+	}
+	else
+	{
+		return enOdd::Odd;
+	}
+}
+void PrintEven(int Number)
+{
+	if (CheckNumber(Number) == enOdd::Even)
+	{
+		cout << "\nEven.";
+	}
+	else
+	{
+		cout << "\nOdd.";
+	}
+}
+int main()
+{
+	PrintEven(ReadNumber());
+	system("pause>0");
+	return 0;
+}

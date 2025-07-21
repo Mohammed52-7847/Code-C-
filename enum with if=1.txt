@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+enum enScreenColor
+{
+	white=1,red=2,green=3,blue=4,yellow=5
+};
+int main()
+{
+	cout << "**************************************\n";
+	cout << "(1)white= \n";
+	cout << "(2)red= \n";
+	cout << "(3)green= \n";
+	cout << "(4)blue= \n";
+	cout << "(5)yellow= \n";
+	cout << "**************************************\n\n";
+	cout << "Your choice color: ";
+
+	int c;
+	enScreenColor color;
+	cin >> c;
+	color = (enScreenColor)c;
+
+	if (color == enScreenColor::white)
+	{
+		system("color 1F");
+	}
+	else if (color == enScreenColor::red)
+	{
+		system("color 2F");
+	}
+	else if (color == enScreenColor::green)
+	{
+		system("color 3F");
+	}
+	else if (color == enScreenColor::blue)
+	{
+		system("color 4F");
+	}
+	else if (color == enScreenColor::yellow)
+	{
+		system("color 5F");
+	}
+	else
+	{
+		system("color 6F");
+	}
+
+	return 0;
+}

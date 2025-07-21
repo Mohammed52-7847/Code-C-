@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int Number = 0;
+	int From = 1,To = 100;
+	do
+	{
+		cout << "Enter Number " << From << " AND " << To << endl;;
+		cin >> Number;
+	} while (Number < From || Number>To);
+	cout << "The Number is True " << Number << endl;
+
+
+	return 0;
+}

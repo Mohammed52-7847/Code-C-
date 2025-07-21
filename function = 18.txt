@@ -1,0 +1,20 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+float Myfunction(int r,const float pi)
+//float Myfunction(int r, const float pi=3.14)
+{
+	return pi * pow(r, 2);
+}
+int main()
+{
+	int r;
+	const float pi = 3.14;
+	cout << "please enter your number? ";
+	cin >> r;
+
+	cout << Myfunction(r, pi) << endl;
+
+	return 0;
+}

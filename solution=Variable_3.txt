@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+struct stInfo
+{
+	int Age;
+	int Num = 5;
+};
+stInfo ReadNumber()
+{
+	stInfo Info;
+	cout << "Enter a Number:\n";
+	cin >> Info.Age;
+	return Info;
+}
+void PrintNumber(stInfo Info)
+{
+	cout << "After " << Info.Num << " Years You Will be " << Info.Age + Info.Num << " Years Old.\n";
+}
+int main()
+{
+	PrintNumber(ReadNumber());
+	return 0;
+}

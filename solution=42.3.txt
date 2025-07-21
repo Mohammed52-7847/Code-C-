@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+struct stInfo
+{
+	int Days;
+	int Hours;
+	int Minutes;
+	int Seconds;
+};
+stInfo ReadDuration()
+{
+	stInfo Info;
+	cout << "Days:\n";
+	cin >> Info.Days;
+	cout << "Hours:\n";
+	cin >> Info.Hours;
+	cout << "Minutes:\n";
+	cin >> Info.Minutes;
+	cout << "Seconds:\n";
+	cin >> Info.Seconds;
+	return Info;
+}
+float CheckDurationNum(stInfo Info)
+{
+	float Duration = 0;
+	Duration = (Info.Days * 24 * 60 * 60) + (Info.Hours * 60 * 60) + (Info.Minutes * 60) + (Info.Seconds);
+	return Duration;
+}
+void PrintTotalSeconds(stInfo Info)
+{
+	cout << "\nTotal Seconds: " << CheckDurationNum(Info) << endl;
+}
+int main()
+{
+	PrintTotalSeconds(ReadDuration());
+	return 0;
+}

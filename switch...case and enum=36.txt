@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+
+enum entype
+{
+	add=1, subtract = 2, multiply = 3, divide = 4
+};
+int main()
+{
+	int number1;
+	int number2;
+	int t;
+	
+	
+
+	cout << "please enter your number1: ";
+	cin >> number1;
+	cout << "please enter your number2: ";
+	cin >> number2;
+	cout << "please enter your type: ";
+	cin >> t;
+
+	
+	entype type;
+	type = (entype)t;
+	
+	
+
+	switch (t)
+	{
+	case entype::add:
+		cout << number1 + number2 << "." << endl;
+		break;
+	case entype::subtract:
+		cout << number1 - number2 << "." << endl;
+		break;
+	case entype::multiply:
+		cout << number1 * number2 << "." << endl;
+		break;
+	case entype::divide:
+		cout << number1 / number2 << "." << endl;
+		break;
+	default:
+		cout << "Other Type." << endl;
+	}
+	return 0;
+}

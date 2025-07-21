@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    short int A;
+	short int B;
+	cout << "please enter your number-A= ";
+	cin >> A;
+	cout << "please enter your number-B= ";
+	cin >> B;
+    A == B;
+	A != B;
+	A > B;
+	A < B;
+	A >= B;
+	A <= B;
+	cout << "******************************""\n";
+	cout << "50=50 is= " << (A==B) << "." << endl;
+	cout << "50!=50 is= " << (A != B) << "." << endl;
+	cout << "50>50 is= " << (A > B) << "." << endl;
+	cout << "50<50 is= " << (A < B) << "." << endl;
+	cout << "50>=50 is= " << (A >= B) << "." << endl;
+	cout << "50<=50 is= " << (A <= B) << "." << endl;
+	cout << "******************************""\n";
+
+
+
+	int A, B;
+	cout << "please enter your number-A= ";
+	cin >> A;
+	cout << "please enter your number-B= ";
+	cin >> B;
+	cout << "******************************""\n";
+	cout << "50=50 is= " << (A == B) << "." << endl;
+	cout << "50!=50 is= " << (A != B) << "." << endl;
+	cout << "50>50 is= " << (A > B) << "." << endl;
+	cout << "50<50 is= " << (A < B) << "." << endl;
+	cout << "50>=50 is= " << (A >= B) << "." << endl;
+	cout << "50<=50 is= " << (A <= B) << "." << endl;
+	cout << "******************************""\n";
+
+    return 0;
+}

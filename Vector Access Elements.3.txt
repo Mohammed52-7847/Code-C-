@@ -1,0 +1,16 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int main()
+{
+	vector <char> num{'A','B','C','D','E'};
+	cout << "\n\nElements Numbers with at:\n";
+	cout << "Element 1: " << num.at(0) << endl;
+	cout << "Element 2: " << num.at(2) << endl;
+	cout << "Element 4: " << num.at(4) << endl;
+	cout << "Elements[]:\n\n";
+	cout << "Element 1: " << num[0] << endl;
+	cout << "Element 2: " << num[2] << endl;
+	cout << "Element 4: " << num[4] << endl;
+	return 0;
+}

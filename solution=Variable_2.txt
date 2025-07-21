@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+void PrintNumber()
+{
+	int Number1 = 20;
+	int Number2 = 30;
+	int Number3 = 10;
+	int Sum = Number1 + Number2 + Number3;
+	cout << "Total:\t" << Sum << "." << endl;
+}
+int main()
+{
+	PrintNumber();
+	return 0;
+}

@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	float grade[3];
+	cout << "please enter grade-1? ";
+	cin >> grade[0];
+	cout << "please enter grade-2? ";
+	cin >> grade[1];
+	cout << "please enter grade-3? ";
+	cin >> grade[2];
+	float average = (grade[0] + grade[1] + grade[2]) / 3;
+	cout << "\n***********************\n";
+	cout << "The average of grades is: " << average << endl;
+
+	return 0;
+
+}

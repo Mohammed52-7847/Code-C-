@@ -1,0 +1,54 @@
+#include <iostream>
+#include <string>
+using namespace std;
+string ReadPassword()
+{
+	string Password = "";
+	cout << "Please Enter Password?\n";
+	cin >> Password;
+	return Password;
+}
+string Columsperator(int Counter)
+{
+	if (Counter < 10)
+	{
+		return "  |";
+	}
+	else
+	{
+		return " |";
+	}
+}
+bool GuessPassword(string OriginalPassword)
+{
+	string word = "";
+	int Counter = 0;
+	for (int i = 65; i <= 90; i++)
+	{
+		for (int j = 65; j <= 90; j++)
+		{
+			for (int l = 65; l <= 90; l++)
+			{
+				word = word + char(i);
+				word = word + char(j);
+				word = word + char(l);
+				Counter++;
+				cout << "Trial [" << Counter << "]: " << Columsperator(Counter) << word << "." << endl;
+				if (word == OriginalPassword)
+				{
+					cout << "Password is " << Columsperator(Counter) << word << "." << endl;
+					cout << "\nFound After " << Counter << " Trial(s)." << endl;
+					return true;
+				}
+				word = "";
+			}
+		}
+	}
+	return false;
+}
+int main()
+{
+	GuessPassword(ReadPassword());
+
+	return 0;
+}

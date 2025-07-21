@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+enum enType{Add = '+', Sub = '-', Multi = '*', Div = '/' };
+struct stInfo
+{
+	int Number1 = 0;
+	int Number2 = 0;
+	char Type;
+};
+stInfo ReadNumber()
+{
+	stInfo Info;
+	cout << "Please Enter Your Number1: " << endl;
+	cin >> Info.Number1;
+	cout << "Plaese Enter Your Number2: " << endl;
+	cin >> Info.Number2;
+	cout << "Please Enter Your Type: " << endl;
+	cin >> Info.Type;
+	return Info;
+}
+float OperationType(stInfo Info)
+{
+	
+	switch (Info.Type)
+	{
+	case '+':
+		return Info.Number1 + Info.Number2;
+	case '-':
+		return Info.Number1 - Info.Number2;
+	case '*':
+		return Info.Number1 * Info.Number2;
+	case '/':
+		return Info.Number1 / Info.Number2;
+	default:
+		return Info.Number1 + Info.Number2;
+	}
+}
+void PrintResult(int Result)
+{
+	cout << "PrintResult: " << Result << endl;
+}
+int main()
+{
+	PrintResult(OperationType(ReadNumber()));
+
+	return 0;
+}

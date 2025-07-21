@@ -1,0 +1,51 @@
+#include <iostream>
+#include <string>
+#include <cstdio>
+#include <iomanip>
+using namespace std;
+void PrintMatrix(int arr[3][3], short Rows, short Cols)
+{
+	for (short i = 0; i < Rows; i++)
+	{
+		for (short j = 0; j < Cols; j++)
+		{
+			cout << setw(3) << arr[i][j] << "    ";
+		}
+		cout << endl;
+	}
+}
+short CountNumber(int arr[3][3], short Number, short Rows, short Cols)
+{
+	short Count = 0;
+	for (short i = 0; i < Rows; i++)
+	{
+		for (short j = 0; j < Cols; j++)
+		{
+			if (arr[i][j] == Number)
+			{
+				Count++;
+			}
+		}
+	}
+	return Count;
+}
+bool SparceMatrix(int arr[3][3], short Rows, short Cols)
+{
+	short x = Rows * Cols;
+	return (CountNumber(arr, 0, 3, 3) >= ceil((float) x/2));
+}
+int main()
+{
+	int arr[3][3] = { {1,7,4},{6,6,2},{0,0,3} };
+	PrintMatrix(arr, 3, 3);
+	if (SparceMatrix(arr, 3, 3))
+	{
+		cout << "\n YES: Sparce Matrix.\n";
+	}
+	else
+	{
+		cout << "\n NO: NOT Sparce Matrix.\n";
+	}
+	system("pause > 0");
+	return 0;
+}

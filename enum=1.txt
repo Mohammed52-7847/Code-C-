@@ -1,0 +1,151 @@
+#include <iostream>
+using namespace std;
+enum encolor
+{
+	white,red,blue,yellow,pink
+};
+enum enfavorite
+{
+	programming,newe_duction,food,play
+};
+enum enfood
+{
+	chicken,fish,meet,cook,saybean
+};
+enum enmatrialstatue
+{
+	married,single
+};
+enum engender
+{
+	female,male
+};
+struct machine
+{
+	string carname;
+	string carmodel;
+	string carnumber;
+};
+struct place
+{
+	int buildingno;
+	string streetname;
+	string address;
+	machine style;
+};
+struct date
+{
+	string birth;
+	string phone;
+	string email;
+	place info;
+};
+struct card
+{
+	string name;
+	int age;
+	string city;
+	string country;
+	float monthlysalary;
+	float yearlysalary;
+	date contact;
+	encolor color;
+	enfavorite favorite;
+	enfood food;
+	enmatrialstatue matrialstatue;
+	engender gender;
+
+};
+int main()
+{
+	card person1;
+	person1.name;
+	person1.age;
+	person1.city;
+	person1.country;
+	person1.monthlysalary;
+	person1.yearlysalary;
+	person1.color;
+	person1.food;
+	person1.favorite;
+	person1.matrialstatue;
+	person1.gender;
+	person1.contact.birth;
+	person1.contact.phone;
+	person1.contact.email;
+	person1.contact.info.streetname;
+	person1.contact.info.address;
+	person1.contact.info.buildingno;
+	person1.contact.info.style.carname;
+	person1.contact.info.style.carmodel;
+	person1.contact.info.style.carnumber;
+
+
+	cout << "name: ";
+	cin >> person1.name;
+	cout << "age: ";
+	cin >> person1.age; 
+	cout << "city: ";
+	cin >> person1.city;
+	cout << "country: ";
+	cin >> person1.country;
+	cout << "monthlysalary: ";
+	cin >> person1.monthlysalary;
+	cout << "birth: ";
+	cin >> person1.contact.birth;
+	cout << "phone: ";
+	cin >> person1.contact.phone;
+	cout << "email: ";
+	cin >> person1.contact.email;
+	cout << "streetname: ";
+	cin >> person1.contact.info.streetname;
+	cout << "address: ";
+	cin >> person1.contact.info.address;
+	cout << "buildingno: ";
+	cin >> person1.contact.info.buildingno;
+	cout << "carname: ";
+	cin >> person1.contact.info.style.carname;
+	cout << "carmodel: ";
+	cin >> person1.contact.info.style.carmodel;
+	cout << "carnumber: ";
+	cin >> person1.contact.info.style.carnumber;
+
+	encolor color;
+	color = encolor::pink;
+	enfavorite favorite;
+	favorite = enfavorite::programming;
+	enfood food;
+	food = enfood::chicken;
+	engender gender;
+	gender = engender::male;
+	enmatrialstatue martailstatue;
+	martailstatue = enmatrialstatue::single;
+
+
+	cout << "***************************************""\n";
+	cout << "Name: " << person1.name << "." << endl;
+	cout << "Age: " << person1.age << "." << endl;
+	cout << "City: " << person1.city << "." << endl;
+	cout << "Country: " << person1.country << "." << endl;
+	cout << "MonthlySalary: " << person1.monthlysalary << "." << endl;
+	cout << "YearlySalary: " << person1.monthlysalary * 12 << "." << endl;
+	cout << "Color: " << color << "." << endl;
+	cout << "Favorite: " << favorite << "." << endl;
+	cout << "Food: " << food << "." << endl;
+	cout << "Gender: " << gender << "." << endl;
+	cout << "Martailstatue: " << martailstatue << "." << endl;
+	cout << "Birth: " << person1.contact.birth << "." << endl;
+	cout << "Phone: " << person1.contact.phone << "." << endl;
+	cout << "E-Mail: " << person1.contact.email << "." << endl;
+	cout << "StreetNam: " << person1.contact.info.streetname << "." << endl;
+	cout << "Address: " << person1.contact.info.address << "." << endl;
+	cout << "BildingNo: " << person1.contact.info.buildingno << "." << endl;
+	cout << "CarName: " << person1.contact.info.style.carname << "." << endl;
+	cout << "CarModel: " << person1.contact.info.style.carmodel << "." << endl;
+	cout << "CarNumber: " << person1.contact.info.style.carnumber << "." << endl;
+	cout << "***************************************""\n";
+
+
+	return 0;
+
+}

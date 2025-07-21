@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+int MyFloor(float Number)
+{
+	int IntPart;
+	IntPart = int(Number);
+	if (IntPart)
+	{
+		if (Number > 0)
+		{
+			return IntPart;
+		}
+		else
+		{
+			return --IntPart;
+		}
+	}
+	
+}
+float ReadNumber()
+{
+	float Number;
+	cout << "Please Enter Your Number? ";
+	cin >> Number;
+	return Number;
+}
+int main()
+{
+	float Number = ReadNumber();
+	cout << "My Floor Result: " << MyFloor(Number) << endl;
+	cout << "C++ floor Result: " << floor(Number) << endl;
+
+	return 0;
+}

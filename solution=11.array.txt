@@ -1,0 +1,41 @@
+#include <iostream>
+#include <string>
+using namespace std;
+void ReadMark(int Mark[3])
+{
+	cout << "Please Enter Your Mark 1: " << endl;
+	cin >> Mark[0];
+	cout << "Please Enter Your Mark 2: " << endl;
+	cin >> Mark[1];
+	cout << "Please Enter Your Mark 3: " << endl;
+	cin >> Mark[2];
+}
+int Sum(int Mark[3])
+{
+	return Mark[0] + Mark[1] + Mark[2];
+}
+float Average(int Mark[3])
+{
+	 return (float)Sum(Mark) / 3;
+}
+
+void PrintAverage(float Average)
+{
+	cout << "average: " << Average << endl;
+}
+void PrintIF(int Mark[3])
+{
+	if (Average(Mark) >= 50)
+		cout << "\n Passed." << endl;
+
+	else
+		cout << "\n Faild." << endl;
+}
+int main()
+{
+	int Mark[3];
+	ReadMark(Mark);
+	PrintAverage(Average(Mark));
+	PrintIF(Mark);
+	return 0;
+}

@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int ReadNumber()
+{
+	int Number;
+	cout << "\nPlease Enter Your Number: ";
+	cin >> Number;
+	return Number;
+}
+int AbsNumber(int Number)
+{
+	cout << "\nMy Abs Result: ";
+	int Abs = ((Number) * (-1));
+	return Abs;
+}
+
+int main()
+{
+	int Number = ReadNumber();
+	cout << AbsNumber(Number) << endl;
+	cout << "\nC++ Abs Result: ";
+	cout << abs(Number) << endl;
+	return 0;
+}

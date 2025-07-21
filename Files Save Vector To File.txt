@@ -1,0 +1,27 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
+using namespace std;
+void SaveFiles(string FileName, vector <string> vSaveFile)
+{
+	fstream MyFile;
+	MyFile.open("MyFile.txt", ios::out);
+	if (MyFile.is_open())
+	{
+		for (string& Line : vSaveFile)
+		{
+			if (Line != "")
+			{
+				MyFile << Line << endl;
+			}
+		}
+		MyFile.close();
+	}
+}
+int main()
+{
+	vector <string> vSaveFile{"Mohammed", "Ali", "Zaki"};
+	SaveFiles("MyFile.txt", vSaveFile);
+	return 0;
+}

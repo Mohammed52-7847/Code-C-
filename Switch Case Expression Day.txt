@@ -1,0 +1,51 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int ReadDayNum()
+{
+	int Day = 0;
+	cout << "Please Enter Your Day: ";
+	cin >> Day;
+	return Day;
+}
+void PrintResult(int Day)
+{
+	switch (Day)
+	{
+	case 1:
+		cout << "Saturday";
+		system("Color 4F");
+		break;
+	case 2:
+		cout << "Sunday";
+		system("Color 1F");
+		break;
+	case 3:
+		cout << "Monday";
+		system("Color 2F");
+		break;
+	case 4:
+		cout << "Tuesday";
+		system("Color 6F");
+		break;
+	case 5:
+		cout << "Wednesday";
+		system("Color 9F");
+		break;
+	case 6:
+		cout << "Thursday";
+		system("Color 3F");
+		break;
+	default:
+		cout << "Friday";
+		system("Color 8F");
+		cout << "\a";
+	}
+}
+
+int main()
+{
+	PrintResult(ReadDayNum());
+	
+	return 0;
+}

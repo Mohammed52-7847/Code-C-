@@ -1,0 +1,40 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	void* ptr;
+	int f = 10;
+	ptr = &f;
+	cout << ptr << endl;
+	cout << *(static_cast <int*>(ptr)) << endl;
+
+
+	float x = 50.6;
+	ptr = &x;
+	cout << ptr << endl;
+	cout << *(static_cast <float*>(ptr)) << endl;
+
+
+	cout << "Void again\n" << endl;
+	void* RT;
+	char J = 'M';
+	RT = &J;
+	cout << RT << endl;
+	cout << *(static_cast <char*>(RT)) << endl;
+
+
+	string K = "Mohammed Helmi Ahmed";
+	RT = &K;
+	cout << RT << endl;
+	cout << *(static_cast <string*> (RT)) << endl;
+
+
+	cout << "Void again\n" << endl;
+	void* N;
+	string H = "Ali Mhammed";
+	N = &H;
+	cout << N << endl;
+	cout << *(static_cast <string*> (N)) << endl;
+	return 0;
+}

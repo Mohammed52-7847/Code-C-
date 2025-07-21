@@ -1,0 +1,50 @@
+#include <iostream>
+#include <string>
+#include <cstdio>
+#include <iomanip>
+using namespace std;
+void PrintMatrix(int arr[3][3], short Rows, short Cols)
+{
+	for (short i = 0; i < Rows; i++)
+	{
+		for (short j = 0; j < Cols; j++)
+		{
+			cout << " " << char(arr[i][j]) << "    ";
+		}
+		cout << "\n";
+	}
+}
+bool ScalarMatrix(int arr[3][3], short Rows, short Cols)
+{
+	short FirstScalar = char(arr[0][0]);
+	for (short i = 0; i < Rows; i++)
+	{
+		for (short j = 0; j < Cols; j++)
+		{
+			if (i == j && char(arr[i][j]) != FirstScalar)
+			{
+				return false;
+			}
+			else if (i != j && char(arr[i][j]) != 48)
+			{
+				return false;
+			}
+		}
+	}
+	return true;
+}
+int main()
+{
+	int arr[3][3] = { {65,48,48},{48,65,48},{48,48,65} };
+	PrintMatrix(arr, 3, 3);
+	if (ScalarMatrix(arr, 3, 3))
+	{
+		cout << "\n YES: is Scalar.\n";
+	}
+	else
+	{
+		cout << "\n NO: is NOT Scalar.\n";
+	}
+	system("pause > 0");
+	return 0;
+}

@@ -1,0 +1,28 @@
+﻿#include <iostream>
+#include <cmath>
+using namespace std;
+
+float MyBigfunction(int a,int b,int c,int p , float pi)
+{
+	return pi * pow((a * b * c) / (4 * sqrt(p * (p - a) * (p - b) * (p - c))), 2);
+}
+
+int main()
+{
+	int a;
+	int b;
+	int c;
+	int p = 9;
+	float pi = 3.14;
+	/*في هذا التمرين انت بتدخل 3 ارقام طب  البي اين رقمة والباي اين رقمة فلابد من ادخال ارقام الثوابت وهذا يختلف عن باقي المسائل*/
+	cout << "number1: ";
+	cin >> a;
+	cout << "number2: ";
+	cin >> b;
+	cout << "number3: ";
+	cin >> c;
+
+	cout << MyBigfunction(a, b, c, p, pi);
+
+	return 0;
+}

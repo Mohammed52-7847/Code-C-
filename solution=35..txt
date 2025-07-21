@@ -1,0 +1,45 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+struct stInfo
+{
+	int Pennies;
+	int Nickels;
+	int Dimes;
+	int Quarters;
+	int Dollars;
+	float TotalPennies;
+	float TotalDollars;
+	float Area;
+};
+stInfo ReadTotal()
+{
+	stInfo Info;
+	cout << "Please Enter a Pennies: " << endl;
+	cin >> Info.Pennies;
+	cout << "Please Enter a Nickels: " << endl;
+	cin >> Info.Nickels;
+	cout << "Please Enter a Dimes: " << endl;
+	cin >> Info.Dimes;
+	cout << "Please Enter a Quarters: " << endl;
+	cin >> Info.Quarters;
+	cout << "Please Enter a Dollars: " << endl;
+	cin >> Info.Dollars;
+	return Info;
+}
+float SumAndDivid(stInfo Info)
+{
+	Info.TotalPennies = (Info.Pennies * 1) + (Info.Nickels * 5) + (Info.Dimes * 10) + (Info.Quarters * 25) + (Info.Dollars * 100);
+	Info.TotalDollars = Info.TotalPennies / 100;
+	return Info.TotalDollars;
+}
+void Print(float Area)
+{
+	cout << "Number: " << Area << endl;
+}
+int main()
+{
+	Print(SumAndDivid(ReadTotal()));
+	return 0;
+}

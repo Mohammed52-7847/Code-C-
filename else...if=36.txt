@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int number1;
+	int number2;
+	string type;
+	cout << "please enter your number1: ";
+	cin >> number1;
+	cout << "please enter your number2: ";
+	cin >> number2;
+	cout << "please enter your type: ";
+	cin >> type;
+	if (type == "+")
+	{
+		cout << number1 + number2 << "." << endl;
+	}
+	else if (type == "-")
+	{
+		cout << number1 - number2 << "." << endl;
+	}
+	else if (type == "*")
+	{
+		cout << number1 * number2 << "." << endl;
+	}
+	else if (type == "/")
+	{
+		cout << number1 / number2 << "." << endl;
+	}
+	else if (type == "%")
+	{
+		cout << number1 % number2 << "." << endl;
+	}
+	else
+	{
+		cout << "Wrong Operation." << endl;
+	}
+
+	return 0;
+}

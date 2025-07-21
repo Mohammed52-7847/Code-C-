@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    bool A = (12 >= 12);
+	bool B = (12 > 7);
+	bool C = (8 < 6);
+	bool D = (8 == 8);
+	bool E = (12 <= 12);
+	bool F = (7 == 5);
+	bool a = !(12 >= 12);
+	bool b = !(12 < 7);
+	bool c = !(8 < 6);
+	bool d = !(8 == 8);
+	bool e = !(12 <= 12);
+	bool f = !(7 == 5);
+	bool g = (1 && 1);
+	bool h = (true && 0);
+	bool i = (0 || 1);
+	bool j = (0 || 0);
+	bool k = (!0);
+	bool l = !(1 || 0);
+	bool m = (7 == 7) && (7 > 5);
+	bool n = (7 == 7) && (7 < 5);
+	bool o = (7 == 7) || (7 < 5);
+	bool p = (7 < 7) || (7 > 5);
+	bool q = !(7 == 7) && (7 > 5);
+	bool r = (7 == 7) && !(7 < 5);
+	cout << "********""\n";
+	cout << "A= " << A << endl;
+	cout << "B= " << B << endl;
+	cout << "C= " << C << endl;
+	cout << "D= " << D << endl;
+	cout << "E= " << E << endl;
+	cout << "F= " << F << endl;
+	cout << "a= " << a << endl;
+	cout << "b= " << b << endl;
+	cout << "c= " << c << endl;
+	cout << "d= " << d << endl;
+	cout << "e= " << e << endl;
+	cout << "f= " << f << endl;
+	cout << "g= " << g << endl;
+	cout << "h= " << h << endl;
+	cout << "i= " << i << endl;
+	cout << "j= " << j << endl;
+	cout << "k= " << k << endl;
+	cout << "l= " << l << endl;
+	cout << "m= " << m << endl;
+	cout << "n= " << n << endl;
+	cout << "o= " << o << endl;
+	cout << "p= " << p << endl;
+	cout << "q= " << q << endl;
+	cout << "********""\n";
+
+    return 0;
+}

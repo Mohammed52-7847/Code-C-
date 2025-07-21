@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	
+	
+	int s = 0;
+	int n;
+	cout << "please enter your number: ";
+	cin >> n;
+	while (n>-99)
+	{
+		//cout << s << endl;
+		cin >> n;
+		s = s + n;
+		cout << "SUM: " << s << " ";
+		//n--;
+	}
+	//cout << "SUM: " << s << " ";
+
+	return 0;
+}

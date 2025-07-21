@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int multi[2];
+	cout << "please enter your number1: ";
+	cin >> multi[0];
+	cout << "please enter your number2: ";
+	cin >> multi[1];
+	int area = multi[0] * multi[1];
+	cout << "\n*****************************\n";
+	cout << "arae: " << area << "." << endl;
+
+	return 0;
+}

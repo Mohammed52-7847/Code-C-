@@ -1,0 +1,77 @@
+#include <iostream>
+#include <string>
+using namespace std;
+enum enPrimeNotPrime{Prime = 1,NotPrime = 2};
+int RandomNumber(int From, int To)
+{
+	int randNum = rand() % (To - From + 1) + From;
+	return randNum;
+}
+int ReadNumber()
+{
+	short Number = 0;
+	cout << "Enter Your Number:\n";
+	cin >> Number;
+	return Number;
+}
+enPrimeNotPrime CheckPrimeNumber(short Number)
+{
+	short M = round(Number / 2);
+	for (short Counter = 2; Counter <= M; Counter++)
+	{
+		if (Number % Counter == 0)
+		{
+			return enPrimeNotPrime::NotPrime;
+		}
+	}
+	return enPrimeNotPrime::Prime;
+}
+void FillArrayElement(int arr[100], short &arrlength)
+{
+	arrlength = ReadNumber();
+	for (short i = 0; i < arrlength; i++)
+	{
+		arr[i] = RandomNumber(1,100);
+	}
+}
+
+void PrintArray(int arr[100], short arrlength)
+{
+	for (short i = 0; i < arrlength; i++)
+	{
+		cout << " " << arr[i] << "   ";
+	}
+	cout << endl;
+}
+
+void AddArrayElement(short Number, int arr[100], short &arrlength)
+{
+	arrlength++;
+	arr[arrlength - 1] = Number;
+}
+void CopyArrayElement(int arrSource[100], int Destension[100], short arrlength, short &arrDestensionLength)
+{
+	for (short i = 0; i < arrlength; i++)
+	{
+		if (CheckPrimeNumber(arrSource[i]) == enPrimeNotPrime::Prime)
+		{
+			AddArrayElement(arrSource[i], Destension, arrDestensionLength);
+		}
+	}
+}
+int main()
+{
+	srand((unsigned)time(NULL));
+	int arr[100]; short arrlength = 0, arr2length = 0;
+	int arr2[100];
+	FillArrayElement(arr, arrlength);
+	CopyArrayElement(arr, arr2, arrlength, arr2length);
+
+	cout << "\nArray 1 Elements:\n";
+	PrintArray(arr, arrlength);
+
+	cout << "\nArray 2 Elements:\n";
+	PrintArray(arr2, arr2length);
+	system("pause>0");
+	return 0;
+}

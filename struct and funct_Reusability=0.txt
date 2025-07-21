@@ -1,0 +1,113 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+enum encolor
+{
+	red,blue,green,white,yellow,pink,black
+};
+enum enmstate
+{
+	single,married
+};
+enum entype
+{
+	male,female
+};
+struct strcar
+{
+	string namecar;
+	string model;
+	string number;
+};
+struct strbirth
+{
+	string birth;
+	string phone;
+	string email;
+	strcar car;
+};
+struct strInfo
+{
+	string Name;
+	int Age;
+	string City;
+	string Country;
+	float MonthlySalary;
+	float YearlySalary;
+	char Gender;
+	bool Married;
+	strbirth date;
+	encolor color = encolor::green;
+	enmstate state = enmstate::married;
+	entype type = entype::male;
+
+};
+void ReadInfo(strInfo& Info)
+{
+	cout << "Name: ";
+	//cin >> Info.Name;
+	cin.ignore(1);
+	getline(cin, Info.Name);
+	cout << "Age: ";
+	cin >> Info.Age;
+	cout << "City: ";
+	cin >> Info.City;
+	cout << "Country: ";
+	cin >> Info.Country;
+	cout << "MonthlySalary: ";
+	cin >> Info.MonthlySalary;
+	cout << "Gender: ";
+	cin >> Info.Gender;
+	cout << "Married: ";
+	cin >> Info.Married;
+	cout << "Birth: ";
+	cin >>  Info.date.birth;
+	cout << "Phone: ";
+	cin >> Info.date.phone;
+	cout << "E-Mail: ";
+	cin >> Info.date.email;
+	cout << "NameCar: ";
+	cin >> Info.date.car.namecar;
+	cout << "Model: ";
+	cin >> Info.date.car.model;
+	cout << "NumberCar: ";
+	cin >> Info.date.car.number;
+}
+void PrintInfo(strInfo Info)
+{
+	cout << "\n*************************************\n";
+
+	cout << "Name: " << Info.Name << "." << endl;
+	cout << "Age: " << Info.Age << "." << endl;
+	cout << "City: " << Info.City << "." << endl;
+	cout << "Country: " << Info.Country << "." << endl;
+	cout << "MonthlySalary: " << Info.MonthlySalary << "." << endl;
+	cout << "YearlySalary: " << Info.MonthlySalary * 12 << "." << endl;
+	cout << "Gender: " << Info.Gender << "." << endl;
+	cout << "Married: " << Info.Married << "." << endl;
+	cout << "Birth: " << Info.date.birth << "." << endl;
+	cout << "Phone: " << Info.date.phone << "." << endl;
+	cout << "E-Mail: " << Info.date.email << "." << endl;
+	cout << "NameCar: " << Info.date.car.namecar << "." << endl;
+	cout << "Model: " << Info.date.car.model << "." << endl;
+	cout << "NumberCar: " << Info.date.car.number << "." << endl;
+	cout << "Color: " << Info.color << "." << endl;
+	cout << "State: " << Info.state << "." << endl;
+	cout << "Type: " << Info.type << "." << endl;
+
+	cout << "\n*************************************\n";
+}
+int main()
+{
+	strInfo Card1;
+	ReadInfo(Card1);
+	PrintInfo(Card1);
+
+
+	/*strInfo Card2;
+	ReadInfo(Card2);
+	PrintInfo(Card2);*/
+
+	return 0;
+}

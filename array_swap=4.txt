@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int swap[3];
+	cout << "number1: ";
+	cin >> swap[0];
+	cout << "number2: ";
+	cin >> swap[1];
+	cout << swap[0] << " " << swap[1] << endl;
+	swap[2];
+	swap[2] = swap[0];
+	swap[0] = swap[1];
+	swap[1] = swap[2];
+	cout << swap[0] << " " << swap[1] << endl;
+
+	return 0;
+}

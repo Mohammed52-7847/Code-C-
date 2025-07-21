@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int Readintnumberrange(int f, int t)
+{
+	int number;
+	cout << "please enter your number from 18 to 50: ";
+	cin >> number;
+	while (number < f || number > t)
+	{
+		cout << "wrong number\n";
+		cout << "please enter your number from " << f << " and " << t << ": \n";
+		cin >> number;
+	}
+	return number;
+}
+int main()
+{
+	int number;
+	int f;
+	int t;
+
+	cout << "The Perfact Number: " << Readintnumberrange(18, 45) << endl;
+
+	return 0;
+}

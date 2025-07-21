@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+
+void Readprocedure1(int ARRAY[100], int& N)
+{
+	cout << "How Many Number Do You Want To Enter:1 To 100?";
+	cin >> N;
+	for (int C = 0; C <= N - 1; C++)
+	{
+		cout << "Please Enter Your Number: " << C + 1 << endl;
+		cin >> ARRAY[C];
+	}
+}
+void print(int ARRAY[100], int N)
+{
+	cout << "\n SUM Data...\n";
+	for (int C = 0; C <= N - 1; C++)
+	{
+		cout << "Number: [" << C + 1 << "]:" << ARRAY[C] << endl;
+	}
+}
+int calculatefunctionsum(int ARRAY[100], int N)
+{
+	int SUM = 0;
+	for (int C = 0; C <= N - 1; C++)
+	{
+		SUM += ARRAY[C];
+	}
+	return SUM;
+}
+int calculateAverage(int ARRAY[100], int N)
+{
+	return (float)calculatefunctionsum(ARRAY,N) / N;
+}
+
+int main()
+{
+	int ARRAY[100];
+	int N = 0;
+	Readprocedure1(ARRAY,N);
+	print(ARRAY, N);
+	cout << "\n******************************************\n";
+	cout << "SUM: " << calculatefunctionsum(ARRAY, N) << endl;
+	cout << "AVERAGE: " << calculateAverage(ARRAY, N) << endl;
+
+
+	return 0;
+}

@@ -1,0 +1,73 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <vector>
+using namespace std;
+void Load(string FileName, vector <string>& vLetter)
+{
+	fstream MyFile;
+	MyFile.open("MyFile.txt", ios::in);
+	if (MyFile.is_open())
+	{
+		string Line;
+		while (getline(MyFile, Line))
+		{
+			vLetter.push_back(Line);
+		}
+		MyFile.close();
+	}
+}
+void Save(string FileName, vector <string> vLetter)
+{
+	fstream MyFile;
+	MyFile.open("MyFile.txt", ios::out);
+	if (MyFile.is_open())
+	{
+		for (string Line : vLetter)
+		{
+			if (Line != "")
+			{
+				MyFile << Line << endl;
+			}
+		}
+		MyFile.close();
+	}
+}
+void Delete(string FileName, string Record,string Update)
+{
+	vector <string> vLetter;
+	Load(FileName, vLetter);
+	for (string& Line : vLetter)
+	{
+		if (Line == Record)
+		{
+			Line = Update;
+		}
+	}
+	Save(FileName, vLetter);
+}
+void Print(string FileName)
+{
+	fstream MyFile;
+	MyFile.open(FileName, ios::in);
+	if (MyFile.is_open())
+	{
+		string Line;
+		while (getline(MyFile, Line))
+		{
+			cout << Line << endl;
+		}
+		MyFile.close();
+	}
+}
+int main()
+{
+	/*vector <string> vLetter{"Mohammed", "Helmi", "Ahmed", "Zaki"};
+	Save("MyFile.txt", vLetter);*/
+	cout << "Before.\n";
+	Print("MyFile.txt");
+	Delete("MyFile.txt", "Zaki", "Soha");
+	cout << "\n\nAfter.\n";
+	Print("MyFile.txt");
+	return 0;
+}

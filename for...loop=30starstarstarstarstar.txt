@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+struct strinfo
+{
+	int N;
+	int C = 1;
+	int F = 1;
+};
+int function(strinfo info)
+{
+	cout << "Please Enter Your Number: ";
+	cin >> info.N;
+
+	for (info.C; info.C <= info.N; info.C++)
+	{
+		info.F = info.F * info.C;
+	}
+	cout << "FACTORIAL: " << info.F << endl;
+	return info.F;
+}
+
+int main()
+{
+	strinfo person;
+	function(person);
+	return 0;
+}

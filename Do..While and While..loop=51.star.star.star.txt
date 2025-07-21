@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+int ReadIntNumberInRangeUsingDoWhile(int From, int To)
+{
+	int Number;
+	do
+	{
+		cout << "Please Enter a Number between " << From << " and " << To << endl;
+		cin >> Number;
+	} while (Number < From || Number > To);
+	return Number;
+}
+//int ReadWhile(int from, int to)
+//{
+//	int n;
+//	cout << "please enter your number: " << from << " and " << to << endl;
+//	cin >> n;
+//	while (n < from || n > to)
+//	{
+//		cout << "Wrong Number,";
+//		cout << "please enter a number between " << from << " and " << to << endl;
+//		cin >> n;
+//	}
+//	return n;
+//}
+
+int main()
+{
+	cout << "\nThe Number Your Entered is: " << ReadIntNumberInRangeUsingDoWhile(18, 50) << endl;
+	/*cout << "\nThe Number Your Entered is: " << ReadWhile(18, 50) << endl;*/
+
+	return 0;
+}

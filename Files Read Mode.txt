@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+using namespace std;
+void PrintNameCool(string FileName)
+{
+	fstream MyFile;
+	MyFile.open(FileName, ios::in);
+	if (MyFile.is_open())
+	{
+		string Line;
+		while (getline(MyFile, Line))
+		{
+			cout << Line << endl;
+		}
+		MyFile.close();
+	}
+}
+int main()
+{
+	PrintNameCool("MyFile.txt");
+	return 0;
+}

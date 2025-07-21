@@ -1,0 +1,16 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int main()
+{
+	vector <string> nam{"Mohammed","Helmi","Ahmed","Baghdadi","saluman"};
+	cout << "\n\nElements Numbers with at:\n";
+	cout << "Element 1: " << nam.at(0) << endl;
+	cout << "Element 2: " << nam.at(2) << endl;
+	cout << "Element 4: " << nam.at(4) << endl;
+	cout << "Elements[]:\n\n";
+	cout << "Element 1: " << nam[0] << endl;
+	cout << "Element 2: " << nam[2] << endl;
+	cout << "Element 4: " << nam[4] << endl;
+
+}

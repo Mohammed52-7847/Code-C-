@@ -1,0 +1,15 @@
+#include <iostream>
+#include <cstdio>
+using namespace std;
+int main()
+{
+	int N = 1, M = 10;
+	printf("The Number is = %d\n", N);
+	printf("The Number Range = From %d To %d\n", N, M);
+	printf("The Number is = %0*d\n", 2, N);
+	printf("The Number is = %0*d\n", 3, N);
+	printf("The Number is = %0*d\n", 4, N);
+	printf("The Number is = %0*d\n", 5, N);
+	int Page1 = 10,Page2 = 20;
+	printf("The Number is = %d + %d = %d\n", Page1, Page2, Page1 + Page2);
+}

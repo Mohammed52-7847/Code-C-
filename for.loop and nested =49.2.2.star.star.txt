@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	for (char i = 'A'; i <= 'F'; i++)
+	{
+		for (char c = 65; c <= i; c++)
+		{
+			cout << c;
+		}
+		cout << endl;
+
+	}
+	cout << "-------------------------------\n";
+	return 0;
+}

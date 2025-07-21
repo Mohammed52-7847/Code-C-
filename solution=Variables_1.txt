@@ -1,0 +1,51 @@
+#include <iostream>
+#include <string>
+using namespace std;
+struct stInfo
+{
+	string Name;
+	int Age;
+	string City;
+	string Country;
+	float MonthlySalary;
+	float YearlySalary;
+	char Gender;
+	bool Married;
+};
+stInfo ReadInfo()
+{
+	stInfo Info;
+	cout << "Enter a Name:\n";
+	getline(cin, Info.Name);
+	cout << "Enter an Age:\n";
+	cin >> Info.Age;
+	cout << "Enter a City:\n";
+	cin >> Info.City;
+	cout << "Enter a Country:\n";
+	cin >> Info.Country;
+	cout << "Enter a Monthly Salary:\n";
+	cin >> Info.MonthlySalary;
+	cout << "Enter a Gender:\n";
+	cin >> Info.Gender;
+	cout << "Enter a Married:\n";
+	cin >> Info.Married;
+	return Info;
+}
+void PrintCardInfo(stInfo Info)
+{
+	cout << "\n********************\n";
+	cout << "Name:\t" << Info.Name << endl;
+	cout << "Age:\t" << Info.Age << endl;
+	cout << "City:\t" << Info.City << endl;
+	cout << "Country:\t" << Info.Country << endl;
+	cout << "Monthly Salary:\t" << Info.MonthlySalary << endl;
+	cout << "Yearly Salary:\t" << Info.MonthlySalary * 12 << endl;
+	cout << "Gender:\t" << Info.Gender << endl;
+	cout << "Married:\t" << Info.Married << endl;
+	cout << "\n********************\n";
+}
+int main()
+{
+	PrintCardInfo(ReadInfo());
+	return 0;
+}

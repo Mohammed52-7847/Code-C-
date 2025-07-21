@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+int RandomNumber(int From, int To)
+{
+	int randNum = rand() % (To - From + 1) + From;
+	return randNum;
+}
+void FillArrayWithRandomNumbers(int arr[100], int& arrlength)
+{
+	cout << "\nEnter Number Of Elements:\n";
+	cin >> arrlength;
+	for (int i = 0; i < arrlength; i++)
+	{
+		arr[i] = RandomNumber(1, 100);
+	}
+}
+void PrintArray(int arr[100], int arrlength)
+{
+	for (int i = 0; i < arrlength; i++)
+		cout << arr[i] << " ";
+	cout << "\n";
+}
+void CheckPrime(int arr[100], int arrlength)
+{
+int M = round(arr[i]/2);
+	for (int Counter = 2; Counter <= M; Counter++)
+	{
+		if (arr[i] % Counter != 0)
+		{
+		   cout << arr[i] << " ";
+		}	
+	}
+	cout << "\n";
+}
+
+int main()
+{
+	srand((unsigned)time(NULL));
+	int arr[100], arrlength;
+	FillArrayWithRandomNumbers(arr, arrlength);
+	cout << "\nArray Elements:\n";
+	PrintArray(arr, arrlength);
+	cout << "\nThe Prime is:\n";
+    CheckPrime(arr, arrlength);
+	
+	return 0;
+}

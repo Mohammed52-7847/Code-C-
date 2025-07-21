@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    int a;
+    cout << "please enter your seconds: ";
+    cin >> a;
+    float d = 24 * 60 * 60;
+    float h = 60 * 60;
+    int m = 60;
+    int s;
+    int days = a / d;
+    //int rem = seconds % d;
+    int rem =  a % 86400 ;
+    int hours = rem / h;
+    int rem2 = rem % 3600;
+    int minutes = rem2 / m;
+    int rem3 = rem2 % 60;
+    cout << days << " : " << hours << " : " << minutes << " : " << rem3 << endl;
+
+    return 0;
+}

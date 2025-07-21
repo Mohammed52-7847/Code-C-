@@ -1,0 +1,31 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int ReadPositiveNumber(string Message)
+{
+	int Number = 0;
+	do
+	{
+		cout << Message << endl;
+		cin >> Number;
+	} while (Number <= 0);
+	return Number;
+}
+int PrintDigits(int Number)
+{
+	int Remainder = 0;
+	int Sum = 0;
+	while (Number > 0)
+	{
+		Remainder = Number % 10;
+		Number = Number / 10;
+		Sum += Remainder;
+		cout << Sum << endl;
+	}
+	return Sum;
+}
+int main()
+{
+	PrintDigits(ReadPositiveNumber("Please Enter Your Positive Number: "));
+	return 0;
+}

@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+void procedure()
+{
+	int N;
+	int C = 0;
+	int S = 0;
+	cout << "Please Enter Your Number: ";
+	cin >> N;
+
+	for (int C = 0; C <= N; C++)
+	{
+		if (C % 2 == 0)
+		{
+			cout << C << endl;
+			S = S + C;	
+		}
+	}
+	cout << "SUM: " << S << endl;
+}
+
+int main()
+{
+	procedure();
+	return 0;
+}

@@ -1,0 +1,41 @@
+#include <string>
+#include <iostream>
+using namespace std;
+void Swap(int& n1, int& n2)
+{
+	int temp;
+	temp = n1;
+	n1 = n2;
+	n2 = temp;
+}
+int main()
+{
+	int a = 1, b = 2;
+	cout << "Before#\n\n";
+	cout << "a = " << a << endl;
+	cout << "b = " << b << endl;
+	Swap(a, b);
+	cout << "\nAfter#\n\n";
+	cout << "a = " << a << endl;
+	cout << "b = " << b << endl;
+	cout << endl;
+	int g = 5, h = 6;
+	cout << "Before#\n\n";
+	cout << "a = " << g << endl;
+	cout << "b = " << h << endl;
+	Swap(g, h);
+	cout << "\nAfter#\n\n";
+	cout << "a = " << g << endl;
+	cout << "b = " << h << endl;
+	cout << endl;
+	int j = 100, k = 200;
+	cout << "Before#\n\n";
+	cout << "a = " << j << endl;
+	cout << "b = " << k << endl;
+	Swap(j, k);
+	cout << "\nAfter#\n\n";
+	cout << "a = " << j << endl;
+	cout << "b = " << k << endl;
+	cout << endl;
+	system("pause>0");
+}

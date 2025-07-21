@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+enum enmonth
+{
+	january=1,february=2,march=3,april=4,may=5,june=6,july=7,august=8,september=9,october=10,november=11,december=12
+};
+
+int main()
+{
+	int month;
+	cout << "please enter your number: ";
+	cin >> month;
+
+	switch (month)
+	{
+	case enmonth::january:
+		cout << "january." << endl;
+		break;
+	case enmonth::february:
+		cout << "february." << endl;
+		break;
+	case enmonth::march:
+		cout << "march." << endl;
+		break;
+	case enmonth::april:
+		cout << "april." << endl;
+		break;
+	case enmonth::may:
+		cout << "may." << endl;
+		break;
+	case enmonth::june:
+		cout << "june." << endl;
+		break;
+	case enmonth::july:
+		cout << "july." << endl;
+		break;
+	case enmonth::august:
+		cout << "august." << endl;
+		break;
+	case enmonth::september:
+		cout << "september." << endl;
+		break;
+	case enmonth::october:
+		cout << "october." << endl;
+		break;
+	case enmonth::november:
+		cout << "november." << endl;
+		break;
+	case enmonth::december:
+		cout << "december." << endl;
+		break;
+	default:
+		cout << "wrong month." << endl;
+	}
+	return 0;
+}

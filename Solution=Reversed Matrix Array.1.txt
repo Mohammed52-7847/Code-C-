@@ -1,0 +1,55 @@
+#include <iostream>
+#include <string>
+#include <cstdio>
+#include <iomanip>
+using namespace std;
+int RandomNumber(int From, int To)
+{
+	int randNum = rand() % (To - From + 1) + From;
+	return randNum;
+}
+void FillMatrix(int arr[3][3], short Rows, short Cols)
+{
+	for (short i = 0; i < Rows; i++)
+	{
+		for (short j = 0; j < Cols; j++)
+		{
+			arr[i][j] = RandomNumber(1, 100);
+		}
+	}
+}
+void PrintMatrix(int arr[3][3], short Rows, short Cols)
+{
+	for (short i = 0; i < Rows; i++)
+	{
+		for (short j = 0; j < Cols; j++)
+		{
+			cout << setw(3) << arr[i][j] << "    ";
+		}
+		cout << endl;
+	}
+}
+void ReversedMatrix(int arr[3][3], int arrDestnesion[3][3], short Rows, short Cols)
+{
+	for (short i = 0; i < Rows; i++)
+	{
+		for (short j = 0; j < Cols; j++)
+		{
+			arrDestnesion[i][j] = arr[Rows - 1 - i][Cols - 1 - j];
+		}
+	}
+}
+int main()
+{
+	srand((unsigned)time(NULL));
+	int arr[3][3];
+	FillMatrix(arr, 3, 3);
+	cout << "\nArray 1:\n";
+	PrintMatrix(arr, 3, 3);
+	int arr2[3][3];
+	ReversedMatrix(arr, arr2, 3, 3);
+	cout << "\nArray Reversed:\n";
+	PrintMatrix(arr2, 3, 3);
+
+	system("pause>0");
+}

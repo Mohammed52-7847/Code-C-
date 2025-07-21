@@ -1,0 +1,15 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+	string name = "Mohammed Helmi Ahmed Baghdadi";
+	cout << "\n***********************************\n";
+	cout << name[3] << endl;
+	cout << name[0] << endl;
+	cout << name[15] << endl;
+
+	return 0;
+
+}

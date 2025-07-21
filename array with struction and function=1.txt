@@ -1,0 +1,66 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct strcard
+{
+	string name;
+	int age;
+	string city;
+	string country;
+	float monthlysalary;
+	float yearlysalary;
+	char gender;
+	bool married;
+};
+void Readprocedure1(strcard& info)
+{
+	cout << "please enter your name: ";
+	cin.ignore(1);
+	getline(cin, info.name);
+	cout << "please enter your age: ";
+	cin >> info.age;
+	cout << "please enter your city: ";
+	cin >> info.city;
+	cout << "please enter your country: ";
+	cin >> info.country;
+	cout << "please enter your monthlysalary: ";
+	cin >> info.monthlysalary;
+	cout << "please enter your gender: ";
+	cin >> info.gender;
+	cout << "please enter your married: ";
+	cin >> info.married;
+	 
+}
+void Printprocedure1(strcard info)
+{
+	cout << "**************************************\n";
+	cout << "Name: " << info.name << "." << endl;
+	cout << "Age: " << info.age << "." << endl;
+	cout << "City: " << info.city << "." << endl;
+	cout << "Country: " << info.country << "." << endl;
+	cout << "MonthlySalary: " << info.monthlysalary << "." << endl;
+	cout << "Yearlysalary: " << info.monthlysalary * 12 << "." << endl;
+	cout << "Gender: " << info.gender << "." << endl;
+	cout << "Married: " << info.married << "." << endl;
+	cout << "**************************************\n";
+}
+void Readprocedure(strcard card[2])
+{
+	Readprocedure1(card[0]);
+	Readprocedure1(card[1]);
+}
+void Printprocedure(strcard card[2])
+{
+	Printprocedure1(card[0]);
+	Printprocedure1(card[1]);
+}
+int main()
+{
+	strcard card[2];
+	Readprocedure(card);
+	Printprocedure(card);
+
+
+	return 0;
+}

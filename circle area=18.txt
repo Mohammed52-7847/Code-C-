@@ -1,0 +1,16 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main ()
+{
+    short int r;
+	const float pi = 3.14;
+	cout << "please enter your number-r= ";
+	cin >> r;
+	float circle_area = ceil(pi * pow(r, 2));
+	cout << "******************************""\n";
+	cout << "circle area= " << circle_area << "." << endl;
+
+    return 0;
+}

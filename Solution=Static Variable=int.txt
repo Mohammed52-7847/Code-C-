@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int MyFunction1()
+{
+	static int Num = 1;
+	Num++;
+	return Num;
+	
+}
+int main()
+{
+	
+	cout << MyFunction1() << endl;
+	cout << MyFunction1() << endl;
+	cout << MyFunction1() << endl;
+	cout << MyFunction1() << endl;
+	cout << MyFunction1() << endl;
+	cout << MyFunction1() << endl;
+	
+	system("pause>0");
+	return 0;
+}

@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+void ReadNumber(int arr1[100], int& Length)
+{
+	cout << "How Many Number Do You Want From 1 To 100 ?\n";
+	cin >> Length;
+	for (int i = 0; i <= Length-1; i++)
+	{
+		cout << "Please Enter Your Number " << i+1 << ": \n";
+		cin >> arr1[i];
+	}
+}
+void PrintArray(int arr1[100], int Length)
+{
+	for (int i = 0; i <= Length-1; i++)
+	{
+		cout << "Your Number is [" << i + 1 << "]: " << arr1[i] << endl;
+	}
+}
+int SumNumber(int arr1[100], int Length)
+{
+	int Sum = 0;
+	for (int i = 0; i <= Length - 1; i++)
+	{
+		Sum += arr1[i];
+	}
+	return Sum;
+}
+float AverageNumber(int arr1[100], int Length)
+{
+		return (float)SumNumber(arr1, Length) / Length;
+}
+int main()
+{
+	int arr1[100], Length = 0;
+	ReadNumber(arr1, Length);
+	PrintArray(arr1, Length);
+	int Sum = SumNumber(arr1, Length);
+	cout << "Sum: " << Sum << endl;
+	cout << "Average: " << Sum/Length << endl;
+
+	return 0;
+}

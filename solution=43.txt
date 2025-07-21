@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+using namespace std;
+struct strTotalSeconds
+{
+	int TotalSeconds;
+	int Day = 24 * 60 * 60;
+	int Hours = 60 * 60;
+	int Minutes = 60;
+};
+strTotalSeconds ReadTotalSeconds()
+{
+	strTotalSeconds TotalSeconds;
+	cout << "Please Enter Your Total Seconds: " << endl;
+	cin >> TotalSeconds.TotalSeconds;
+	return TotalSeconds;
+}
+void PrintTotalSeconds(strTotalSeconds TotalSeconds)
+{
+	cout << "\n Number Of Days: " << TotalSeconds.TotalSeconds / TotalSeconds.Day << "."
+		<< "\n Number Of Hours: " << 20735 / TotalSeconds.Hours << "."
+		<< "\n Number Of Minutes: " << 2735 / TotalSeconds.Minutes << "."
+		<< "\n Number Of Seconds: " << 2735 % 60 << ".";
+}
+int main()
+{
+	PrintTotalSeconds(ReadTotalSeconds());
+	return 0;
+}

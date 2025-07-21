@@ -1,0 +1,62 @@
+#include <iostream>
+using namespace std;
+int RandomNumber(int From, int To)
+{
+	int randNum = rand() % (To - From + 1) + From;
+	return randNum;
+}
+void FillArrayRandomNumbers(int arr[100], int& arrlength)
+{
+	cout << "\nEnter Number Of Elements:\n";
+	cin >> arrlength;
+	for (int i = 0; i < arrlength; i++)
+	{
+		arr[i] = RandomNumber(1, 100);
+	}
+}
+void PrintArray(int arr[100], int arrlength)
+{
+	for (int i = 0; i < arrlength; i++)
+	{
+		cout << arr[i] << " ";
+	}
+	cout << "\n";
+}
+bool FindNumberInArray(int Number, int arr[100], int arrlength)
+{
+	for (int i = 0; i < arrlength; i++)
+	{
+		if (arr[i] == Number)
+		{
+			return true;
+		}
+	}
+	return false;
+}
+int ReadNumber()
+{
+	int Number;
+	cout << "\nPlease Enter a Number to Search For:\n";
+	cin >> Number;
+	return Number;
+}
+int main()
+{
+	srand((unsigned)time(NULL));
+	int arr[100], arrlength;
+	FillArrayRandomNumbers(arr, arrlength);
+	cout << "\nArray 1 Elements:\n";
+	PrintArray(arr, arrlength);
+	int Number = ReadNumber();
+	cout << "\nNumber You Are Looking For is: " << Number << endl;
+	bool NumberPosition = FindNumberInArray(Number, arr, arrlength);
+	if (NumberPosition == false)
+	{
+		cout << "\nNo,The Number is Not Found: -(\n";
+	}
+	else
+	{
+		cout << "\nYes,The Number is Found: -(\n";
+	}
+	return 0;
+}

@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+using namespace std;
+void ReadNumbers(float& A, float& B)
+{
+	cout << "Please Enter Your Number A: " << endl;
+	cin >> A;
+	cout << "Please Enter Your Number B: " << endl;
+	cin >> B;
+}
+float RectangleArea(float A, float B)
+{
+	return A * B;
+}
+void PrintArea(float Area)
+{
+	cout << "\n The Rectangle Area is: " << Area << "." << endl;
+}
+int main()
+{
+	float A, B;
+	ReadNumbers(A, B);
+	PrintArea(RectangleArea(A, B));
+	return 0;
+}

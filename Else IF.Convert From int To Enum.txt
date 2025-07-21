@@ -1,0 +1,37 @@
+﻿#include <iostream>
+#include <string>
+using namespace std;
+enum enColor{Red = 1, Yellow = 2,Blue = 3,Green = 4};
+int main()
+{
+	cout << "******************************\n";
+	cout << "Enter The Color Red    :\n";
+	cout << "Enter The Color Blue   :\n";
+	cout << "Enter The Color Yellow :\n";
+	cout << "Enter The Color Green  :\n";
+	cout << "******************************\n";
+	
+	int C = 0;
+	enColor Color;
+	cout << "Please Enter Your Color: " << endl;
+	cin >> C;// لازم السي توجد قبل التحويل وبعد القيمة المبدئية
+	Color = (enColor)C;
+	
+	if (Color == enColor::Red)
+	{
+		system("Color 4F");
+	}
+	else if (Color == enColor::Yellow)
+	{
+		system("Color 6F");
+	}
+	else if (Color == enColor::Blue)
+	{
+		system("Color 1F");
+	}
+	else
+	{
+		system("Color 2F");
+	};
+	return 0;
+}

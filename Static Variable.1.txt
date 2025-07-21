@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+void MyFunct()
+{
+	static int Number = 1;
+	cout << "Enter Your Number: " << Number << "\n";
+	Number++;
+}
+int main()
+{
+	MyFunct();
+	MyFunct();
+	MyFunct();
+	return 0;
+}

@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+using namespace std;
+void MyFunction(int Num1)
+{
+	Num1 = 8000;
+	cout << "Number 1: " << Num1 << endl;
+}
+void MyFunction2(int &Num2)
+{
+	Num2 = 4000;
+	cout << "Number 1: " << Num2 << endl;
+}
+int main()
+{
+	int Num1 = 1000;
+	int Num2 = 1000;
+	MyFunction(Num1);
+	cout << "Number 2: " << Num1 << endl;
+	MyFunction2(Num2);
+	cout << "Number 2: " << Num2 << endl;
+	system("pause>0");
+	return 0;
+}

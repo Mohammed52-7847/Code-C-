@@ -1,0 +1,16 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	char x[3][4] = { {'M','N','D','F'},{'Q','W','E','R'},{'T','Y','U','I'}};
+	for (int i = 0; i < 3; i++)
+	{
+		for (int j = 0; j < 4; j++)
+		{
+			cout << x[i][j] << "\t";
+		}
+		cout << endl;
+	}
+	return 0;
+}

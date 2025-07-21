@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+struct strperson
+{
+	string firstname = "Mohamed.";
+	int age = 34;
+	char married = 'M';
+};
+void printprocedure(strperson person)
+{
+	cout << "\n***********************************************\n";
+	cout << "First Name: " << person.firstname << "." << endl;
+	cout << "Age: " << person.age << "." << endl;
+	cout << "Married: " << person.married << "." << endl;
+	cout << "\n***********************************************\n";
+}
+void printprocedure2(strperson info[100], int N)
+{
+	cout << "How Many Info: ";
+	cin >> N;
+	for (int C = 0; C <= N - 1; C++)
+	{
+		cout << "Please enter your info: " << C + 1 << endl;
+		printprocedure(info[C]);
+	}
+}
+int main()
+{
+	strperson info[100];
+	int N = 1;
+	printprocedure2(info,N);
+	return 0;
+}

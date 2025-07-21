@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+struct stInfo
+{
+	int Penny;
+	int Nickel;
+	int Dime;
+	int Quarter;
+	int Dollar;
+};
+stInfo ReadNumber()
+{
+	stInfo Info;
+	cout << "Enter Penny:\n";
+	cin >> Info.Penny;
+	cout << "Enter Nickel:\n";
+	cin >> Info.Nickel;
+	cout << "Enter Dime:\n";
+	cin >> Info.Dime;
+	cout << "Enter Quarter:\n";
+	cin >> Info.Quarter;
+	cout << "Enter Dollar:\n";
+	cin >> Info.Dollar;
+	return Info;
+}
+int CheckNumber(stInfo Info)
+{
+	int Result = 0;
+	Result =  (Info.Penny * 1 + Info.Nickel * 5 + Info.Dime * 10 + Info.Quarter * 25 + Info.Dollar * 100);
+	return Result;
+}
+void CheckResult(stInfo Info)
+{
+	cout << "Total Pennies: " << CheckNumber(Info) << endl;
+	cout << "Total Dollars: " << (float)CheckNumber(Info) / 100 << endl;
+}
+int main()
+{
+	
+	CheckResult(ReadNumber());
+	return 0;
+}

@@ -1,0 +1,22 @@
+﻿#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	char arr[5] = {'M','H','A','B','S'};
+	char* ptr;
+	ptr = arr;
+	cout << "Address.\n";
+	cout << &ptr << endl;//هنا تضيف هذه العلامة &
+	cout << &ptr + 1 << endl;
+	cout << &ptr + 2 << endl;
+	cout << &ptr + 3 << endl;
+	cout << &ptr + 4 << endl;
+	cout << "Value.\n";
+	cout << *(ptr) << endl;
+	cout << *(ptr + 1) << endl;
+	cout << *(ptr + 2) << endl;
+	cout << *(ptr + 3) << endl;
+	cout << *(ptr + 4) << endl;
+	return 0;
+}

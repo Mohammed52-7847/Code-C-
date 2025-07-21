@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+struct stNum
+{
+	int Num1;
+	int Num2;
+	int Num3;
+	int sum;
+};
+
+stNum ReadNum()
+{
+	stNum Num;
+	cout << "Please Enter Your Num1: " << endl;
+	cin >> Num.Num1;
+	cout << "Please Enter Your Num2: " << endl;
+	cin >> Num.Num2;
+	cout << "Please Enter Your Num3: " << endl;
+	cin >> Num.Num3;
+	return Num;
+}
+int CheckNum(stNum Num)
+{
+	 Num.sum = Num.Num1 + Num.Num2 + Num.Num3;
+	 return Num.sum;
+}
+void PrintNum(stNum Num)
+{
+	cout << "The Sum is: " << (CheckNum(Num)) << "." << endl;
+}
+int main()
+{
+	PrintNum(ReadNum());
+	return 0;
+}

@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int ReadNumber()
+{
+	int N;
+	cout << "Please Enter Your Number: " << endl;
+	cin >> N;
+	return N;
+}
+int CheckNumber(int N)
+{
+	int F = 1;
+	for (int i = 6; i >= N; i--)
+	{
+		//cout << i << endl;
+		F *= i;
+	}
+	cout << "\n Your Fartical is: " << F << endl;
+	return F;
+}
+void PrintResult(int Area)
+{
+	cout << "\n Your Number is: " << Area << endl;
+}
+int main()
+{
+	PrintResult(CheckNumber(ReadNumber()));
+	return 0;
+}

@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+using namespace std;
+float ReadNumber()
+{
+	float N;
+	cout << "Please Enter Your Number: " << endl;
+	cin >> N;
+	return N;
+}
+float NumberFrom1To10(float N)
+{
+	for (float i = 10; i >= N; i--)
+	{
+		cout << i << endl;
+	}
+	return N;
+}
+void PrintResult(float Area)
+{
+	cout << "\n Your Number is: " << Area << endl;
+}
+int main()
+{
+	PrintResult(NumberFrom1To10(ReadNumber()));
+	return 0;
+}

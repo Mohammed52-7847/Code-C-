@@ -1,0 +1,65 @@
+#include <iostream>
+using namespace std;
+enum enPrimNotPrime
+{
+	Prime = 1,NotPrime = 2
+};
+enPrimNotPrime CheckPrime(int Number)
+{
+	int M = round(Number / 2);
+	for (int Counter = 2; Counter <= M; Counter++)
+	{
+		if (Number % Counter == 0)
+			return enPrimNotPrime::NotPrime;
+	}
+	return enPrimNotPrime::Prime;
+}
+int RandomNumber(int From, int To)
+{
+	int randNum = rand() % (To - From + 1) + From;
+	return randNum;
+}
+void FillArrayWithRandomNumbers(int arr[100], int& arrlength)
+{
+	cout << "\nEnter Number Of Elements:\n";
+	cin >> arrlength;
+	for (int i = 0; i < arrlength; i++)
+	{
+		arr[i] = RandomNumber(1, 100);
+	}
+}
+void CopyOnlyPrimeNumbers(int arrSource[100], int arrDestination[100], int arrlength, int& arr2length)
+{
+	int Counter = 0;
+	for (int i = 0; i < arrlength; i++)
+	{
+		if (CheckPrime(arrSource[i]) == enPrimNotPrime::Prime)
+		{
+			arrDestination[Counter] = arrSource[i];
+			Counter++;
+		}
+		
+	}
+	arr2length = Counter;
+}
+void PrintArray(int arr[100], int arrlength)
+{
+	for (int i = 0; i < arrlength; i++)
+	{
+		cout << arr[i] << " ";
+	}	
+	cout << "\n";
+}
+int main()
+{
+	srand((unsigned)time(NULL));
+	int arr[100], arrlength;
+	FillArrayWithRandomNumbers(arr, arrlength);
+	int arr2[100], arr2length = 0;
+	CopyOnlyPrimeNumbers(arr, arr2, arrlength, arr2length);
+	cout << "\nArray 1 Elements: ";
+	PrintArray(arr, arrlength);
+	cout << "\nArray 2 Elements: ";
+	PrintArray(arr2, arr2length);
+	return 0;
+}

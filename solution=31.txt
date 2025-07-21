@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+void ReadNumber()
+{
+	int Number;
+	cout << "Number:" << endl;
+	cin >> Number;
+	int A = pow(Number, 2);
+	int B = pow(Number, 3);
+	int C = pow(Number, 4);
+	cout << "Number-1: " << A << endl;
+	cout << "Number-2: " << B << endl;
+	cout << "Number-3: " << C << endl;
+}
+int main()
+{
+	ReadNumber();
+	return 0;
+}

@@ -1,0 +1,73 @@
+#include <iostream>
+#include <string>
+using namespace std;
+enum enOddOrEven{Odd = 0,Even = 1,Positive = 2,Negative = 3,Prime = 4,NotPrime = 5};
+int RandomNumber(int From, int To)
+{
+	int randNum = rand() % (To - From + 1) + From;
+	return randNum;
+}
+void FillArray(int arr[100], int& arrlength)
+{
+	cout << "Please Enter Your Number?\n";
+	cin >> arrlength;
+	for (short i = 0; i < arrlength; i++)
+	{
+		arr[i] = RandomNumber(-100, 100);
+	}
+}
+void PrintArray(int arr[100], int arrlength)
+{
+	for (short i = 0; i < arrlength; i++)
+	{
+		cout << arr[i] << "   ";
+	}
+	cout << endl;
+}
+short GeneralCountOddAndEven(int arr[100], int arrlength, enOddOrEven OddOrEven)
+{
+	short Counter = 0;
+	for (short i = 0; i < arrlength; i++)
+	{
+		if (arr[i] % 2 != 0 && OddOrEven == enOddOrEven::Odd)
+		{
+			Counter++;
+		}
+	}
+	for (short i = 0; i < arrlength; i++)
+	{
+		if (arr[i] % 2 == 0 && OddOrEven == enOddOrEven::Even)
+		{
+			Counter++;
+		}
+	}
+	for (short i = 0; i < arrlength; i++)
+	{
+		if (arr[i] > 0 && OddOrEven == enOddOrEven::Positive)
+		{
+			Counter++;
+		}
+	}
+	for (short i = 0; i < arrlength; i++)
+	{
+		if (arr[i] < 0 && OddOrEven == enOddOrEven::Negative)
+		{
+			Counter++;
+		}
+	}
+	
+	return Counter;
+}
+int main()
+{
+	srand((unsigned)time(NULL));
+	int arr[100], arrlength = 0;
+	FillArray(arr, arrlength);
+	PrintArray(arr, arrlength);
+	cout << "\nNumber Odd = " << GeneralCountOddAndEven(arr, arrlength, enOddOrEven::Odd) << endl;
+	cout << "\nNumber Even = " << GeneralCountOddAndEven(arr, arrlength, enOddOrEven::Even) << endl;
+	cout << "\nNumber Positive = " << GeneralCountOddAndEven(arr, arrlength, enOddOrEven::Positive) << endl;
+	cout << "\nNumber Negative = " << GeneralCountOddAndEven(arr, arrlength, enOddOrEven::Negative) << endl;
+	system("pause>0");
+	return 0;
+}

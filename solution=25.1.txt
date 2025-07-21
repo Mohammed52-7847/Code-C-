@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int ReadNumber()
+{
+	int Number = 0;
+	do
+	{
+		cout << "Please Enter Your Number:\n";
+		cin >> Number;
+	} while (Number < 18 || Number > 45);
+	return Number;
+}
+void PrintResult(int Number)
+{
+	cout << "Valid Age." << endl;
+}
+int main()
+{
+	PrintResult(ReadNumber());
+
+	return 0;
+}

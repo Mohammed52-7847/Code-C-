@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+struct strinfo
+{
+	int A = 65;
+	int Z = 90;
+};
+void procedurecharacters(strinfo info)
+{
+	for (info.A; info.A <= info.Z; info.A++)
+	{
+		cout << "The Characters is: " << char(info.A) << "." << endl;
+	}
+}
+
+int main()
+{
+	strinfo person;
+	procedurecharacters(person);
+	return 0;
+}

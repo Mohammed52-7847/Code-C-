@@ -1,0 +1,85 @@
+#include <iostream>
+using namespace std;
+
+enum enmonth
+{
+	january=1,february=2,march=3,april=4,may=5,june=6,july=7,august=8,september=9,october=10,november=11,december=12
+};
+void printmonth()
+{
+	cout << "******************************" << endl;
+	cout << "         Months Year          " << endl;
+	cout << "******************************" << endl;
+	cout << "1:january.\n";
+	cout << "2:february.\n";
+	cout << "3:march.\n";
+	cout << "4:april.\n";
+	cout << "5:may.\n";
+	cout << "6:june.\n";
+	cout << "7:july.\n";
+	cout << "8:august.\n";
+	cout << "9:september.\n";
+	cout << "10:october.\n";
+	cout << "11:november.\n";
+	cout << "12:december.\n";
+	cout << "******************************" << endl;
+	cout << "Please Enter The Number Of Month: ";
+}
+
+enmonth Readfunction()
+{
+	enmonth month;
+	int my;
+	cin >> my;
+	return (enmonth)my;
+}
+string printmonthfunction(enmonth month)
+{
+	switch(month)
+	{
+	case enmonth::january:
+		return "JANUARY.";
+		break;
+	case enmonth::february:
+		return "FEBRUARY.";
+		break;
+	case enmonth::march:
+		return "MARCH.";
+		break;
+	case enmonth::april:
+		return "APRIL.";
+		break;
+	case enmonth::may:
+		return "MAY.";
+		break;
+	case enmonth::june:
+		return "JUNE.";
+		break;
+	case enmonth::july:
+		return "JULY.";
+		break;
+	case enmonth::august:
+		return "AUGUST.";
+		break;
+	case enmonth::september:
+		return "SEPTEMBER.";
+		break;
+	case enmonth::october:
+		return "OCTOBER.";
+		break;
+	case enmonth::november:
+		return "NOVEMBER.";
+		break;
+	case enmonth::december:
+		return "DECEMBER.";
+		break;
+	default:
+		return "WRONG MONTH.\n";
+	}
+}
+int main()
+{
+	printmonth();
+	cout << "THAT IS: " << printmonthfunction(Readfunction()) << endl;
+	return 0;
+}

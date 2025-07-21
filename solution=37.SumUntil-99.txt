@@ -1,0 +1,48 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int ReadSumNumber()
+{
+	int Number;
+	int sum = 0;
+	while (true)
+	{
+		cout << "Please Enter a Positive Integer: " << endl;
+		cin >> Number;
+		if (Number <= -99)
+		{
+			cout << "This is a Negative Number." << endl;
+			break;
+		}
+		sum += Number;
+		cout << "\n The Sum is= " << sum << "." << endl;
+	}
+	return sum;
+}
+int main()
+{
+
+	cout << "\n The Result is: " << ReadSumNumber() << "." << endl;
+
+
+	/*int Number;
+	int sum = 0;
+	
+		while (true)
+		{
+			cout << "Please enter number: " << endl;
+			cin >> Number;
+			if (Number <= -99)
+			{
+				cout << "This is The Negative Number: " << endl;
+				break;
+			}
+			sum = sum + Number;
+			cout << ": " << sum << endl;
+	    }*/
+		
+
+	
+	
+	return 0;
+}

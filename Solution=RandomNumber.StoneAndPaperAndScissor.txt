@@ -1,0 +1,46 @@
+#include <iostream>
+#include <string>
+#include <cstdlib>
+using namespace std;
+enum enGame{Stone = 1,Paper = 2,Scissors = 3};
+int RandomNumber(int From, int To)
+{
+	int randNum = rand() % (To - From + 1) + From;
+	return randNum;
+}
+enGame CheckGame(enGame Game)
+{
+	switch (Game)
+	{
+	case enGame::Stone:
+		return Stone;
+		break;
+	case enGame::Paper:
+		return Paper;
+		break;
+	case enGame::Scissors:
+		return Scissors;
+		break;
+	}
+}
+void PrintGame(enGame Game)
+{
+	switch (CheckGame(Game))
+	{
+	case enGame::Stone:
+		cout << "Stone\n";
+		break;
+	case enGame::Paper:
+		cout << "Paper\n";
+		break;
+	case enGame::Scissors:
+		cout << "Scissors\n";
+		break;
+	}
+}
+int main()
+{
+	srand((unsigned)time(NULL));
+	PrintGame((enGame)RandomNumber(1, 3));
+	return 0;
+}

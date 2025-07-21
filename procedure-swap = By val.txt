@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+void procedure_swap(int A, int B)
+{
+	int Temp;
+	Temp = A;
+	A = B;
+	B = Temp;
+	cout << A << " - " << B << endl;
+}
+int main()
+{
+	int A;
+	int B;
+	cout << "Number-1: ";
+	cin >> A;
+	cout << "Number-2: ";
+	cin >> B;
+	cout << A << " - " << B << endl;
+	procedure_swap(A, B);
+
+	cout << A << " - " << B << endl;
+	return 0;
+}

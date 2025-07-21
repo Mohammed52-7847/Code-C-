@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+int ReadNumber1()
+{
+	int Number = 0;
+	cout << "Please Enter Your Number:\n";
+	cin >> Number;
+	return Number;
+}
+int ReadNumber2()
+{
+	int	M = 0;
+	cout << "Please Enter Your M:\n";
+	cin >> M;
+	return M;
+}
+int CalculateNumber(int Number,int M)
+{
+	return pow(Number, M);
+}
+int main()
+{
+	cout << "\nThe Result: \n" << CalculateNumber(ReadNumber2(), ReadNumber1()) << endl;
+	return 0;
+}

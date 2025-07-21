@@ -1,0 +1,85 @@
+#include <iostream>
+#include <string>
+#include <iomanip>
+#include <cstdio>
+using namespace std;
+int RandomNumber(int From, int To)
+{
+	int randNum = rand() % (To - From + 1) + From;
+	return randNum;
+}
+void FillMatrix(int arr[3][3], short Rows, short Cols)
+{
+	for (short i = 0; i < Rows; i++)
+	{
+		for (short j = 0; j < Cols; j++)
+		{
+			arr[i][j] = RandomNumber(1, 10);
+		}
+	}
+}
+void PrintMatrix(int arr[3][3], short Rows, short Cols)
+{
+	for (short i = 0; i < Rows; i++)
+	{
+		for (short j = 0; j < Cols; j++)
+		{
+			printf("%0*d   ",2, arr[i][j]);
+		}
+		cout << endl;
+	}
+}
+int  MiddleCols(int arr[3][3], short RowNumber, short Cols)
+{
+	int Counter = 0;
+	for (short j = 0; j < Cols; j++)
+	{
+		if (j == 1)
+		{
+			Counter = arr[RowNumber][j];
+		}
+		
+	}
+	return Counter;
+}
+void PrintMiddleCol(int arr[3][3], short Rows, short Cols)
+{
+	for (short i = 0; i < Rows; i++)
+	{
+		printf("%0*d   ", 2, MiddleCols(arr, i, Cols));
+	}
+}
+int  MiddleRows(int arr[3][3], short Rows, short ColNumber)
+{
+	int Middle = 0;
+	for (short i = 0; i < Rows; i++)
+	{
+		if (i == 1)
+		{
+			Middle = arr[i][ColNumber];
+		}
+
+	}
+	return Middle;
+}
+void PrintMiddleRows(int arr[3][3], short Rows, short Cols)
+{
+	for (short j = 0; j < Cols; j++)
+	{
+		printf("%0*d   ", 2, MiddleRows(arr, Rows, j));
+	}
+}
+int main()
+{
+	srand((unsigned)time(NULL));
+	int arr[3][3];
+	FillMatrix(arr, 3, 3);
+	cout << "\nArray 1:\n";
+	PrintMatrix(arr, 3, 3);
+	cout << "\nMiddle Colum:\n";
+	PrintMiddleCol(arr, 3, 3);
+	cout << "\nMiddle Row:\n";
+	PrintMiddleRows(arr, 3, 3);
+
+	system("pause>0");
+}

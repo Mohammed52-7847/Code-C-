@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int number;
+	cout << "please enter apositive number: \n";
+	cin >> number;
+	while (number < 0)
+	{
+		cout << "wrong number,please enter a positive number: \n";
+		cin >> number;
+	}
+	cout << "\nThe Number You Entered is " << number << endl;
+
+	return 0;
+}

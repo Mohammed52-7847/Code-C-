@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    int a;
+	int b;
+	cout << "please enter number-a = ";
+	cin >> a;
+	cout << "please enter number-b = ";
+	cin >> b;
+	int area = a * b;
+	cout << "****************************""\n";
+	cout << "the rectangle is = " << area << "." << endl;
+	cout << "****************************""\n";
+}

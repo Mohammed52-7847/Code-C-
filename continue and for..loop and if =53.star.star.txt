@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int sum = 0;
+	int number = 0;
+	//for (int i = 1; i <= 5; i++)
+	for (int i = 1; i <= 5; i++)
+	{
+		cout << "number: ";
+		cin >> number;
+		if (number > 50)
+		{
+			cout << "the number is grater than and wont be calculate." << endl;
+			continue;
+		}
+		
+			
+			sum = sum + number;
+		
+	}
+	cout << "SUM: " << sum << endl;
+
+	return 0;
+}

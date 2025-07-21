@@ -1,0 +1,71 @@
+#include <iostream>
+using namespace std;
+
+float ReadNumber()
+{
+	float Number = 0;
+	cout << "Please Enter Your Grade? " << endl;
+	cin >> Number;
+	return Number;
+}
+float CheckGrade(float Number)
+{
+	if (Number >= 1000000)
+	{
+		return (Number * (0.01));
+	}
+	else if (Number >= 500000)
+	{
+		return (Number * (0.02));
+	}
+	else if (Number >= 100000)
+	{
+		return (Number * (0.03));
+	}
+	else if (Number >= 50000)
+	{
+		return (Number * (0.05));
+	}
+	else
+	{
+		return (Number * 0);
+	}
+}
+float Percentage(float Number)
+{
+	if (Number >= 1000000)
+	{
+		return 0.01;
+	}
+	else if (Number >= 500000)
+	{
+		return 0.02;
+	}
+	else if (Number >= 100000)
+	{
+		return 0.03;
+	}
+	else if (Number >= 50000)
+	{
+		return 0.05;
+	}
+	else
+	{
+		return 0;
+	}
+}
+void PrintPercentage(float Number)
+{
+	cout << "\nPercentage is: [" << Percentage(Number) << "]." << endl;
+}
+void PrintResult(float Result)
+{
+	cout << "\nTotal Percentage: [" << Result << "]." << endl;
+}
+int main()
+{
+	float Number = ReadNumber();
+	PrintPercentage(Number);
+	PrintResult(CheckGrade(Number));
+	return 0;
+}

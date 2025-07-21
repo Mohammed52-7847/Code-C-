@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int a = 10;
+	int& x = a;
+	int b = 700;
+	int v = 5600;
+	cout << "a value       = " << a << endl;
+	cout << "a address     = " << &a << endl;
+	cout << "x address     = " << &x << endl;
+	cout << "b address     = " << &b << endl;
+	cout << "v address     = " << &v << endl;
+	
+
+	int* p;
+	p = &a;
+	p = &v;
+	
+	cout << "Pointer value = " << p << endl;
+	
+
+	return 0;
+}

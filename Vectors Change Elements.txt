@@ -1,0 +1,29 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int main()
+{
+	vector <int> num{1, 2, 3, 4, 5};
+	cout << "Number const:\n\n";
+	for (const int& i : num)
+	{
+		cout << i << " ";
+	}
+	cout << "\nNumber:\n\n";
+	for (int& i : num)
+	{
+		i = 20;
+		cout << i << " ";
+	}
+	num.at(1) = 50;
+	num[2] = 80;
+	num.at(4) = 90;
+	cout << "\nNumber num:\n\n";
+	for (const int& i : num)
+	{
+		cout << i << " ";
+	}
+
+
+	return 0;
+}

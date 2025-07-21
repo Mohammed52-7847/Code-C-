@@ -1,0 +1,65 @@
+#include <iostream>
+using namespace std;
+int ReadPositiveNumber(string Message)
+{
+	int Number = 0;
+	do
+	{
+		cout << Message << endl;
+		cin >> Number;
+	} while (Number <= 0);
+	return Number;
+}
+int CountDigitFrequency(int Number, short DigitToCheck)
+{
+	int Remainder = 0, FreqCount = 0;
+	while (Number > 0)
+	{
+		Remainder = Number % 10;
+		Number = Number / 10;
+		if (DigitToCheck == Remainder)
+		{
+			FreqCount++;
+		}
+	}
+	return FreqCount;
+}
+int CountDigitFrequency2(int Number, short DigitToCheck2)
+{
+	int Remainder = 0, FreqCount2 = 0;
+	while (Number > 0)
+	{
+		Remainder = Number % 10;
+		Number = Number / 10;
+		if (DigitToCheck2 == Remainder)
+		{
+			FreqCount2++;
+		}
+	}
+	return FreqCount2;
+}
+int CountDigitFrequency3(int Number, short DigitToCheck3)
+{
+	int Remainder = 0, FreqCount3 = 0;
+	while (Number > 0)
+	{
+		Remainder = Number % 10;
+		Number = Number / 10;
+		if (DigitToCheck3 == Remainder)
+		{
+			FreqCount3++;
+		}
+	}
+	return FreqCount3;
+}
+int main()
+{
+	int Number = ReadPositiveNumber("Please Enter Your Positive Number: ");
+	short DigitToCheck = ReadPositiveNumber("Please Enter Your Positive Number: ");
+	short DigitToCheck2 = ReadPositiveNumber("Please Enter Your Positive Number: ");
+	short DigitToCheck3 = ReadPositiveNumber("Please Enter Your Positive Number: ");
+	cout << "\nDigit " << DigitToCheck << " Frequency is " << CountDigitFrequency(Number, DigitToCheck) << " Time(S).\n";
+	cout << "\nDigit2 " << DigitToCheck2 << " Frequency2 is " << CountDigitFrequency2(Number, DigitToCheck2) << " Time(S).\n";
+	cout << "\nDigit3 " << DigitToCheck3 << " Frequency3 is " << CountDigitFrequency3(Number, DigitToCheck3) << " Time(S).\n";
+	return 0;
+}

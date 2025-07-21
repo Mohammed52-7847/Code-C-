@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+void ReadNumber(int& a, int& h)
+{
+	cout << "Please Enter Your Number a: " << endl;
+	cin >> a;
+	cout << "Please Enter Your Number h: " << endl;
+	cin >> h;
+}
+float CalculateArea(float a, float h)
+{
+	return 0.5 * (a * h);
+}
+void PrintResults(float Area)
+{
+	cout << "The Result Area is: " << Area << endl;
+}
+int main()
+{
+	int a, h;
+	ReadNumber(a, h);
+	PrintResults(CalculateArea(a, h));
+	return 0;
+}

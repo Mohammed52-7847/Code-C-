@@ -1,0 +1,94 @@
+#include <iostream>
+using namespace std;
+int RandomNumber(int From, int To)
+{
+	int randNum = rand() % (To - From + 1) + From;
+	return randNum;
+}
+void FillArrayWithRandomNumbers(int arr[100], int& arrlength)
+{
+	cout << "\nEnter Number:\n";
+	cin >> arrlength;
+	for (int i = 0; i < arrlength; i++)
+	{
+		arr[i] = RandomNumber(1, 100);
+	}
+}
+void PrintArray(int arr[100], int arrlength)
+{
+	for (int i = 0; i < arrlength; i++)
+	{
+		cout << arr[i] << " ";
+	}
+	cout << "\n";
+}
+void CopyArrayRandomNum(int arrSource[100], int arrDestination[100], int arrlength)
+{
+	for (int i = 0; i < arrlength; i++)
+	{
+		arrDestination[i] = arrSource[i];
+	}
+}
+int ArrayRepeated(int Number, int arr[100], int arrlength)
+{
+	int Count = 0;
+	for (int i = 0; i <= arrlength; i++)
+	{
+		if (Number == arr[i])
+		{
+			Count = Count + i;
+		}
+	}
+	return Count;
+}
+int ArrayRepeated2(int Number, int arr[100], int arrlength)
+{
+	int Count = 1;
+	for (int i = 0; i <= arrlength; i++)
+	{
+		if (Number == arr[i])
+		{
+			Count = Count + i;
+		}
+	}
+	return Count;
+}
+int ReadPositiveNumber(string Message)
+{
+	int Number = 0;
+	do
+	{
+		cout << Message << endl;
+		cin >> Number;
+	} while (Number <= 0);
+	return Number;
+}
+int main()
+{
+	srand((unsigned)time(NULL));
+	int arr[100],arrlength,NumberToCheck;
+	FillArrayWithRandomNumbers(arr, arrlength);
+	int arr2[100];
+	CopyArrayRandomNum(arr, arr2, arrlength);
+	cout << "\nArray 1 elements: ";
+	PrintArray(arr, arrlength);
+	NumberToCheck = ReadPositiveNumber("\nPlease Enter a Number To Search For?\n");
+	cout << "\nNumber Your Are Looking For is: ";
+	cout << NumberToCheck << endl;
+	cout << "\nThe Number Found At Position: ";
+	cout << ArrayRepeated(NumberToCheck, arr, arrlength) << endl;
+	cout << "\nThe Number Found its Order: ";
+	cout << ArrayRepeated2(NumberToCheck, arr, arrlength) << endl;
+	FillArrayWithRandomNumbers(arr, arrlength);
+	cout << "\nArray 1 elements: ";
+	PrintArray(arr2, arrlength);
+	NumberToCheck = ReadPositiveNumber("\nPlease Enter a Number To Search For?\n");
+	cout << "\nNumber Your Are Looking For is: ";
+	cout << NumberToCheck << endl;
+	cout << "\nThe Number Found At Position: ";
+	cout << ArrayRepeated(NumberToCheck,arr2, arrlength) << endl;
+	cout << "\nThe Number Found its Order: ";
+	cout << ArrayRepeated2(NumberToCheck, arr2, arrlength) << endl;
+
+	return 0;
+}

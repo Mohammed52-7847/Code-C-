@@ -1,0 +1,31 @@
+#include <iostream>
+#include <string>
+using namespace std;
+struct stEmployees
+{
+	string Name;
+	float Salary;
+};
+int main()
+{
+	stEmployees Employees, * ptr;
+	cout << "Enter Name\n";
+	getline(cin, Employees.Name);
+	cout << Employees.Name << endl;
+	Employees.Name = "Mohamed Helmi";
+	Employees.Salary = 5000;
+	cout << Employees.Name << endl;
+	cout << Employees.Salary << endl;
+	ptr = &Employees;
+	cout << "Enter Name\n";
+	getline(cin, ptr->Name);
+	cout << ptr->Name << endl;
+	cout << "Get Out Baby\n";
+	cout << ptr->Name << endl;
+	cout << ptr->Salary << endl;
+	cout << "Address\n";
+	cout << &ptr->Name << endl;
+	cout << &ptr->Salary << endl;
+	cin.ignore();
+	return 0;
+}

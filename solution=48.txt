@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+using namespace std;
+struct strMonthlyLoan
+{
+	float LoanAmount;
+	float Months;
+};
+strMonthlyLoan ReadMonthlyLoan()
+{
+	strMonthlyLoan MonthlyLoan;
+	cout << "Please Enter Your a LoanAmount: " << endl;
+	cin >> MonthlyLoan.LoanAmount;
+	cout << "Please Enter Your a Months: " << endl;
+	cin >> MonthlyLoan.Months;
+	return MonthlyLoan;
+}
+float Calculate(strMonthlyLoan MonthlyLoan)
+{
+	float MonthlyInStallment = 0;
+	MonthlyInStallment = MonthlyLoan.LoanAmount / MonthlyLoan.Months;
+	return MonthlyInStallment;
+}
+void PrintResult(float Result)
+{
+	cout << "\n MonthlyInStallment: " << Result << "." << endl;
+}
+int main()
+{
+	PrintResult(Calculate(ReadMonthlyLoan()));
+	return 0;
+}

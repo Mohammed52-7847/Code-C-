@@ -1,0 +1,65 @@
+#include <iostream>
+#include <string>
+using namespace std;
+enum enMonth
+{
+	January = 1, February = 2, March = 3, April = 4, May = 5, June = 6, July = 7, August = 8,
+	September = 9, October = 10, November = 11, December = 12
+};
+enMonth ReadNumOfMonth()
+{
+	int Number = 0;
+	do
+	{
+		cout << "Please Enter Your Day Again: " << endl;
+		cin >> Number;
+	} while (Number < 1 || Number > 12);
+	return (enMonth)Number;
+}
+string CheckMonth(enMonth Month)
+{
+	switch (Month)
+	{
+	case enMonth::January:
+		return "\n It is January.";
+		break;
+	case  enMonth::February:
+		return "\n It is February.";
+		break;
+	case enMonth::March:
+		return "\n It is March.";
+		break;
+	case enMonth::April:
+		return "\n It is April.";
+		break;
+	case enMonth::May:
+		return "\n It is May.";
+		break;
+	case enMonth::June:
+		return "\n It is June.";
+		break;
+	case enMonth::July:
+		return "\n It is July.";
+		break;
+	case enMonth::August:
+		return "\n It is August.";
+		break;
+	case enMonth::September:
+		return "\n It is September.";
+		break;
+	case enMonth::October:
+		return "\n It is October.";
+		break;
+	case enMonth::November:
+		return "\n It is November.";
+		break;
+	case enMonth::December:
+		return "\n It is December.";
+		break;
+	}
+}
+int main()
+{
+	cout << CheckMonth(ReadNumOfMonth()) << endl;
+	return 0;
+}

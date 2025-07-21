@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+double Myfuction(int l, const float pi)
+{
+	return (pow(l, 2) / (4 * pi));
+}
+int main()
+{
+	int l;
+	const float pi = 3.14;
+	cout << "please enter your number? ";
+	cin >> l;
+
+	cout << Myfuction(l, pi) << endl;
+
+	return 0;
+}

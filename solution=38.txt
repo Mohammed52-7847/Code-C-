@@ -1,0 +1,21 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	int Number;
+	do
+	{
+		cout << "Please Enter a Positive Number: " << endl;
+		cin >> Number;
+	} while (Number < 0);
+	if (Number % 2==0)
+	{
+		cout << "a Prime Number is: " << Number << "." << endl;
+	}
+	else
+	{
+		cout << "Not a Prime Number is: " << Number << "." << endl;
+	}
+	return 0;
+}

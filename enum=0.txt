@@ -1,0 +1,110 @@
+#include <iostream>
+using namespace std;
+
+struct N
+{
+	string name;
+	int age;
+	string city;
+	string country;
+	float monthly_salary;
+	float yearly_salary;
+};
+struct B
+{
+	N info;
+	string birth;
+	string phone;
+	string street;
+	string email;
+};
+struct C
+{
+	B contact;
+	string car;
+	string model;
+	float manu_year;
+};
+enum gender
+{
+	male,female
+};
+enum state
+{
+	married,single
+};
+enum favorit
+{
+	red,blue,pink,green,white
+};
+int main()
+{
+	gender type;
+	type = gender::male;
+	state personal;
+	personal = state::married;
+	favorit color;
+	color = favorit::white;
+	C information;
+	information.contact.info.name;
+	information.contact.info.age;
+	information.contact.info.city;
+	information.contact.info.country;
+	information.contact.info.monthly_salary;
+	information.contact.info.yearly_salary;
+
+	information.contact.birth;
+	information.contact.phone;
+	information.contact.street;
+	information.contact.email;
+
+	information.car;
+	information.model;
+	information.manu_year;
+	cout << "name: ";
+	cin >> information.contact.info.name;
+	cout << "age: ";
+	cin >> information.contact.info.age;
+	cout << "city: ";
+	cin >> information.contact.info.city;
+	cout << "country: ";
+	cin >> information.contact.info.country;
+	cout << "monthly salary: ";
+	cin >> information.contact.info.monthly_salary;
+	
+	cout << "birth: ";
+	cin >> information.contact.birth;
+	cout << "phone: ";
+	cin >> information.contact.phone;
+	cout << "street: ";
+	cin >> information.contact.street;
+	cout << "email: ";
+	cin >> information.contact.email;
+
+	cout << "car: ";
+	cin >> information.car;
+	cout << "model: ";
+	cin >> information.model;
+	cout << "manufactring year: ";
+	cin >> information.manu_year;
+
+	cout << "********************************************""\n";
+	cout << "Name: " << information.contact.info.name << "." << endl;
+	cout << "Age: " << information.contact.info.age << "." << endl;
+	cout << "City: " << information.contact.info.city << "." << endl;
+	cout << "Country: " << information.contact.info.country << "." << endl;
+	cout << "Monthly Salary: " << information.contact.info.monthly_salary << "." << endl;
+	cout << "Yearly Salary: " << information.contact.info.monthly_salary * 12 << "." << endl;
+	cout << "Gender: " << type << "." << endl;
+	cout << "State: " << personal << "." << endl;
+	cout << "Color: " << color << "." << endl;
+	cout << "Birth: " << information.contact.birth << "." << endl;
+	cout << "Phone: " << information.contact.phone << "." << endl;
+	cout << "Street: " << information.contact.street << "." << endl;
+	cout << "E-Mail: " << information.contact.email << "." << endl;
+	cout << "Car: " << information.car << "." << endl;
+	cout << "Model: " << information.model << "." << endl;
+	cout << "Manufactring Year: " << information.manu_year << "." << endl;
+	cout << "********************************************""\n";
+
+}

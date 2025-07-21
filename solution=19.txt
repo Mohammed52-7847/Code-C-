@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+void ReadNumber(int& D)
+{
+	cout << "Please Enter Your Number D: " << endl;
+	cin >> D;
+}
+float CalculateCircleArea(float D)
+{
+	const float pi = 3.14;
+	return (pi * pow(D, 2)) / 4;
+}
+void ResultsDiameter(float Diameter)
+{
+	cout << "\n The Result is: " << Diameter << "." << endl;
+}
+int main()
+{
+	int D;
+	ReadNumber(D);
+	ResultsDiameter(CalculateCircleArea(D));
+	return 0;
+}

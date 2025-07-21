@@ -1,0 +1,14 @@
+﻿#include <vector>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	vector <int> vTempEmployee;
+
+	cout << "The Number Empty: " << vTempEmployee.empty() << endl;//اذا كان فاضي يعطي 1
+	vTempEmployee = { 10,20,30,40,50 };
+	cout << "The Number Empty: " << vTempEmployee.empty() << endl;//اذا كان ممتلي يعطي 0
+
+	return 0;
+}

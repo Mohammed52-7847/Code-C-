@@ -1,0 +1,37 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int ReadMark()
+{
+	int Mark;
+	do
+	{
+		cout << "Enter Your Mark: ";
+		cin >> Mark;
+	} while (Mark <= 0);
+	return Mark;
+}
+int CalculateMark(int Mark)
+{
+	if (Mark >= 50)
+	{
+		return true;
+	}
+	return false;
+}
+void PrintMark(int Mark)
+{
+	if (Mark >= 50)
+	{
+		cout << "\nPass.\n";
+	}
+	else
+	{
+		cout << "\nFall.\n";
+	}
+}
+int main()
+{
+	PrintMark(ReadMark());
+	return 0;
+}

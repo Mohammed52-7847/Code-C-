@@ -1,0 +1,14 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+int main()
+{
+	cout << "________" << "|" << "______________________________" << "|" << "________" << "|" << endl;
+	cout << "  Code  " << "|" << "             Name             " << "|" << "  Mark  " << "|" << endl;
+	cout << "________" << "|" << "______________________________" << "|" << "________" << "|" << endl;
+	cout << setw(8) << "C101" << "|" << setw(30) << "Introduction to Programming 1" << "|" << setw(8) << "95" << "|" << endl;
+	cout << setw(8) << "C102" << "|" << setw(30) << "Computer Hardware" << "|" << setw(8) << "88" << "|" << endl;
+	cout << setw(8) << "C1035243" << "|" << setw(30) << "Net Work" << "|" << setw(8) << "75" << "|" << endl;
+	cout << "________" << "|" << "______________________________" << "|" << "________" << "|" << endl;
+	return 0;
+}

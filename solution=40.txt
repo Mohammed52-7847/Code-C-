@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+using namespace std;
+struct strService
+{
+	int BillValue;
+	float ServiceFee = 1.1;
+	float SalesTax = 1.16;
+};
+strService ReadServiceFeeAndSalesTax()
+{
+	strService ServiceFeeAndSalesTax;
+	cout << "Please Enter a Bill Value: " << endl;
+	cin >> ServiceFeeAndSalesTax.BillValue;
+	return ServiceFeeAndSalesTax;
+}
+float CalculateServiceFeeAndSalesTax(strService ServiceFeeAndSalesTax)
+{
+	float TotalBill = 0;
+	return TotalBill = ServiceFeeAndSalesTax.BillValue *
+		ServiceFeeAndSalesTax.ServiceFee *
+		ServiceFeeAndSalesTax.SalesTax;
+}
+int main()
+{
+	cout << endl << "The Total Bill is: " << CalculateServiceFeeAndSalesTax(ReadServiceFeeAndSalesTax()) << "." << endl;
+	return 0;
+}

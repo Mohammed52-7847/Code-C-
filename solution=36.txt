@@ -1,0 +1,38 @@
+#include <iostream>
+#include <string>
+using namespace std;
+struct stSimpleCalculator
+{
+	float Number_1;
+	float Number_2;
+	char OperationType;
+};
+stSimpleCalculator ReadSimpleCalculator()
+{
+	stSimpleCalculator SimpleCalculator;
+	cout << "Please Enter Your Number-1: " << endl;
+	cin >> SimpleCalculator.Number_1;
+	cout << "Please Enter Your Number-2: " << endl;
+	cin >> SimpleCalculator.Number_2;
+	cout << "Please Enter Your OperationType: " << endl;
+	cin >> SimpleCalculator.OperationType;
+	return SimpleCalculator;
+}
+float CalculatorOperation(stSimpleCalculator SimpleCalculator)
+{
+	if (SimpleCalculator.OperationType == '+')
+		return SimpleCalculator.Number_1 + SimpleCalculator.Number_2;
+	else if (SimpleCalculator.OperationType == '-')
+		return SimpleCalculator.Number_1 - SimpleCalculator.Number_2;
+	else if (SimpleCalculator.OperationType == '*')
+		return SimpleCalculator.Number_1 * SimpleCalculator.Number_2;
+	else if (SimpleCalculator.OperationType == '/')
+		return SimpleCalculator.Number_1 / SimpleCalculator.Number_2;
+	else
+		return 0;
+}
+int main()
+{
+	cout << "\n Result= " << CalculatorOperation(ReadSimpleCalculator()) << "." << endl;
+	return 0;
+}

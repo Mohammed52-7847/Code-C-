@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+#include "HeaderOutput.h";
+#include "HeaderMath.h";
+#include "MyInput.h";
+#include "MyOutput.h";
+using namespace std;
+using namespace HeOut;
+using namespace MathFun;
+using namespace MyLib;
+using namespace MyOut;
+enum enPassAndFail{Pass = 1,Fail = 2};
+int main()
+{
+	int array1[] = { 1,2,3,4,5 };
+	for (int n : array1)
+	{
+		cout << n << "\t";
+	}
+	
+	return 0;
+}

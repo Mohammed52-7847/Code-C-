@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main ()
+{
+	short int a;
+	short int b;
+	cout << "please enter the first number A? ";
+	cin >> a;
+	cout << "please enter the second number B? ";
+	cin >> b;
+	short int add = a + b;
+	short int sub = a - b;
+	short int multi = a * b;
+	short int divid = a / b;
+	short int mod = a % b;
+	cout << a << " + " << b << " = " << add << endl;
+	cout << a << " - " << b << " = " << sub << endl;
+	cout << a << " * " << b << " = " << multi << endl;
+	cout << a << " / " << b << " = " << divid << endl;
+	cout << a << " % " << b << " = " << mod << endl;
+
+	return 0;
+}

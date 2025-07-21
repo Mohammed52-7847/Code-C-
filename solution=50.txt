@@ -1,0 +1,39 @@
+#include <iostream>
+#include <string>
+using namespace std;
+float ReadNumberPIN(string Message)
+{
+	float Number = 0;
+	do
+	{
+		cout << Message << endl;
+		cin >> Number;
+	} while (Number <= 0);
+	return Number;
+}
+float CalculatePIN(float Number)
+{
+	if (Number == 1234)
+	{
+		cout << "\n Your Balance is: " << 7500 << endl;
+	}
+	else
+	{
+		for (int i = 1; i <= 3; i++)
+		{
+			if (Number == 5151)
+			{
+				cout << "Please Enter Your Number: " << endl;
+				cin >> Number;
+
+			}
+		}
+		cout << "Card Locked." << endl;
+	}
+		return Number;
+}
+int main()
+{
+    CalculatePIN(ReadNumberPIN("Please Enter Your PIN: "));
+	return 0;
+}

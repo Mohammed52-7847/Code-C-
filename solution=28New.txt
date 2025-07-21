@@ -1,0 +1,72 @@
+#include <iostream>
+#include <string>
+using namespace std;
+enum enOddOrEven
+{
+	Odd = 1,Even=2
+};
+int ReadNumber()
+{
+	int Number;
+	cout << "Please Enter Your Number: " << endl;
+	cin >> Number;
+	return Number;
+}
+enOddOrEven CheckOddOrEven(int Number)
+{
+	if (Number % 2 != 0)
+		return enOddOrEven::Odd;
+	else
+		return enOddOrEven::Even;
+}
+int SumOddOrEvenNumberFrom1toNWhileStatement(int N)
+{
+	int counter = 0;
+	int sum = 0;
+	cout << "Sum Odd Number While Statement:\n";
+	while (counter < N)
+	{
+		counter++;
+		if (CheckOddOrEven(counter) == enOddOrEven::Odd)
+		{
+			sum += counter;
+		}
+	}
+	return sum;
+}
+int SumOddOrEvenNumberFrom1toNDoWhile(int N)
+{
+	int counter = 0;
+	int sum = 0;
+	cout << "Sum Odd Or Even From 1 To N Do..While:\n";
+	do
+	{
+		counter++;
+		if (CheckOddOrEven(counter) == enOddOrEven::Odd)
+		{
+			sum += counter;
+		}
+	} while (counter < N);
+	return sum;
+}
+int SumOddOrEvenNumberFrom1toNForStatement(int N)
+{
+	int sum = 0;
+	cout << "Sun Odd Or Even From 1 To N For Statment:\n";
+	for (int counter = 1; counter <= N; counter++)
+	{
+		if (CheckOddOrEven(counter) == enOddOrEven::Odd)
+		{
+			sum += counter;
+		}
+	}
+	return sum;
+}
+int main()
+{
+	int N = ReadNumber();
+	cout << SumOddOrEvenNumberFrom1toNWhileStatement(N) << endl;
+	cout << SumOddOrEvenNumberFrom1toNDoWhile(N) << endl;
+	cout << SumOddOrEvenNumberFrom1toNForStatement(N) << endl;
+	return 0;
+}

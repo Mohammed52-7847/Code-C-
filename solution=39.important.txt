@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+using namespace std;
+struct stPayRemainder
+{
+	int TotalBill;
+	int CashPaid;
+};
+stPayRemainder ReadPayRemainder()
+{
+	stPayRemainder PayRemainder;
+	cout << "Please Enter a Total Bill: " << endl;
+	cin >> PayRemainder.TotalBill;
+	cout << "Please Enter a CashPaid: " << endl;
+	cin >> PayRemainder.CashPaid;
+	return PayRemainder;
+}
+int CalculatePayRemainder(stPayRemainder PayRemainder)
+{
+	int Remainder = 0;
+	return Remainder = PayRemainder.CashPaid - PayRemainder.TotalBill;
+}
+int main()
+{
+	cout << endl << "Your Result is: " << CalculatePayRemainder(ReadPayRemainder()) << "." << endl;
+	return 0;
+}

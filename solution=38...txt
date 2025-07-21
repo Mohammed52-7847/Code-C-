@@ -1,0 +1,43 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	int Number1,n2,n3;
+	do
+	{
+		cout << "Please Enter a Positive Number: " << endl;
+		cin >> Number1;
+		cout << "Please Enter a Positive n2: " << endl;
+		cin >> n2;
+		cout << "Please Enter a Positive n3: " << endl;
+		cin >> n3;
+	} while (Number1,n2,n3 < 0);
+	if (Number1 % 2==0)
+	{
+		cout << "a Prime Number is: " << Number1 << "." << endl;
+	}
+	else
+	{
+		cout << "Not a Prime Number is: " << Number1 << "." << endl;
+	}
+	cout << "-------------------------\n";
+	if (n2 % 2 == 0)
+	{
+		cout << "a Prime Number is: " << n2 << "." << endl;
+	}
+	else
+	{
+		cout << "Not a Prime Number is: " << n2 << "." << endl;
+	}
+	cout << "-------------------------\n";
+	if (n3 % 2 == 0)
+	{
+		cout << "a Prime Number is: " << n3 << "." << endl;
+	}
+	else
+	{
+		cout << "Not a Prime Number is: " << n3 << "." << endl;
+	}
+	return 0;
+}

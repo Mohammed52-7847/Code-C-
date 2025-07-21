@@ -1,0 +1,81 @@
+#include <iostream>
+#include <string>
+using namespace std;
+enum enWeekDay{Saturday = 1,Sunday = 2,Monday = 3,Tuesday = 4,Wednesday = 5,Thursday = 6,Friday = 7};
+void ReadName()
+{
+	cout << "************************\n";
+	cout << "Enter The Saturday :\n";
+	cout << "Enter The Sunday   :\n";
+	cout << "Enter The Monday   :\n";
+	cout << "Enter The Tuesday  :\n";
+	cout << "Enter The Wednesday:\n";
+	cout << "Enter The Thursday :\n";
+	cout << "Enter The Friday   :\n";
+	cout << "************************\n";
+
+	cout << "Please Enter Your Day: " << endl;
+
+}
+enWeekDay CheckDay()
+{
+	enWeekDay Day;
+	int c = 0;
+	cin >> c;
+	return Day = (enWeekDay)c;
+}
+string PrintDay(enWeekDay Day)
+{
+		switch (Day)
+		{
+		case enWeekDay::Saturday:
+			system("Color 1F");
+			return "Saturday";
+			break;
+		case enWeekDay::Sunday:
+			system("Color 2F");
+			return "Sunday";
+			break;
+		case enWeekDay::Monday:
+			system("Color 3F");
+			return "Monday";
+			break;
+		case enWeekDay::Tuesday:
+			system("Color 5F");
+			return "Tuesday";
+			break;
+		case enWeekDay::Wednesday:
+			system("Color 6F");
+			return "Wednesday";
+			break;
+		case enWeekDay::Thursday:
+			system("Color 7F");
+			return "Thursday";
+			break;
+		case enWeekDay::Friday:
+			system("Color 8F");
+			return "Friday";
+			break;
+		default:
+			system("Color 4F");
+			return "Wrong Day";
+			break;
+		}
+		
+}
+void Print2Result()
+{
+	char Play = 'Y';
+	while (Play == 'Y' || Play == 'y')
+	{
+		ReadName();
+		cout << "\nThe Day is: " << PrintDay(CheckDay()) << endl;
+		cout << "\nDo You Want To Enter Day again ?Y/N ? ";
+		cin >> Play;
+	}
+}
+int main()
+{
+	Print2Result();
+	return 0;
+}

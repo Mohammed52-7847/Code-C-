@@ -1,0 +1,69 @@
+#include <iostream>
+using namespace std;
+enum enGrade{A = 1,B = 2,C = 3,D = 4,E = 5,F = 6};
+int ReadNumber()
+{
+	int Number = 0;
+	cout << "Please Enter Your Grade? " << endl;
+	cin >> Number;
+	return Number;
+}
+int CheckGrade(int Number)
+{
+	if (Number >= 90)
+	{
+		return enGrade::A;
+	}
+	else if (Number >= 80)
+	{
+		return enGrade::B;
+	}
+	else if (Number >= 70)
+	{
+		return enGrade::C;
+	}
+	else if (Number >= 60)
+	{
+		return enGrade::D;
+	}
+	else if (Number >= 50)
+	{
+		return enGrade::E;
+	}
+	else
+	{
+		return enGrade::F;
+	}
+}
+void PrintResult(int Number)
+{
+	if (CheckGrade(Number) == enGrade::A)
+	{
+		cout << "A\n";
+	}
+	else if (CheckGrade(Number) == enGrade::B)
+	{
+		cout << "B\n";
+	}
+	else if (CheckGrade(Number) == enGrade::C)
+	{
+		cout << "C\n";
+	}
+	else if (CheckGrade(Number) == enGrade::D)
+	{
+		cout << "D\n";
+	}
+	else if (CheckGrade(Number) == enGrade::E)
+	{
+		cout << "E\n";
+	}
+	else
+	{
+		cout << "F\n";
+	}
+}
+int main()
+{
+	PrintResult(ReadNumber());
+	return 0;
+}

@@ -1,0 +1,84 @@
+#include <iostream>
+#include <string>
+#include <iomanip>
+using namespace std;
+int RandomNumber(int From, int To)
+{
+	int randNum = rand() % (To - From + 1) + 1;
+	return randNum;
+}
+void FillMatrix(int arr[3][3], short Rows, short Cols)
+{
+	for (short i = 0; i < Rows; i++)
+	{
+		for (short j = 0; j < Cols; j++)
+		{
+			arr[i][j] = RandomNumber(1, 100);
+		}
+	}
+}
+void PrintFillMatrix(int arr[3][3], short Rows, short Cols)
+{
+	for (short i = 0; i < Rows; i++)
+	{
+		for (short j = 0; j < Cols; j++)
+		{
+			cout << setw(3) << arr[i][j] << "     ";
+		}
+		cout << endl;
+	}
+}
+int RowSum(int arr[3][3], short showNumber, short Cols)
+{
+	int Sum = 0;
+	for (short j = 0; j < Cols; j++)
+	{
+		Sum += arr[showNumber][j];
+	}
+	return Sum;
+}
+void PrintRowSum(int arr[3][3], short Rows, short Cols)
+{
+	for (short i = 0; i < Rows; i++)
+	{
+		cout << "The Sum Row is: " << RowSum(arr, i, Cols) << endl;
+	}
+}
+void arrayOneDimensional(int arr[3][3], short showNumber,short Cols)
+{
+	for (short j = 0; j < Cols; j++)
+	{
+		arr[showNumber][j] = RandomNumber(1,100);
+	}
+}
+void PrintarrayOneDimensional(int arr[3][3], short Rows, short Cols)
+{
+	for (short i = 0; i < Rows; i++)
+	{
+		cout << setw(3) << arr[i][0] << endl;
+	}
+	cout << endl;
+}
+int SumarrayOneDimensional(int arr[3][3], short Rows, short Cols)
+{
+	int Sum = 0;
+	for (short i = 0; i < Rows; i++)
+	{
+		 Sum+=arr[i][0];
+	}
+	return Sum;
+}
+
+int main()
+{
+	srand((unsigned)time(NULL));
+	int arr[3][3];
+	FillMatrix(arr, 3, 3);
+	PrintFillMatrix(arr, 3, 3);
+	PrintRowSum(arr, 3, 3);
+	cout << "One Array:\n";
+	PrintarrayOneDimensional(arr, 3, 3);
+	cout << "Sum One Array:\n";
+	cout << SumarrayOneDimensional(arr, 3, 3) << endl;
+	system("pause>0");
+}

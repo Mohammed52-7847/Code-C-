@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+using namespace std;
+void ReadNumber(int x[4])
+{
+	cout << "Number_1: " << endl;
+	cin >> x[0];
+	cout << "Number_2: " << endl;
+	cin >> x[1];
+	cout << "Number_3: " << endl;
+	cin >> x[2];
+	cout << "Number_4: " << endl;
+	cin >> x[3];
+}
+void PrintArray(int x[4])
+{
+	cout << "\n";
+	cout << x[3] << endl;
+	cout << x[2] << endl;
+	cout << x[1] << endl;
+	cout << x[0] << "\n";
+}
+int main()
+{
+	int x[4];
+	ReadNumber(x);
+	PrintArray(x);
+	return 0;
+}

@@ -1,0 +1,52 @@
+#include <iostream>
+#include <string>
+#include <iomanip>
+#include <cstdio>
+using namespace std;
+void PrintMatrix(int arr[3][3], short Rows, short Cols)
+{
+	for (short i = 0; i < Rows; i++)
+	{
+		for (short j = 0; j < Cols; j++)
+		{
+			cout << " " << setw(3) << arr[i][j] << "    ";
+		}
+		cout << endl;
+	}
+}
+bool AreIsIdentityMatrix(int arr[3][3], short Rows, short Cols)
+{
+	for (short i = 0; i < Rows; i++)
+	{
+		for (short j = 0; j < Cols; j++)
+		{
+			if (i == j && arr[i][j] < 0)
+			{
+				return false;
+			}
+			else if (i != j && arr[i][j] != 0)
+			{
+				return false;
+			}
+		}
+	}
+	return true;
+}
+int main()
+{
+	int arr[3][3] = { {9,0,0},{0,9,0},{0,0,9} };
+	cout << "\nMatrix:\n";
+	PrintMatrix(arr, 3, 3);
+	cout << endl;
+	if (AreIsIdentityMatrix(arr, 3, 3))
+	{
+		cout << " YES: Identity.\n";
+	}
+	else
+	{
+		cout << " No: NOT Identity.\n";
+	}
+
+	system("pause > 0");
+	return 0;
+}

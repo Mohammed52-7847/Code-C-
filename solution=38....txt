@@ -1,0 +1,67 @@
+#include <iostream>
+#include <string>
+using namespace std;
+struct stNumber
+{
+	int Number_A;
+	int Number_B;
+	int Number_C;
+};
+stNumber ReadNumber()
+{
+	stNumber Number;
+	do
+	{
+		cout << "Please Enter a Positive Number-A: " << endl;
+		cin >> Number.Number_A;
+		cout << "Please Enter a Positive Number-B: " << endl;
+		cin >> Number.Number_B;
+		cout << "Please Enter a Positive Number-C: " << endl;
+		cin >> Number.Number_C;
+	} while (Number.Number_A, Number.Number_B, Number.Number_C < 0);
+	return Number;
+}
+void CalculateNumber(stNumber Number)
+{
+	if (Number.Number_A % 2 == 0)
+	{
+		cout << "This is a Prime: " << Number.Number_A << endl;
+	}
+	else
+	{
+		cout << "This is Not a Prime: " << Number.Number_A << endl;
+	}
+	cout << "-------------------------\n";
+}
+void CalculateNumber2(stNumber Number)
+{
+	
+	if (Number.Number_B % 2 == 0)
+	{
+		cout << "This is a Prime: " << Number.Number_B << endl;
+	}
+	else
+	{
+		cout << "This is Not a Prime: " << Number.Number_B << endl;
+	}
+	cout << "-------------------------\n";
+}
+void CalculateNumber3(stNumber Number)
+{
+	if (Number.Number_C % 2 == 0)
+	{
+		cout << "This is a Prime: " << Number.Number_C << endl;
+	}
+	else
+	{
+		cout << "This is Not a Prime: " << Number.Number_C << endl;
+	}
+}
+int main()
+{
+	stNumber Number = ReadNumber();
+	 CalculateNumber(Number);
+	 CalculateNumber2(Number);
+	 CalculateNumber3(Number);
+	return 0;
+}

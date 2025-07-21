@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+using namespace std;
+char ReadNumber(string Message)
+{
+	char Number = 0;
+	do
+	{
+		cout << Message << endl;
+		cin >> Number;
+	} while (Number < 0);
+	return Number;
+}
+char CheckNumber(char Number)
+{
+	for (char i = 'A'; i <= Number; i++)
+	{
+		cout << "\n Char: " + to_string(i) << "::" << i << endl;
+	}
+	return Number;
+}
+int main()
+{
+	cout << "\n Char: [" << CheckNumber(ReadNumber("Please Enter Your Character: ")) << "]." << endl;
+	cout << "\n";
+
+	return 0;
+}

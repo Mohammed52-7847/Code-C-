@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int ReadNumber()
+{
+	int Number = 0;
+	cout << "Enter Number?\n";
+	cin >> Number;
+	return Number;
+}
+float CheckCalculate(int Number)
+{
+	float TotalBill = 0;
+	return TotalBill = Number * 1.1 * 1.16;
+}
+void PrintResult()
+{
+	cout << CheckCalculate(ReadNumber()) << endl;
+}
+int main()
+{
+	PrintResult();
+	return 0;
+}

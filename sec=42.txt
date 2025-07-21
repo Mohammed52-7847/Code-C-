@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main ()
+{
+    int d;
+	int h;
+	int m;
+	int s;
+	cout << "please enter the day= ";
+	cin >> d;
+	cout << "please enter the hours= ";
+	cin >> h;
+	cout << "please enter the minutes= ";
+	cin >> m;
+	cout << "please enter the seconds= ";
+	cin >> s;
+	int total_seconds = round((d * 24 * 60 * 60) + (h * 60 * 60) + (m * 60) + (s));
+	cout << "******************************""\n";
+	cout << "Total Seconds is= " << total_seconds << "." << endl;
+
+
+    return 0;
+}

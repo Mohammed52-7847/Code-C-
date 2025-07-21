@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+void Readstudent(int S[100], int& N)
+{
+	cout << "how many number do you want to enter:1 to 100=\n";
+	cin >> N;
+	for (int C = 0; C <= N - 1; C++)
+	{
+		cout << "please enter number:" << C + 1 << endl;
+		cin >> S[C];
+	}
+}
+void Printstudent(int S[100], int N)
+{
+	for (int C = 0; C <= N - 1; C++)
+	{
+		cout << "Number [" << C + 1 << "]:" << S[C] << endl;
+	}
+}
+int calculateSum(int S[100], int N)
+{
+	int SUM = 0;
+	for (int C = 0; C <= N - 1; C++)
+	{
+		SUM += S[C];
+	}
+	return SUM;
+}
+float calculateAverage(int S[100], int N)
+{
+	return (float)calculateSum(S, N) / N;
+}
+int main()
+{
+	int S[100], N = 0;
+	Readstudent(S, N);
+	Printstudent(S, N);
+	cout << "\n********************************\n";
+	cout << "SUM: " << calculateSum(S, N) << endl;
+	cout << "AVERAGE: " << calculateAverage(S, N) << endl;
+
+	return 0;
+}

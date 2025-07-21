@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+int RandomNumber(int From, int To)
+{
+	int randNum = rand() % (To - From + 1) + From;
+	return randNum;
+}
+void ReadArray(int arr[100], int& arrlength)
+{
+	cout << "\nEnter Your Number Elements:\n";
+	cin >> arrlength;
+	cout << "\nEnter Your Array Elements:\n";
+	for (int i = 0; i < arrlength; i++)
+	{
+		cout << RandomNumber(1, 100) << " ";
+	}
+	cout << endl;
+}
+
+int main()
+{
+	int arr[100], arrlength;
+	srand((unsigned)time(NULL));
+	ReadArray(arr, arrlength);
+	return 0;
+}

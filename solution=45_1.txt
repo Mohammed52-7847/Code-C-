@@ -1,0 +1,109 @@
+#include <iostream>
+#include <string>
+using namespace std;
+enum enDay{Sunday = 1,Monday = 2,Tuesday = 3,Wednesday = 4,Thursday = 5,Friday = 6,Saturday = 7};
+int ReadNumber()
+{
+	int Number = 0;
+	do
+	{
+		cout << "Enter Your Day:\n";
+		cin >> Number;
+	} while (Number < 1 || Number > 7);
+	return Number;
+}
+enDay GetDay()
+{
+	return (enDay)ReadNumber();
+}
+ //void PrintResult(enDay Day)
+ //{
+	// switch (Day)
+	// {
+	// case enDay::Sunday:
+	// {
+	//	 cout << "Sunday\n";
+	// }
+	// break;
+	// case enDay::Monday:
+	// {
+	//	 cout << "Monday\n";
+	// }
+	// break;
+	// case enDay::Tuesday:
+	// {
+	//	 cout << "Tuesday\n";
+	// }
+	// break;
+	// case enDay::Wednesday:
+	// {
+	//	 cout << "Wednesday\n";
+	// }
+	// break;
+	// case enDay::Thursday:
+	// {
+	//	 cout << "Thursday\n";
+	// }
+	// break;
+	// case enDay::Friday:
+	// {
+	//	 cout << "Friday\n";
+	// }
+	// break;
+	// case enDay::Saturday:
+	// {
+	//	 cout << "Saturday\n";
+	// }
+	// break;
+	// default:
+	//	 cout << "Wrong Day\n";
+	// }
+ //}
+ string PrintResult(enDay Day)
+ {
+	 switch (Day)
+	 {
+	 case enDay::Sunday:
+	 {
+		 return "Sunday\n";
+	 }
+	 break;
+	 case enDay::Monday:
+	 {
+		 return "Monday\n";
+	 }
+	 break;
+	 case enDay::Tuesday:
+	 {
+		 return "Tuesday\n";
+	 }
+	 break;
+	 case enDay::Wednesday:
+	 {
+		 return "Wednesday\n";
+	 }
+	 break;
+	 case enDay::Thursday:
+	 {
+		 return "Thursday\n";
+	 }
+	 break;
+	 case enDay::Friday:
+	 {
+		 return "Friday\n";
+	 }
+	 break;
+	 case enDay::Saturday:
+	 {
+		 return "Saturday\n";
+	 }
+	 break;
+	 default:
+		 return "Wrong Day\n";
+	 }
+ }
+int main()
+{
+	cout << PrintResult(GetDay());
+	return 0;
+}

@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+using namespace std;
+struct strInfo
+{
+	float Number;
+	float Days;
+	float Weeks;
+};
+strInfo ReadNumber()
+{
+	strInfo Info;
+	do
+	{
+		cout << "Please Enter a Positive Number: " << endl;
+		cin >> Info.Number;
+	} while (Info.Number <= 0);
+	return Info;
+}
+void CheckDaysAndWeeks(strInfo Info)
+{
+	 Info.Days = Info.Number / 24;
+	 Info.Weeks = Info.Days / 7;
+	 cout << "**********************\n";
+	cout << "Days= " << Info.Days << "." << endl;
+	cout << "Weeks= " << Info.Weeks << "." << endl;
+}
+int main()
+{
+	CheckDaysAndWeeks(ReadNumber());
+	return 0;
+}

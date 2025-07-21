@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int Number[2];
+	cout << "please enter your Number-1: ";
+	cin >> Number[0];
+	cout << "please enter your Number-2: ";
+	cin >> Number[1];
+	int Half_1 = (Number[0]) / 2;
+	int Half_2 = (Number[1]) / 2;
+	cout << "Half Number-1: " << Half_1 << endl;
+	cout << "Half Number-2: " << Half_2 << endl;
+
+	return 0;
+}

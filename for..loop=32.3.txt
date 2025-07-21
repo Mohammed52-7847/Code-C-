@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	
+	int n;
+	int m;
+	int p = 1;
+	cout << "please enter your number: ";
+	cin >> n;
+	cout << "please enter your power: ";
+	cin >> m;
+	for (int i=1; i <= n+2; i++)
+	{
+		cout << i << " ";
+		p = p * n;
+	}
+	cout << "power: " << p << " ";
+
+	return 0;
+}

@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    int a;
+    cout << "Please enter your number-A = ";
+    cin >> a;
+    const float pi = 3.14;
+    float square = pi * a * a / 4;
+    cout << "****************""\n";
+    cout << "the solution is = " << square << "." << endl;
+
+    return 0;
+}

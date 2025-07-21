@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+void ReadNumber(int* Num1, int* Num2)
+{
+	cout << "Enter Number 1:\n";
+	cin >> *Num1;
+	cout << "Enter Number 2:\n";
+	cin >> *Num2;
+}
+void CheckSwapping(int *Num1,int *Num2)
+{
+	int temp;
+	temp = *Num1;
+	*Num1 = *Num2;
+	*Num2 = temp;
+}
+void PrintPointer()
+{
+	int a, b;
+	ReadNumber(&a, &b);
+	cout << "a = " << a << endl;
+	cout << "b = " << b << endl;
+	CheckSwapping(&a, &b);
+	cout << "\na = " << a << endl;
+	cout << "b = " << b << endl;
+}
+
+int main()
+{
+	PrintPointer();
+
+	return 0;
+}

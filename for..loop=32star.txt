@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int function()
+{
+	int N;
+	int M;
+	int P = 1;
+	int C = 1;
+	cout << "Please Enter Your Number: ";
+	cin >> N;
+	cout << "Please Enter Your Other: ";
+	cin >> M;
+	for (int C = 1; C <= M; C++)
+	{
+		P = P * N;
+	}
+	cout << "POWER: " << P << "." << endl;
+	return P;
+}
+
+int main()
+{
+	function();
+	return 0;
+}

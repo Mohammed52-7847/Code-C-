@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+using namespace std;
+void Read2Number(int& N, int& M)
+{
+	cout << "Enter N: " << endl;
+	cin >> N;
+	cout << "Enter M: " << endl;
+	cin >> M;
+}
+void PrintNumberPower(int N, int M)
+{
+	int P = 1;
+	for (int i = 1; i <= M; i++)
+	{
+		P *= N;
+		cout << "The Power is: " << P << endl;
+	}
+}
+int main()
+{
+	int N, M;
+	Read2Number(N, M);
+	cout << "\n";
+	PrintNumberPower(N, M);
+	return 0;
+}

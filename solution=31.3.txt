@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int ReadNumber()
+{
+	int Number = 0;
+	cout << "Please Enter Your Number:\n";
+	cin >> Number;
+	return Number;
+}
+void PrintNumber(int Number)
+{
+	cout << pow(Number, 2) << "," << pow(Number, 3) << "," << pow(Number, 4) << ".\n";
+}
+int main()
+{
+	PrintNumber(ReadNumber());
+	return 0;
+}

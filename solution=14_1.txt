@@ -1,0 +1,31 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int ReadPositiveNumber(string Message)
+{
+	int Number = 0;
+	do
+	{
+		cout << Message << endl;
+		cin >> Number;
+	} while (Number < 0);
+	return Number;
+}
+void PrintIntertedPattern(int Number)
+{
+	cout << "\n";
+	for (int i = 65+Number-1; i >= 65; i--)
+	{
+		for (int j = 65; j <= i; j++)
+		{
+			cout << char(i) << " ";
+		}
+		cout << endl;
+	}
+}
+int main()
+{
+	int Number = ReadPositiveNumber("Enter a Number\n");
+	PrintIntertedPattern(Number);
+	return 0;
+}

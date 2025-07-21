@@ -1,0 +1,27 @@
+#pragma once
+#include <iostream>
+#include <string>
+#include <cmath>
+#include <cstdlib>
+using namespace std;
+namespace MyOut
+{
+	void PrintName(string Name)
+	{
+		cout << "\nYour Name is: " << Name << endl;
+	}
+	void PrintResults(float Area)
+	{
+		cout << "\nRectangle Area is: " << Area << endl;
+	}
+	void PrintResult(int Sum)
+	{
+		cout << "\nThe Sum is = " << Sum << endl;
+	}
+
+	void PrintNumbers(int Num1, int Num2)
+	{
+		cout << "\nNumber1 = " << Num1 << endl;
+		cout << "\nNumber2 = " << Num2 << endl;
+	}
+}

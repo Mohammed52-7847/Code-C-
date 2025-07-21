@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+int main()
+{
+	int TotalSales;
+	do
+	{
+		cout << "Please Enter Your Total Sales: " << endl;
+		cin >> TotalSales;
+	} while (TotalSales < 0);
+	if (TotalSales >= 1000000)
+	{
+		cout << TotalSales * 0.01 << endl;
+	}
+	else if (TotalSales >= 500000)
+	{
+		cout << TotalSales * 0.02 << endl;
+	}
+	else if (TotalSales >= 100000)
+	{
+		cout << TotalSales * 0.03 << endl;
+	}
+	else if (TotalSales >= 50000)
+	{
+		cout << TotalSales * 0.05 << endl;
+	}
+	else
+	{
+		cout << TotalSales * 0 << endl;
+	}
+
+	return 0;
+}

@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+enum enPerfect{Perfect = 1,NotPerfect = 2};
+int ReadNumber()
+{
+	int Num = 0;
+	cout << "Enter Number:\n";
+	cin >> Num;
+	return Num;
+}
+bool CheckNumber(int Num)
+{
+	int Sum = 0;
+
+	for (int i = 1; i < Num; i++)
+	{
+		if (Num % i == 0)
+		{
+			Sum += i;
+			if (Sum == Num)
+			{
+				return true;
+			}
+		}
+	}
+}
+void PrintNumber(int Num)
+{
+	if (CheckNumber(Num)==true)
+	{
+		cout << enPerfect::Perfect << endl;
+	}
+	else
+	{
+		cout << enPerfect::NotPerfect << endl;
+	}
+}
+int main()
+{
+	
+	
+	PrintNumber(ReadNumber());
+
+	return 0;
+}

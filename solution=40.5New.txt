@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+struct stInfo
+{
+	float TotalBill = 0;
+	float Services = 0;
+	float SalesTax = 0;
+};
+stInfo ReadNumber()
+{
+	stInfo Info;
+	cout << "Enter Services?\n";
+	cin >> Info.Services;
+	cout << "Enter SalesTax?\n";
+	cin >> Info.SalesTax;
+	cout << "Enter TotalBill?\n";
+	cin >> Info.TotalBill;
+	return Info;
+}
+float CheckCalculate1(stInfo Info)
+{
+	float Result1 = 0;
+	Result1 = (Info.Services + Info.TotalBill) / (Info.TotalBill);
+	return Result1;
+}
+float CheckCalculate2(stInfo Info)
+{
+	float Result2 = 0;
+	Result2 = (Info.SalesTax + Info.TotalBill) / (Info.TotalBill);
+	return Result2;
+}
+float CheckCalculate3(stInfo Info)
+{
+	float Result3 = 0;
+	Result3 = Info.TotalBill * CheckCalculate1(Info) * CheckCalculate2(Info);
+	return Result3;
+}
+void PrintResult()
+{
+	stInfo Info = ReadNumber();
+	cout << "Services = " << CheckCalculate1(Info) << endl;
+	cout << "Sales Tax = " << CheckCalculate2(Info) << endl;
+	cout << "TotalBill = " << CheckCalculate3(Info) << endl;
+}
+int main()
+{
+	PrintResult();
+	return 0;
+}

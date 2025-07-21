@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    float value;
+	cout << "Please Enter Your Number: ";
+	cin >> value;
+	const int monthly_salary = 28;
+	const int monthly_salary2 = 30;
+	const int monthly_salary3 = 31;
+	float month = value * monthly_salary;
+	float month2 = value * monthly_salary2;
+	float month3 = value * monthly_salary3;
+	cout << "*************************""\n";
+	cout << "Monthly Salary: " << month << "." << endl;
+	cout << "Monthly Salary: " << month2 << "." << endl;
+	cout << "Monthly Salary: " << month3 << "." << endl;
+
+    return 0;
+}

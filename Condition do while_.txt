@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+#include <vector>
+using namespace std;
+void ReadLogout()
+{
+	bool Login = false;
+	string UserName, PassWord;
+	do
+	{
+		system("cls");
+		cout << "\n___________________________\n";
+		cout << "\tLogin Screen";
+		cout << "\n___________________________\n";
+		if (Login)
+		{
+			cout << "Invlaid UserName/PassWord\n";
+		}
+		cout << "Enter UserName? ";
+		cin >> UserName;
+		cout << "Enter PassWord? ";
+		cin >> PassWord;
+		Login = true;
+	}while(Login);// is mean if while true  Execute the condition but if while false Do Not the condition
+}
+int main()
+{
+	ReadLogout();
+	system("pause>0");
+	return 0;
+}

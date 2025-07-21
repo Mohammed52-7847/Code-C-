@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+	short int a;
+	cout << "please enter ypur number= ";
+	cin >> a;
+	short int divid = a / 2;
+	cout << "Half of " << a << " is " << " = " << divid << endl;
+	
+	return 0;
+}

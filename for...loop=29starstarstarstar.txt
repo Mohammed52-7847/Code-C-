@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+struct strinfo
+{
+	int N;
+	int C = 0;
+	int S = 0;
+};
+void procedure(strinfo info)
+{
+	cout << "Please Enter Your Number: ";
+	cin >> info.N;
+	for (info.C; info.C <= info.N; info.C++)
+	{
+		if (info.C % 2 == 0)
+		{
+			cout << info.C << endl;
+			info.S = info.S + info.C;
+		}
+	}
+	cout << "SUM: " << info.S << endl;
+}
+
+int main()
+{
+	strinfo person;
+	procedure(person);
+
+	return 0;
+}\

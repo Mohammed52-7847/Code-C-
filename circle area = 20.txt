@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main ()
+{
+    short int a;
+	cout << "please enter your number-A= ";
+	cin >> a;
+	const float pi = 3.14;
+	//float square = ceil(pi * (pow(a, 2) / pow(2, 2)));
+	float square = ceil(pi * pow(a, 2) / 4);
+	cout << "******************************""\n";
+	cout << "circle area is= " << square << "." << endl;
+	cout << "******************************""\n";
+
+    return 0;
+}
