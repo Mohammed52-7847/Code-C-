@@ -32,7 +32,7 @@ int Print(int Number)
 	}
 	else
 	{
-		return system("Color cF");
+		return system("Color CF");
 
 	}
 }
