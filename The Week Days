@@ -1,0 +1,64 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+enum enDays {Sunday = 1,Monday = 2,Tuesday = 3,Wednesday = 4,Thursday = 5,Friday = 6,Saturday = 7};
+
+int ReadDay()
+{
+	int day = 0;
+	cout << "Chooice Your Day? ";
+	cin >> day;
+	return day;
+}
+
+void PrintDays(int day)
+{
+	switch (day)
+	{
+	case enDays::Sunday:
+		system("Color 1F");
+		cout << "Sunday";
+		break;
+	case enDays::Monday:
+		system("Color 2F");
+		cout << "Monday";
+		break;
+	case enDays::Tuesday:
+		system("Color 3F");
+		cout << "Tuesday";
+		break;
+	case enDays::Wednesday:
+		system("Color 5F");
+		cout << "Wednesday";
+		break;
+	case enDays::Thursday:
+		system("Color 6F");
+		cout << "Tursday";
+		break;
+	case enDays::Friday:
+		system("Color 7F");
+		cout << "Friday";
+		break;
+	case enDays::Saturday:
+		system("Color 8F");
+		cout << "Saturday";
+		break;
+	default:
+		cout << "\a";
+		system("Color 4F");
+		cout << "There Are Not Other Days.\n";
+
+	}
+}
+int main()
+{
+	
+	PrintDays((enDays)ReadDay());
+
+	
+
+	system("pause>0");
+	return 0;
+}
